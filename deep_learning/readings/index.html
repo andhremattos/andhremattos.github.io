@@ -1,0 +1,1498 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Learn deep learning and deep reinforcement learning theories and code easily and quickly. Used by thousands of students and professionals from top tech companies and research institutions.">
+      
+      
+        <link rel="canonical" href="https://www.deeplearningwizard.com/deep_learning/readings/">
+      
+      
+        <meta name="author" content="Ritchie Ng">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../docs/assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>Additional Readings - Deep Learning Wizard</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.30686662.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#009688">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-122083328-1", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#long-tailed-recognition" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://www.deeplearningwizard.com/" title="Deep Learning Wizard" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">whatshot</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Deep Learning Wizard
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Additional Readings
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../intro/" class="md-tabs__link md-tabs__link--active">
+          Deep Learning Tutorials (CPU/GPU)
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../machine_learning/intro/" class="md-tabs__link">
+          Machine Learning Tutorials (CPU/GPU)
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../programming/intro/" class="md-tabs__link">
+          Programming Tutorials
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../database/intro/" class="md-tabs__link">
+          Scalable Database Tutorials
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../news/news/" class="md-tabs__link">
+          News
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://www.deeplearningwizard.com/" title="Deep Learning Wizard" class="md-nav__button md-logo">
+      
+        <i class="md-icon">whatshot</i>
+      
+    </a>
+    Deep Learning Wizard
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../about/" title="About Us" class="md-nav__link">
+      About Us
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../review/" title="Reviews" class="md-nav__link">
+      Reviews
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../pipeline/" title="AI Pipeline" class="md-nav__link">
+      AI Pipeline
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../consultancy/" title="Consultancy" class="md-nav__link">
+      Consultancy
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+    
+    <label class="md-nav__link" for="nav-6">
+      Deep Learning Tutorials (CPU/GPU)
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Deep Learning Tutorials (CPU/GPU)
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../intro/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../course_progression/" title="Course Progression" class="md-nav__link">
+      Course Progression
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../practical_pytorch/pytorch_matrices/" title="Matrices" class="md-nav__link">
+      Matrices
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../practical_pytorch/pytorch_gradients/" title="Gradients" class="md-nav__link">
+      Gradients
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../practical_pytorch/pytorch_linear_regression/" title="Linear Regression" class="md-nav__link">
+      Linear Regression
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../practical_pytorch/pytorch_logistic_regression/" title="Logistic Regression" class="md-nav__link">
+      Logistic Regression
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../practical_pytorch/pytorch_feedforward_neuralnetwork/" title="Feedforward Neural Networks (FNN)" class="md-nav__link">
+      Feedforward Neural Networks (FNN)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../practical_pytorch/pytorch_convolutional_neuralnetwork/" title="Convolutional Neural Networks (CNN)" class="md-nav__link">
+      Convolutional Neural Networks (CNN)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../practical_pytorch/pytorch_recurrent_neuralnetwork/" title="Recurrent Neural Networks (RNN)" class="md-nav__link">
+      Recurrent Neural Networks (RNN)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../practical_pytorch/pytorch_lstm_neuralnetwork/" title="Long Short Term Memory Neural Networks (LSTM)" class="md-nav__link">
+      Long Short Term Memory Neural Networks (LSTM)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../practical_pytorch/pytorch_autoencoder/" title="Autoencoders (AE)" class="md-nav__link">
+      Autoencoders (AE)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../boosting_models_pytorch/derivative_gradient_jacobian/" title="Derivative, Gradient and Jacobian" class="md-nav__link">
+      Derivative, Gradient and Jacobian
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../boosting_models_pytorch/forwardpropagation_backpropagation_gradientdescent/" title="Forward- and Backward-propagation and Gradient Descent" class="md-nav__link">
+      Forward- and Backward-propagation and Gradient Descent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../boosting_models_pytorch/lr_scheduling/" title="Learning Rate Scheduling" class="md-nav__link">
+      Learning Rate Scheduling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../boosting_models_pytorch/optimizers/" title="Optimization Algorithms" class="md-nav__link">
+      Optimization Algorithms
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../boosting_models_pytorch/weight_initialization_activation_functions/" title="Weight Initialization and Activation Functions" class="md-nav__link">
+      Weight Initialization and Activation Functions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../deep_reinforcement_learning_pytorch/supervised_to_rl/" title="Supervised Learning to Reinforcement Learning (RL)" class="md-nav__link">
+      Supervised Learning to Reinforcement Learning (RL)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../deep_reinforcement_learning_pytorch/bellman_mdp/" title="Markov Decision Processes (MDP) and Bellman Equations" class="md-nav__link">
+      Markov Decision Processes (MDP) and Bellman Equations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../deep_reinforcement_learning_pytorch/dynamic_programming_frozenlake/" title="Dynamic Programming" class="md-nav__link">
+      Dynamic Programming
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Additional Readings
+      </label>
+    
+    <a href="./" title="Additional Readings" class="md-nav__link md-nav__link--active">
+      Additional Readings
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#long-tailed-recognition" class="md-nav__link">
+    Long Tailed Recognition
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#better-generalization-overfitting-prevention-or-regularization" class="md-nav__link">
+    Better Generalization (Overfitting Prevention or Regularization)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimization" class="md-nav__link">
+    Optimization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-compression" class="md-nav__link">
+    Network Compression
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-search" class="md-nav__link">
+    Architecture Search
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-pruning" class="md-nav__link">
+    Network Pruning
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bayesian-deep-learning" class="md-nav__link">
+    Bayesian Deep Learning
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explainability" class="md-nav__link">
+    Explainability
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cautious" class="md-nav__link">
+    Cautious
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualization" class="md-nav__link">
+    Visualization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#missing-values" class="md-nav__link">
+    Missing Values
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#correlation" class="md-nav__link">
+    Correlation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deep-reinforcement-learning" class="md-nav__link">
+    Deep Reinforcement Learning
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" class="md-nav__link md-nav__link--active">
+            Comments
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Machine Learning Tutorials (CPU/GPU)
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Machine Learning Tutorials (CPU/GPU)
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../machine_learning/intro/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../machine_learning/gpu/rapids_cudf/" title="GPU DataFrames" class="md-nav__link">
+      GPU DataFrames
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../machine_learning/gpu/gpu_fractional_differencing/" title="GPU/CPU Fractional Differencing" class="md-nav__link">
+      GPU/CPU Fractional Differencing
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Programming Tutorials
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Programming Tutorials
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../programming/intro/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../programming/cpp/cpp/" title="C++" class="md-nav__link">
+      C++
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../programming/bash/bash/" title="Bash" class="md-nav__link">
+      Bash
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../programming/python/python/" title="Python" class="md-nav__link">
+      Python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../programming/javascript/javascript/" title="Javascript" class="md-nav__link">
+      Javascript
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../programming/electron/electron/" title="Electron" class="md-nav__link">
+      Electron
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Scalable Database Tutorials
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        Scalable Database Tutorials
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../database/intro/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../database/setting_up_cluster/" title="Cassandra Cluster Setup" class="md-nav__link">
+      Cassandra Cluster Setup
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      News
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        News
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../news/news/" title="Welcome" class="md-nav__link">
+      Welcome
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../news/defence_and_science_technology_agency_dsta_nvidia_talk_2016_06/" title="Deep Learning Introduction, Defence and Science Technology Agency (DSTA) and NVIDIA, June 2019" class="md-nav__link">
+      Deep Learning Introduction, Defence and Science Technology Agency (DSTA) and NVIDIA, June 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../news/detect_waterbone_debris_ai_for_social_good_icml_2019_06/" title="Oral Presentation for AI for Social Good Workshop ICML, June 2019" class="md-nav__link">
+      Oral Presentation for AI for Social Good Workshop ICML, June 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../news/it_youth_leader_2019_03_11/" title="IT Youth Leader of The Year 2019, March 2019" class="md-nav__link">
+      IT Youth Leader of The Year 2019, March 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../news/ammi_facebook_google_recap_2018_11_21/" title="AMMI (AIMS) supported by Facebook and Google, November 2018" class="md-nav__link">
+      AMMI (AIMS) supported by Facebook and Google, November 2018
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../news/nanjing_next_nus_tsinghua_ai_finance_healthcare_2018_11_01/" title="NExT++ AI in Healthcare and Finance, Nanjing, November 2018" class="md-nav__link">
+      NExT++ AI in Healthcare and Finance, Nanjing, November 2018
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../news/facebook_pytorch_devcon_recap_2018_10_02/" title="Recap of Facebook PyTorch Developer Conference, San Francisco, September 2018" class="md-nav__link">
+      Recap of Facebook PyTorch Developer Conference, San Francisco, September 2018
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../news/facebook_pytorch_developer_conference_2018_09_05/" title="Facebook PyTorch Developer Conference, San Francisco, September 2018" class="md-nav__link">
+      Facebook PyTorch Developer Conference, San Francisco, September 2018
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../news/nvidia_nus_mit_datathon_2018_07_05/" title="NUS-MIT-NUHS NVIDIA Image Recognition Workshop, Singapore, July 2018" class="md-nav__link">
+      NUS-MIT-NUHS NVIDIA Image Recognition Workshop, Singapore, July 2018
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../news/deep_learning_wizard_1y_2018_06_01/" title="Featured on PyTorch Website 2018" class="md-nav__link">
+      Featured on PyTorch Website 2018
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../news/nvidia_self_driving_cars_talk_2017_06_21/" title="NVIDIA Self Driving Cars & Healthcare Talk, Singapore, June 2017" class="md-nav__link">
+      NVIDIA Self Driving Cars & Healthcare Talk, Singapore, June 2017
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../news/deep_learning_wizard_nvidia_inception_2018_05_01/" title="NVIDIA Inception Partner Status, Singapore, May 2017" class="md-nav__link">
+      NVIDIA Inception Partner Status, Singapore, May 2017
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#long-tailed-recognition" class="md-nav__link">
+    Long Tailed Recognition
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#better-generalization-overfitting-prevention-or-regularization" class="md-nav__link">
+    Better Generalization (Overfitting Prevention or Regularization)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimization" class="md-nav__link">
+    Optimization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-compression" class="md-nav__link">
+    Network Compression
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-search" class="md-nav__link">
+    Architecture Search
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-pruning" class="md-nav__link">
+    Network Pruning
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bayesian-deep-learning" class="md-nav__link">
+    Bayesian Deep Learning
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explainability" class="md-nav__link">
+    Explainability
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cautious" class="md-nav__link">
+    Cautious
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualization" class="md-nav__link">
+    Visualization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#missing-values" class="md-nav__link">
+    Missing Values
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#correlation" class="md-nav__link">
+    Correlation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deep-reinforcement-learning" class="md-nav__link">
+    Deep Reinforcement Learning
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" class="md-nav__link md-nav__link--active">
+            Comments
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Additional Readings</h1>
+                
+                <div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>This is a list of growing number of papers and implementations I think are interesting.</p>
+</div>
+<h2 id="long-tailed-recognition">Long Tailed Recognition<a class="headerlink" href="#long-tailed-recognition" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://arxiv.org/abs/1904.05160">Large-Scale Long-Tailed Recognition in an Open World</a><ul>
+<li>Frequently in real world scenario there're new unseen classes or samples within the tail classes</li>
+<li>This tackles the problem with dynamic embedding to bring associative memory to aid prediction of long-tailed classes</li>
+<li>The model essentially combines direct image features with embeddings from other classes</li>
+</ul>
+</li>
+</ul>
+<h2 id="better-generalization-overfitting-prevention-or-regularization">Better Generalization (Overfitting Prevention or Regularization)<a class="headerlink" href="#better-generalization-overfitting-prevention-or-regularization" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://arxiv.org/abs/1703.06907">Domain Randomization for Transferring Deep Neural Networks from Simulation to the Real World</a><ul>
+<li>They propose to use domain randomization to train deep learning algorithms on synthetic data and transferring to real-world data</li>
+<li>The idea is that with sufficient variability in the textures of synthetic data, real-world data becomes another variation of the synthetic data</li>
+<li>It works surprisingly well and it's a simple technique of varying image textures essentially enabling CNNs to be more robust to variations in image textures</li>
+</ul>
+</li>
+</ul>
+<h2 id="optimization">Optimization<a class="headerlink" href="#optimization" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://arxiv.org/abs/1703.04782">Online Learning Rate Adaptation with Hypergradient Descent</a><ul>
+<li>Reduces the need for learning rate scheduling for SGD, SGD and nesterov momentum, and Adam</li>
+<li>Uses the concept of hypergradients (gradients w.r.t. learning rate) obtained via reverse-mode automatic differentiation to dynamically update learning rates in real-time alongside weight updates</li>
+<li>Little additional computation because just needs just one additional copy of original gradients store in memory</li>
+<li>Severely under-appreciated paper</li>
+</ul>
+</li>
+</ul>
+<h2 id="network-compression">Network Compression<a class="headerlink" href="#network-compression" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://arxiv.org/abs/1806.04321">Energy-constrained Compression for Deep Neural Networks via Weighted Sparse Projection and Layer Input Masking</a><ul>
+<li>More production applications of DNN require low-energy consumption environment like self-driving cars, VR goggles, and drones</li>
+<li>As such it's critical to optimize DNN not for its primary performance (accuracy etc.) but for its energy consumption performance too </li>
+<li>In the DNN training, this paper introduces an energy budget constraint on top of other optimization objectives</li>
+<li>This allows optimization of multiple objectives simultaneously (top-1 accuracy and energy consumption for example)</li>
+<li>It's done through weighted sparse projection and layer input masking</li>
+</ul>
+</li>
+</ul>
+<h2 id="architecture-search">Architecture Search<a class="headerlink" href="#architecture-search" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://arxiv.org/abs/1806.09055">DARTS: Differentiable Architecture Search</a><ul>
+<li>Neural search algorithm based on gradient descent and continuous relaxation in the architecture space. </li>
+<li>A good move towards automatic architecture designs of neural networks.</li>
+</ul>
+</li>
+<li><a href="https://arxiv.org/abs/1905.11946">EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks</a><ul>
+<li>Scales all dimensions of a CNN, resolution/depth/width using compound coefficient</li>
+<li>Uses neural architecture search</li>
+</ul>
+</li>
+</ul>
+<h2 id="network-pruning">Network Pruning<a class="headerlink" href="#network-pruning" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://arxiv.org/abs/1905.05934">EigenDamage: Structured Pruning in the Kronecker-Factored Eigenbasis</a><ul>
+<li>Compared to existing Hessian-based methods, this works on the KFE</li>
+<li>Reported 10x reduction in model size and 8x reduction in FLOPs on Wide ResNet32 (WRN32)</li>
+</ul>
+</li>
+</ul>
+<h2 id="bayesian-deep-learning">Bayesian Deep Learning<a class="headerlink" href="#bayesian-deep-learning" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://arxiv.org/abs/1806.04854">Fast and Scalable Bayesian Deep Learning by Weight-Perturbation in Adam</a><ul>
+<li>Variational Adam (Vadam), an alternative to varianal inference via dropout.</li>
+<li>Vadam perturbs the network's weights when backpropagating, allowing low computation cost uncertainty estimates. </li>
+<li>Not as good as dropout in terms of performance, but a good direction for computationally cheaper options.</li>
+</ul>
+</li>
+</ul>
+<h2 id="explainability">Explainability<a class="headerlink" href="#explainability" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://arxiv.org/pdf/1705.07874.pdf">A Unified Approach to Intepreting Model Predictions</a><ul>
+<li>Introduces SHAP (SHapley Additive exPlanations)</li>
+<li>"SHAP assigns each feature an importance value for a particular prediction"<ul>
+<li>Higher positive SHAP values (red) = increase the probability of the class</li>
+<li>Higher negative SHAP values (blue) = decrease the probability of the class</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://openreview.net/pdf?id=SkEqro0ctQ">Hierarchical interpretations for neural network predictions</a><ul>
+<li>Given a prediction from the deep neural network, agglomerative contextual decomposition (ACD) produces a hierarchical clusters of input features alongside cluster-wise contribution to the final prediction.</li>
+<li>The hierarchical clustering is then optimized to identify learned clusters driving the DNN's predictions.</li>
+</ul>
+</li>
+</ul>
+<h2 id="cautious">Cautious<a class="headerlink" href="#cautious" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.autodeskresearch.com/publications/samestats">Same Stats, Different Graphs: Generating Datasets with Varied Appearance and Identical Statistics through Simulated Annealing</a><ul>
+<li>Shows through scatterplots that multiple toy datasets although visually very different can have similar summary statistics like mean, standard deviation and pearson correlation</li>
+<li>This paper emphasises the need to always visualize your data</li>
+</ul>
+</li>
+</ul>
+<h2 id="visualization">Visualization<a class="headerlink" href="#visualization" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/lutzroeder/netron">Netron</a><ul>
+<li>Easily visualize your saved deep learning models (PyTorch .pth, TensorFlow .pb, MXNet .model, ONNX, and more)</li>
+<li>You can even check out each node's documentation quickly in the interface</li>
+</ul>
+</li>
+</ul>
+<h2 id="missing-values">Missing Values<a class="headerlink" href="#missing-values" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://arxiv.org/abs/1805.10572">BRITS</a><ul>
+<li>If you face problems in missing data in your time series and you use existing imputation methods, there is an alternative called BRITS where it learns missing values in time series via a bidirectional recurrency dynamical system</li>
+</ul>
+</li>
+</ul>
+<h2 id="correlation">Correlation<a class="headerlink" href="#correlation" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="http://proceedings.mlr.press/v28/andrew13.pdf">DCCA: Deep Canonical Correlation Analysis</a><ul>
+<li>Learn non-linear complex transformations such that resulting transformed data have high linear correlation</li>
+<li>Alternative to non-parametric methods like kernel canonical correlation analysis (KCCA) and non-linear extension of canonical correlation analysis (CCA)</li>
+<li>Shown to learn higher correlation representations than CCA/KCCA</li>
+</ul>
+</li>
+</ul>
+<h2 id="deep-reinforcement-learning">Deep Reinforcement Learning<a class="headerlink" href="#deep-reinforcement-learning" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://arxiv.org/pdf/1801.05566.pdf">An Empirical Analysis of Proximal Policy Optimization with Kronecker-factored Natural Gradients</a><ul>
+<li>Shows 2 SOTA for deep RL currently (2018 / early 2019): PPO and ACKTR</li>
+<li>Attempts to combined PPO objective with K-FAC natural gradient optimization: PPOKFAC</li>
+<li>Does not improve sample complexity, stick with either PPO/ACKTR for now</li>
+</ul>
+</li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+  <h2 id="__comments">Comments</h2>
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = "https://www.deeplearningwizard.com/deep_learning/readings/";
+      this.page.identifier =
+        "deep_learning/readings/";
+    };
+    (function() {
+      var d = document, s = d.createElement("script");
+      s.src = "//deep-learning-wizard.disqus.com/embed.js";
+      s.setAttribute("data-timestamp", +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="deep_learning/deep_reinforcement_learning_pytorch/dynamic_programming_frozenlake/" title="Dynamic Programming" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Dynamic Programming
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="machine_learning/intro/" title="Introduction" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Introduction
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2019 Deep Learning Wizard
+          </div>
+        
+        proudly an
+        <a href="http://www.nvidia.com/page/home.html">NVIDIA Inception Partner</a> and supported by the
+        <a href="https://aws.amazon.com/activate/">Amazon AWS Activate Programme</a> by
+        <a href="https://www.ritchieng.com/">
+          Ritchie Ng</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/ritchieng" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://www.facebook.com/DeepLearningWizard/" class="md-footer-social__link fa fa-facebook"></a>
+    
+      <a href="https://www.linkedin.com/company/deeplearningwizard/" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.ac79c3b0.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

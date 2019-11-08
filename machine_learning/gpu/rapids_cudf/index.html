@@ -1,0 +1,2267 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Learn deep learning and deep reinforcement learning theories and code easily and quickly. Used by thousands of students and professionals from top tech companies and research institutions.">
+      
+      
+        <link rel="canonical" href="https://www.deeplearningwizard.com/machine_learning/gpu/rapids_cudf/">
+      
+      
+        <meta name="author" content="Ritchie Ng">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../docs/assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>GPU DataFrames - Deep Learning Wizard</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.30686662.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#009688">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-122083328-1", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#rapids-cudf" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://www.deeplearningwizard.com/" title="Deep Learning Wizard" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">whatshot</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Deep Learning Wizard
+            </span>
+            <span class="md-header-nav__topic">
+              
+                GPU DataFrames
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../.." class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../deep_learning/intro/" class="md-tabs__link">
+          Deep Learning Tutorials (CPU/GPU)
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../intro/" class="md-tabs__link md-tabs__link--active">
+          Machine Learning Tutorials (CPU/GPU)
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../programming/intro/" class="md-tabs__link">
+          Programming Tutorials
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../database/intro/" class="md-tabs__link">
+          Scalable Database Tutorials
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../news/news/" class="md-tabs__link">
+          News
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://www.deeplearningwizard.com/" title="Deep Learning Wizard" class="md-nav__button md-logo">
+      
+        <i class="md-icon">whatshot</i>
+      
+    </a>
+    Deep Learning Wizard
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../about/" title="About Us" class="md-nav__link">
+      About Us
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../review/" title="Reviews" class="md-nav__link">
+      Reviews
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../pipeline/" title="AI Pipeline" class="md-nav__link">
+      AI Pipeline
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../consultancy/" title="Consultancy" class="md-nav__link">
+      Consultancy
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Deep Learning Tutorials (CPU/GPU)
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Deep Learning Tutorials (CPU/GPU)
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../deep_learning/intro/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../deep_learning/course_progression/" title="Course Progression" class="md-nav__link">
+      Course Progression
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../deep_learning/practical_pytorch/pytorch_matrices/" title="Matrices" class="md-nav__link">
+      Matrices
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../deep_learning/practical_pytorch/pytorch_gradients/" title="Gradients" class="md-nav__link">
+      Gradients
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../deep_learning/practical_pytorch/pytorch_linear_regression/" title="Linear Regression" class="md-nav__link">
+      Linear Regression
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../deep_learning/practical_pytorch/pytorch_logistic_regression/" title="Logistic Regression" class="md-nav__link">
+      Logistic Regression
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../deep_learning/practical_pytorch/pytorch_feedforward_neuralnetwork/" title="Feedforward Neural Networks (FNN)" class="md-nav__link">
+      Feedforward Neural Networks (FNN)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../deep_learning/practical_pytorch/pytorch_convolutional_neuralnetwork/" title="Convolutional Neural Networks (CNN)" class="md-nav__link">
+      Convolutional Neural Networks (CNN)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../deep_learning/practical_pytorch/pytorch_recurrent_neuralnetwork/" title="Recurrent Neural Networks (RNN)" class="md-nav__link">
+      Recurrent Neural Networks (RNN)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../deep_learning/practical_pytorch/pytorch_lstm_neuralnetwork/" title="Long Short Term Memory Neural Networks (LSTM)" class="md-nav__link">
+      Long Short Term Memory Neural Networks (LSTM)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../deep_learning/practical_pytorch/pytorch_autoencoder/" title="Autoencoders (AE)" class="md-nav__link">
+      Autoencoders (AE)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../deep_learning/boosting_models_pytorch/derivative_gradient_jacobian/" title="Derivative, Gradient and Jacobian" class="md-nav__link">
+      Derivative, Gradient and Jacobian
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../deep_learning/boosting_models_pytorch/forwardpropagation_backpropagation_gradientdescent/" title="Forward- and Backward-propagation and Gradient Descent" class="md-nav__link">
+      Forward- and Backward-propagation and Gradient Descent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../deep_learning/boosting_models_pytorch/lr_scheduling/" title="Learning Rate Scheduling" class="md-nav__link">
+      Learning Rate Scheduling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../deep_learning/boosting_models_pytorch/optimizers/" title="Optimization Algorithms" class="md-nav__link">
+      Optimization Algorithms
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../deep_learning/boosting_models_pytorch/weight_initialization_activation_functions/" title="Weight Initialization and Activation Functions" class="md-nav__link">
+      Weight Initialization and Activation Functions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../deep_learning/deep_reinforcement_learning_pytorch/supervised_to_rl/" title="Supervised Learning to Reinforcement Learning (RL)" class="md-nav__link">
+      Supervised Learning to Reinforcement Learning (RL)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../deep_learning/deep_reinforcement_learning_pytorch/bellman_mdp/" title="Markov Decision Processes (MDP) and Bellman Equations" class="md-nav__link">
+      Markov Decision Processes (MDP) and Bellman Equations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../deep_learning/deep_reinforcement_learning_pytorch/dynamic_programming_frozenlake/" title="Dynamic Programming" class="md-nav__link">
+      Dynamic Programming
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../deep_learning/readings/" title="Additional Readings" class="md-nav__link">
+      Additional Readings
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
+    
+    <label class="md-nav__link" for="nav-7">
+      Machine Learning Tutorials (CPU/GPU)
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Machine Learning Tutorials (CPU/GPU)
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../intro/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        GPU DataFrames
+      </label>
+    
+    <a href="./" title="GPU DataFrames" class="md-nav__link md-nav__link--active">
+      GPU DataFrames
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#environment-setup" class="md-nav__link">
+    Environment Setup
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-version" class="md-nav__link">
+    Check Version
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python-version" class="md-nav__link">
+    Python Version
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ubuntu-version" class="md-nav__link">
+    Ubuntu Version
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-cuda-version" class="md-nav__link">
+    Check CUDA Version
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-gpu-version" class="md-nav__link">
+    Check GPU Version
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-gpu-if-youve-right-version-t4" class="md-nav__link">
+    Check GPU if You've Right Version (T4)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installation-of-cudfcuml" class="md-nav__link">
+    Installation of cuDF/cuML
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#critical-imports" class="md-nav__link">
+    Critical Imports
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating" class="md-nav__link">
+    Creating
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-series-of-integers" class="md-nav__link">
+    Create a Series of integers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-series-of-floats" class="md-nav__link">
+    Create a Series of floats
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-series-of-strings" class="md-nav__link">
+    Create a  Series of strings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-3-column-dataframe" class="md-nav__link">
+    Create 3 column DataFrame
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-2-column-dataframe" class="md-nav__link">
+    Create 2 column Dataframe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-2-column-dataframe-with-pandas-bridge" class="md-nav__link">
+    Create a 2 Column  Dataframe with Pandas Bridge
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing" class="md-nav__link">
+    Viewing
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#printing-column-names" class="md-nav__link">
+    Printing Column Names
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewing-top-of-dataframe" class="md-nav__link">
+    Viewing Top of DataFrame
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewing-bottom-of-dataframe" class="md-nav__link">
+    Viewing Bottom of DataFrame
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filtering" class="md-nav__link">
+    Filtering
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#method-1-query" class="md-nav__link">
+    Method 1: Query
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filtering-integersfloats-by-column-values" class="md-nav__link">
+    Filtering Integers/Floats by Column Values
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtering-strings-by-column-values" class="md-nav__link">
+    Filtering Strings by Column Values
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-2-simple-columns" class="md-nav__link">
+    Method 2:  Simple Columns
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filtering-strings-by-column-values_1" class="md-nav__link">
+    Filtering Strings by Column Values
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtering-integersfloats-by-column-values_1" class="md-nav__link">
+    Filtering Integers/Floats by Column Values
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-2-simple-rows" class="md-nav__link">
+    Method 2:  Simple Rows
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filtering-by-row-numbers" class="md-nav__link">
+    Filtering by Row Numbers
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-3-locrows-columns" class="md-nav__link">
+    Method 3:  loc[rows, columns]
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" class="md-nav__link md-nav__link--active">
+            Comments
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../gpu_fractional_differencing/" title="GPU/CPU Fractional Differencing" class="md-nav__link">
+      GPU/CPU Fractional Differencing
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Programming Tutorials
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Programming Tutorials
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../programming/intro/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../programming/cpp/cpp/" title="C++" class="md-nav__link">
+      C++
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../programming/bash/bash/" title="Bash" class="md-nav__link">
+      Bash
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../programming/python/python/" title="Python" class="md-nav__link">
+      Python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../programming/javascript/javascript/" title="Javascript" class="md-nav__link">
+      Javascript
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../programming/electron/electron/" title="Electron" class="md-nav__link">
+      Electron
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Scalable Database Tutorials
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        Scalable Database Tutorials
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../database/intro/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../database/setting_up_cluster/" title="Cassandra Cluster Setup" class="md-nav__link">
+      Cassandra Cluster Setup
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      News
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        News
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../news/news/" title="Welcome" class="md-nav__link">
+      Welcome
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../news/defence_and_science_technology_agency_dsta_nvidia_talk_2016_06/" title="Deep Learning Introduction, Defence and Science Technology Agency (DSTA) and NVIDIA, June 2019" class="md-nav__link">
+      Deep Learning Introduction, Defence and Science Technology Agency (DSTA) and NVIDIA, June 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../news/detect_waterbone_debris_ai_for_social_good_icml_2019_06/" title="Oral Presentation for AI for Social Good Workshop ICML, June 2019" class="md-nav__link">
+      Oral Presentation for AI for Social Good Workshop ICML, June 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../news/it_youth_leader_2019_03_11/" title="IT Youth Leader of The Year 2019, March 2019" class="md-nav__link">
+      IT Youth Leader of The Year 2019, March 2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../news/ammi_facebook_google_recap_2018_11_21/" title="AMMI (AIMS) supported by Facebook and Google, November 2018" class="md-nav__link">
+      AMMI (AIMS) supported by Facebook and Google, November 2018
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../news/nanjing_next_nus_tsinghua_ai_finance_healthcare_2018_11_01/" title="NExT++ AI in Healthcare and Finance, Nanjing, November 2018" class="md-nav__link">
+      NExT++ AI in Healthcare and Finance, Nanjing, November 2018
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../news/facebook_pytorch_devcon_recap_2018_10_02/" title="Recap of Facebook PyTorch Developer Conference, San Francisco, September 2018" class="md-nav__link">
+      Recap of Facebook PyTorch Developer Conference, San Francisco, September 2018
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../news/facebook_pytorch_developer_conference_2018_09_05/" title="Facebook PyTorch Developer Conference, San Francisco, September 2018" class="md-nav__link">
+      Facebook PyTorch Developer Conference, San Francisco, September 2018
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../news/nvidia_nus_mit_datathon_2018_07_05/" title="NUS-MIT-NUHS NVIDIA Image Recognition Workshop, Singapore, July 2018" class="md-nav__link">
+      NUS-MIT-NUHS NVIDIA Image Recognition Workshop, Singapore, July 2018
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../news/deep_learning_wizard_1y_2018_06_01/" title="Featured on PyTorch Website 2018" class="md-nav__link">
+      Featured on PyTorch Website 2018
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../news/nvidia_self_driving_cars_talk_2017_06_21/" title="NVIDIA Self Driving Cars & Healthcare Talk, Singapore, June 2017" class="md-nav__link">
+      NVIDIA Self Driving Cars & Healthcare Talk, Singapore, June 2017
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../news/deep_learning_wizard_nvidia_inception_2018_05_01/" title="NVIDIA Inception Partner Status, Singapore, May 2017" class="md-nav__link">
+      NVIDIA Inception Partner Status, Singapore, May 2017
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#environment-setup" class="md-nav__link">
+    Environment Setup
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-version" class="md-nav__link">
+    Check Version
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python-version" class="md-nav__link">
+    Python Version
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ubuntu-version" class="md-nav__link">
+    Ubuntu Version
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-cuda-version" class="md-nav__link">
+    Check CUDA Version
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-gpu-version" class="md-nav__link">
+    Check GPU Version
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-gpu-if-youve-right-version-t4" class="md-nav__link">
+    Check GPU if You've Right Version (T4)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installation-of-cudfcuml" class="md-nav__link">
+    Installation of cuDF/cuML
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#critical-imports" class="md-nav__link">
+    Critical Imports
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating" class="md-nav__link">
+    Creating
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-series-of-integers" class="md-nav__link">
+    Create a Series of integers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-series-of-floats" class="md-nav__link">
+    Create a Series of floats
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-series-of-strings" class="md-nav__link">
+    Create a  Series of strings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-3-column-dataframe" class="md-nav__link">
+    Create 3 column DataFrame
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-2-column-dataframe" class="md-nav__link">
+    Create 2 column Dataframe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-2-column-dataframe-with-pandas-bridge" class="md-nav__link">
+    Create a 2 Column  Dataframe with Pandas Bridge
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing" class="md-nav__link">
+    Viewing
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#printing-column-names" class="md-nav__link">
+    Printing Column Names
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewing-top-of-dataframe" class="md-nav__link">
+    Viewing Top of DataFrame
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewing-bottom-of-dataframe" class="md-nav__link">
+    Viewing Bottom of DataFrame
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filtering" class="md-nav__link">
+    Filtering
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#method-1-query" class="md-nav__link">
+    Method 1: Query
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filtering-integersfloats-by-column-values" class="md-nav__link">
+    Filtering Integers/Floats by Column Values
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtering-strings-by-column-values" class="md-nav__link">
+    Filtering Strings by Column Values
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-2-simple-columns" class="md-nav__link">
+    Method 2:  Simple Columns
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filtering-strings-by-column-values_1" class="md-nav__link">
+    Filtering Strings by Column Values
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtering-integersfloats-by-column-values_1" class="md-nav__link">
+    Filtering Integers/Floats by Column Values
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-2-simple-rows" class="md-nav__link">
+    Method 2:  Simple Rows
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filtering-by-row-numbers" class="md-nav__link">
+    Filtering by Row Numbers
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-3-locrows-columns" class="md-nav__link">
+    Method 3:  loc[rows, columns]
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" class="md-nav__link md-nav__link--active">
+            Comments
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="rapids-cudf">RAPIDS cuDF<a class="headerlink" href="#rapids-cudf" title="Permanent link">&para;</a></h1>
+<p><a href="https://colab.research.google.com/github/ritchieng/deep-learning-wizard/blob/master/docs/machine_learning/gpu/rapids_cudf.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
+<h2 id="environment-setup">Environment Setup<a class="headerlink" href="#environment-setup" title="Permanent link">&para;</a></h2>
+<h3 id="check-version">Check Version<a class="headerlink" href="#check-version" title="Permanent link">&para;</a></h3>
+<h4 id="python-version">Python Version<a class="headerlink" href="#python-version" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="c1"># Check Python Version</span>
+<span class="err">!</span><span class="n">python</span> <span class="o">--</span><span class="n">version</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="n">Python</span> <span class="mi">3</span><span class="p">.</span><span class="mi">6</span><span class="p">.</span><span class="mi">7</span>
+</pre></div>
+
+
+<h4 id="ubuntu-version">Ubuntu Version<a class="headerlink" href="#ubuntu-version" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="c1"># Check Ubuntu Version</span>
+<span class="err">!</span><span class="n">lsb_release</span> <span class="o">-</span><span class="n">a</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="k">No</span> <span class="n">LSB</span> <span class="n">modules</span> <span class="k">are</span> <span class="n">available</span><span class="p">.</span>
+<span class="n">Distributor</span> <span class="n">ID</span><span class="p">:</span> <span class="n">Ubuntu</span>
+<span class="n">Description</span><span class="p">:</span>    <span class="n">Ubuntu</span> <span class="mi">18</span><span class="p">.</span><span class="mi">04</span><span class="p">.</span><span class="mi">2</span> <span class="n">LTS</span>
+<span class="n">Release</span><span class="p">:</span>    <span class="mi">18</span><span class="p">.</span><span class="mi">04</span>
+<span class="n">Codename</span><span class="p">:</span>   <span class="n">bionic</span>
+</pre></div>
+
+
+<h4 id="check-cuda-version">Check CUDA Version<a class="headerlink" href="#check-cuda-version" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="c1"># Check CUDA/cuDNN Version</span>
+<span class="err">!</span><span class="n">nvcc</span> <span class="o">-</span><span class="n">V</span> <span class="o">&amp;&amp;</span> <span class="n">which</span> <span class="n">nvcc</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="n">nvcc</span><span class="o">:</span> <span class="n">NVIDIA</span> <span class="o">(</span><span class="n">R</span><span class="o">)</span> <span class="n">Cuda</span> <span class="n">compiler</span> <span class="n">driver</span>
+<span class="n">Copyright</span> <span class="o">(</span><span class="n">c</span><span class="o">)</span> <span class="mi">2005</span><span class="o">-</span><span class="mi">2018</span> <span class="n">NVIDIA</span> <span class="n">Corporation</span>
+<span class="n">Built</span> <span class="n">on</span> <span class="n">Sat_Aug_25_21</span><span class="o">:</span><span class="mi">08</span><span class="o">:</span><span class="mi">01</span><span class="n">_CDT_2018</span>
+<span class="n">Cuda</span> <span class="n">compilation</span> <span class="n">tools</span><span class="o">,</span> <span class="n">release</span> <span class="mf">10.0</span><span class="o">,</span> <span class="n">V10</span><span class="o">.</span><span class="mf">0.130</span>
+<span class="sr">/usr/local/cuda/bin/</span><span class="n">nvcc</span>
+</pre></div>
+
+
+<h4 id="check-gpu-version">Check GPU Version<a class="headerlink" href="#check-gpu-version" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="c1"># Check GPU</span>
+<span class="err">!</span><span class="n">nvidia</span><span class="o">-</span><span class="n">smi</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="n">Mon</span> <span class="n">May</span> <span class="mi">13</span> <span class="mi">09</span><span class="p">:</span><span class="mi">31</span><span class="p">:</span><span class="mi">40</span> <span class="mi">2019</span>       
+<span class="o">+</span><span class="c1">-----------------------------------------------------------------------------+</span>
+<span class="o">|</span> <span class="n">NVIDIA</span><span class="o">-</span><span class="n">SMI</span> <span class="mi">418</span><span class="p">.</span><span class="mi">56</span>       <span class="n">Driver</span> <span class="k">Version</span><span class="p">:</span> <span class="mi">410</span><span class="p">.</span><span class="mi">79</span>       <span class="n">CUDA</span> <span class="k">Version</span><span class="p">:</span> <span class="mi">10</span><span class="p">.</span><span class="mi">0</span>     <span class="o">|</span>
+<span class="o">|</span><span class="c1">-------------------------------+----------------------+----------------------+</span>
+<span class="o">|</span> <span class="n">GPU</span>  <span class="n">Name</span>        <span class="n">Persistence</span><span class="o">-</span><span class="n">M</span><span class="o">|</span> <span class="n">Bus</span><span class="o">-</span><span class="n">Id</span>        <span class="n">Disp</span><span class="p">.</span><span class="n">A</span> <span class="o">|</span> <span class="k">Volatile</span> <span class="n">Uncorr</span><span class="p">.</span> <span class="n">ECC</span> <span class="o">|</span>
+<span class="o">|</span> <span class="n">Fan</span>  <span class="n">Temp</span>  <span class="n">Perf</span>  <span class="n">Pwr</span><span class="p">:</span><span class="k">Usage</span><span class="o">/</span><span class="n">Cap</span><span class="o">|</span>         <span class="n">Memory</span><span class="o">-</span><span class="k">Usage</span> <span class="o">|</span> <span class="n">GPU</span><span class="o">-</span><span class="n">Util</span>  <span class="n">Compute</span> <span class="n">M</span><span class="p">.</span> <span class="o">|</span>
+<span class="o">|===============================+======================+======================|</span>
+<span class="o">|</span>   <span class="mi">0</span>  <span class="n">Tesla</span> <span class="n">T4</span>            <span class="k">Off</span>  <span class="o">|</span> <span class="mi">00000000</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">04</span><span class="p">.</span><span class="mi">0</span> <span class="k">Off</span> <span class="o">|</span>                    <span class="mi">0</span> <span class="o">|</span>
+<span class="o">|</span> <span class="n">N</span><span class="o">/</span><span class="n">A</span>   <span class="mi">67</span><span class="k">C</span>    <span class="n">P8</span>    <span class="mi">17</span><span class="n">W</span> <span class="o">/</span>  <span class="mi">70</span><span class="n">W</span> <span class="o">|</span>      <span class="mi">0</span><span class="n">MiB</span> <span class="o">/</span> <span class="mi">15079</span><span class="n">MiB</span> <span class="o">|</span>      <span class="mi">0</span><span class="o">%</span>      <span class="k">Default</span> <span class="o">|</span>
+<span class="o">+</span><span class="c1">-------------------------------+----------------------+----------------------+</span>
+
+<span class="o">+</span><span class="c1">-----------------------------------------------------------------------------+</span>
+<span class="o">|</span> <span class="n">Processes</span><span class="p">:</span>                                                       <span class="n">GPU</span> <span class="n">Memory</span> <span class="o">|</span>
+<span class="o">|</span>  <span class="n">GPU</span>       <span class="n">PID</span>   <span class="k">Type</span>   <span class="n">Process</span> <span class="n">name</span>                             <span class="k">Usage</span>      <span class="o">|</span>
+<span class="o">|=============================================================================|</span>
+<span class="o">|</span>  <span class="k">No</span> <span class="n">running</span> <span class="n">processes</span> <span class="k">found</span>                                                 <span class="o">|</span>
+<span class="o">+</span><span class="c1">-----------------------------------------------------------------------------+</span>
+</pre></div>
+
+
+<h4 id="check-gpu-if-youve-right-version-t4">Check GPU if You've Right Version (T4)<a class="headerlink" href="#check-gpu-if-youve-right-version-t4" title="Permanent link">&para;</a></h4>
+<p>Many thanks to NVIDIA team for this snippet of code to automatically set up everything.</p>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">pynvml</span>
+
+<span class="n">pynvml</span><span class="o">.</span><span class="n">nvmlInit</span><span class="p">()</span>
+<span class="n">handle</span> <span class="o">=</span> <span class="n">pynvml</span><span class="o">.</span><span class="n">nvmlDeviceGetHandleByIndex</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">device_name</span> <span class="o">=</span> <span class="n">pynvml</span><span class="o">.</span><span class="n">nvmlDeviceGetName</span><span class="p">(</span><span class="n">handle</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">device_name</span> <span class="o">!=</span> <span class="sa">b</span><span class="s1">&#39;Tesla T4&#39;</span><span class="p">:</span>
+  <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    Unfortunately this instance does not have a T4 GPU.</span>
+
+<span class="s2">    Please make sure you&#39;ve configured Colab to request a GPU instance type.</span>
+
+<span class="s2">    Sometimes Colab allocates a Tesla K80 instead of a T4. Resetting the instance.</span>
+
+<span class="s2">    If you get a K80 GPU, try Runtime -&gt; Reset all runtimes...</span>
+<span class="s2">  &quot;&quot;&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Woo! You got the right kind of GPU!&#39;</span><span class="p">)</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="n">Woo</span><span class="o">!</span> <span class="n">You</span> <span class="n">got</span> <span class="n">the</span> <span class="k">right</span> <span class="n">kind</span> <span class="k">of</span> <span class="n">GPU</span><span class="o">!</span>
+</pre></div>
+
+
+<h3 id="installation-of-cudfcuml">Installation of cuDF/cuML<a class="headerlink" href="#installation-of-cudfcuml" title="Permanent link">&para;</a></h3>
+<p>Many thanks to NVIDIA team for this snippet of code to automatically set up everything.</p>
+<div class="codehilite"><pre><span></span><span class="c1"># intall miniconda</span>
+<span class="err">!</span><span class="n">wget</span> <span class="o">-</span><span class="n">c</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">repo</span><span class="o">.</span><span class="n">continuum</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">miniconda</span><span class="o">/</span><span class="n">Miniconda3</span><span class="o">-</span><span class="mf">4.5</span><span class="o">.</span><span class="mi">4</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">x86_64</span><span class="o">.</span><span class="n">sh</span>
+<span class="err">!</span><span class="n">chmod</span> <span class="o">+</span><span class="n">x</span> <span class="n">Miniconda3</span><span class="o">-</span><span class="mf">4.5</span><span class="o">.</span><span class="mi">4</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">x86_64</span><span class="o">.</span><span class="n">sh</span>
+<span class="err">!</span><span class="n">bash</span> <span class="o">./</span><span class="n">Miniconda3</span><span class="o">-</span><span class="mf">4.5</span><span class="o">.</span><span class="mi">4</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">x86_64</span><span class="o">.</span><span class="n">sh</span> <span class="o">-</span><span class="n">b</span> <span class="o">-</span><span class="n">f</span> <span class="o">-</span><span class="n">p</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span>
+
+<span class="c1"># install RAPIDS packages</span>
+<span class="err">!</span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">q</span> <span class="o">-</span><span class="n">y</span> <span class="o">--</span><span class="n">prefix</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> \
+  <span class="o">-</span><span class="n">c</span> <span class="n">rapidsai</span><span class="o">-</span><span class="n">nightly</span><span class="o">/</span><span class="n">label</span><span class="o">/</span><span class="n">cuda10</span><span class="o">.</span><span class="mi">0</span> <span class="o">-</span><span class="n">c</span> <span class="n">nvidia</span><span class="o">/</span><span class="n">label</span><span class="o">/</span><span class="n">cuda10</span><span class="o">.</span><span class="mi">0</span> \
+  <span class="n">cudf</span> <span class="n">cuml</span>
+
+<span class="c1"># set environment vars</span>
+<span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">shutil</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;/usr/local/lib/python3.6/site-packages/&#39;</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;NUMBAPRO_NVVM&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;/usr/local/cuda/nvvm/lib64/libnvvm.so&#39;</span>
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;NUMBAPRO_LIBDEVICE&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;/usr/local/cuda/nvvm/libdevice/&#39;</span>
+
+<span class="c1"># copy .so files to current working dir</span>
+<span class="k">for</span> <span class="n">fn</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;libcudf.so&#39;</span><span class="p">,</span> <span class="s1">&#39;librmm.so&#39;</span><span class="p">]:</span>
+  <span class="n">shutil</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="s1">&#39;/usr/local/lib/&#39;</span><span class="o">+</span><span class="n">fn</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="o">--</span><span class="mi">2019</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">13</span> <span class="mi">09</span>:<span class="mi">31</span>:<span class="mi">42</span><span class="o">--</span>  <span class="nv">https</span>:<span class="o">//</span><span class="nv">repo</span>.<span class="nv">continuum</span>.<span class="nv">io</span><span class="o">/</span><span class="nv">miniconda</span><span class="o">/</span><span class="nv">Miniconda3</span><span class="o">-</span><span class="mi">4</span>.<span class="mi">5</span>.<span class="mi">4</span><span class="o">-</span><span class="nv">Linux</span><span class="o">-</span><span class="nv">x86_64</span>.<span class="nv">sh</span>
+<span class="nv">Resolving</span> <span class="nv">repo</span>.<span class="nv">continuum</span>.<span class="nv">io</span> <span class="ss">(</span><span class="nv">repo</span>.<span class="nv">continuum</span>.<span class="nv">io</span><span class="ss">)</span>... <span class="mi">104</span>.<span class="mi">18</span>.<span class="mi">201</span>.<span class="mi">79</span>, <span class="mi">104</span>.<span class="mi">18</span>.<span class="mi">200</span>.<span class="mi">79</span>, <span class="mi">2606</span>:<span class="mi">4700</span>::<span class="mi">6812</span>:<span class="nv">c84f</span>, ...
+<span class="nv">Connecting</span> <span class="nv">to</span> <span class="nv">repo</span>.<span class="nv">continuum</span>.<span class="nv">io</span> <span class="ss">(</span><span class="nv">repo</span>.<span class="nv">continuum</span>.<span class="nv">io</span><span class="ss">)</span><span class="o">|</span><span class="mi">104</span>.<span class="mi">18</span>.<span class="mi">201</span>.<span class="mi">79</span><span class="o">|</span>:<span class="mi">443</span>... <span class="nv">connected</span>.
+<span class="nv">HTTP</span> <span class="nv">request</span> <span class="nv">sent</span>, <span class="nv">awaiting</span> <span class="nv">response</span>... <span class="mi">200</span> <span class="nv">OK</span>
+<span class="nv">Length</span>: <span class="mi">58468498</span> <span class="ss">(</span><span class="mi">56</span><span class="nv">M</span><span class="ss">)</span> [<span class="nv">application</span><span class="o">/</span><span class="nv">x</span><span class="o">-</span><span class="nv">sh</span>]
+<span class="nv">Saving</span> <span class="nv">to</span>: ‘<span class="nv">Miniconda3</span><span class="o">-</span><span class="mi">4</span>.<span class="mi">5</span>.<span class="mi">4</span><span class="o">-</span><span class="nv">Linux</span><span class="o">-</span><span class="nv">x86_64</span>.<span class="nv">sh</span>’
+
+<span class="nv">Miniconda3</span><span class="o">-</span><span class="mi">4</span>.<span class="mi">5</span>.<span class="mi">4</span><span class="o">-</span><span class="nv">Li</span> <span class="mi">100</span><span class="o">%</span>[<span class="o">===================&gt;</span>]  <span class="mi">55</span>.<span class="mi">76</span><span class="nv">M</span>  <span class="mi">64</span>.<span class="mi">9</span><span class="nv">MB</span><span class="o">/</span><span class="nv">s</span>    <span class="nv">in</span> <span class="mi">0</span>.<span class="mi">9</span><span class="nv">s</span>
+
+<span class="mi">2019</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">13</span> <span class="mi">09</span>:<span class="mi">31</span>:<span class="mi">48</span> <span class="ss">(</span><span class="mi">64</span>.<span class="mi">9</span> <span class="nv">MB</span><span class="o">/</span><span class="nv">s</span><span class="ss">)</span> <span class="o">-</span> ‘<span class="nv">Miniconda3</span><span class="o">-</span><span class="mi">4</span>.<span class="mi">5</span>.<span class="mi">4</span><span class="o">-</span><span class="nv">Linux</span><span class="o">-</span><span class="nv">x86_64</span>.<span class="nv">sh</span>’ <span class="nv">saved</span> [<span class="mi">58468498</span><span class="o">/</span><span class="mi">58468498</span>]
+
+<span class="nv">PREFIX</span><span class="o">=/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">local</span>
+<span class="nv">installing</span>: <span class="nv">python</span><span class="o">-</span><span class="mi">3</span>.<span class="mi">6</span>.<span class="mi">5</span><span class="o">-</span><span class="nv">hc3d631a_2</span> ...
+<span class="nv">Python</span> <span class="mi">3</span>.<span class="mi">6</span>.<span class="mi">5</span> :: <span class="nv">Anaconda</span>, <span class="nv">Inc</span>.
+<span class="nv">installing</span>: <span class="nv">ca</span><span class="o">-</span><span class="nv">certificates</span><span class="o">-</span><span class="mi">2018</span>.<span class="mi">03</span>.<span class="mi">07</span><span class="o">-</span><span class="mi">0</span> ...
+<span class="nv">installing</span>: <span class="nv">conda</span><span class="o">-</span><span class="nv">env</span><span class="o">-</span><span class="mi">2</span>.<span class="mi">6</span>.<span class="mi">0</span><span class="o">-</span><span class="nv">h36134e3_1</span> ...
+<span class="nv">installing</span>: <span class="nv">libgcc</span><span class="o">-</span><span class="nv">ng</span><span class="o">-</span><span class="mi">7</span>.<span class="mi">2</span>.<span class="mi">0</span><span class="o">-</span><span class="nv">hdf63c60_3</span> ...
+<span class="nv">installing</span>: <span class="nv">libstdcxx</span><span class="o">-</span><span class="nv">ng</span><span class="o">-</span><span class="mi">7</span>.<span class="mi">2</span>.<span class="mi">0</span><span class="o">-</span><span class="nv">hdf63c60_3</span> ...
+<span class="nv">installing</span>: <span class="nv">libffi</span><span class="o">-</span><span class="mi">3</span>.<span class="mi">2</span>.<span class="mi">1</span><span class="o">-</span><span class="nv">hd88cf55_4</span> ...
+<span class="nv">installing</span>: <span class="nv">ncurses</span><span class="o">-</span><span class="mi">6</span>.<span class="mi">1</span><span class="o">-</span><span class="nv">hf484d3e_0</span> ...
+<span class="nv">installing</span>: <span class="nv">openssl</span><span class="o">-</span><span class="mi">1</span>.<span class="mi">0</span>.<span class="mi">2</span><span class="nv">o</span><span class="o">-</span><span class="nv">h20670df_0</span> ...
+<span class="nv">installing</span>: <span class="nv">tk</span><span class="o">-</span><span class="mi">8</span>.<span class="mi">6</span>.<span class="mi">7</span><span class="o">-</span><span class="nv">hc745277_3</span> ...
+<span class="nv">installing</span>: <span class="nv">xz</span><span class="o">-</span><span class="mi">5</span>.<span class="mi">2</span>.<span class="mi">4</span><span class="o">-</span><span class="nv">h14c3975_4</span> ...
+<span class="nv">installing</span>: <span class="nv">yaml</span><span class="o">-</span><span class="mi">0</span>.<span class="mi">1</span>.<span class="mi">7</span><span class="o">-</span><span class="nv">had09818_2</span> ...
+<span class="nv">installing</span>: <span class="nv">zlib</span><span class="o">-</span><span class="mi">1</span>.<span class="mi">2</span>.<span class="mi">11</span><span class="o">-</span><span class="nv">ha838bed_2</span> ...
+<span class="nv">installing</span>: <span class="nv">libedit</span><span class="o">-</span><span class="mi">3</span>.<span class="mi">1</span>.<span class="mi">20170329</span><span class="o">-</span><span class="nv">h6b74fdf_2</span> ...
+<span class="nv">installing</span>: <span class="nv">readline</span><span class="o">-</span><span class="mi">7</span>.<span class="mi">0</span><span class="o">-</span><span class="nv">ha6073c6_4</span> ...
+<span class="nv">installing</span>: <span class="nv">sqlite</span><span class="o">-</span><span class="mi">3</span>.<span class="mi">23</span>.<span class="mi">1</span><span class="o">-</span><span class="nv">he433501_0</span> ...
+<span class="nv">installing</span>: <span class="nv">asn1crypto</span><span class="o">-</span><span class="mi">0</span>.<span class="mi">24</span>.<span class="mi">0</span><span class="o">-</span><span class="nv">py36_0</span> ...
+<span class="nv">installing</span>: <span class="nv">certifi</span><span class="o">-</span><span class="mi">2018</span>.<span class="mi">4</span>.<span class="mi">16</span><span class="o">-</span><span class="nv">py36_0</span> ...
+<span class="nv">installing</span>: <span class="nv">chardet</span><span class="o">-</span><span class="mi">3</span>.<span class="mi">0</span>.<span class="mi">4</span><span class="o">-</span><span class="nv">py36h0f667ec_1</span> ...
+<span class="nv">installing</span>: <span class="nv">idna</span><span class="o">-</span><span class="mi">2</span>.<span class="mi">6</span><span class="o">-</span><span class="nv">py36h82fb2a8_1</span> ...
+<span class="nv">installing</span>: <span class="nv">pycosat</span><span class="o">-</span><span class="mi">0</span>.<span class="mi">6</span>.<span class="mi">3</span><span class="o">-</span><span class="nv">py36h0a5515d_0</span> ...
+<span class="nv">installing</span>: <span class="nv">pycparser</span><span class="o">-</span><span class="mi">2</span>.<span class="mi">18</span><span class="o">-</span><span class="nv">py36hf9f622e_1</span> ...
+<span class="nv">installing</span>: <span class="nv">pysocks</span><span class="o">-</span><span class="mi">1</span>.<span class="mi">6</span>.<span class="mi">8</span><span class="o">-</span><span class="nv">py36_0</span> ...
+<span class="nv">installing</span>: <span class="nv">ruamel_yaml</span><span class="o">-</span><span class="mi">0</span>.<span class="mi">15</span>.<span class="mi">37</span><span class="o">-</span><span class="nv">py36h14c3975_2</span> ...
+<span class="nv">installing</span>: <span class="nv">six</span><span class="o">-</span><span class="mi">1</span>.<span class="mi">11</span>.<span class="mi">0</span><span class="o">-</span><span class="nv">py36h372c433_1</span> ...
+<span class="nv">installing</span>: <span class="nv">cffi</span><span class="o">-</span><span class="mi">1</span>.<span class="mi">11</span>.<span class="mi">5</span><span class="o">-</span><span class="nv">py36h9745a5d_0</span> ...
+<span class="nv">installing</span>: <span class="nv">setuptools</span><span class="o">-</span><span class="mi">39</span>.<span class="mi">2</span>.<span class="mi">0</span><span class="o">-</span><span class="nv">py36_0</span> ...
+<span class="nv">installing</span>: <span class="nv">cryptography</span><span class="o">-</span><span class="mi">2</span>.<span class="mi">2</span>.<span class="mi">2</span><span class="o">-</span><span class="nv">py36h14c3975_0</span> ...
+<span class="nv">installing</span>: <span class="nv">wheel</span><span class="o">-</span><span class="mi">0</span>.<span class="mi">31</span>.<span class="mi">1</span><span class="o">-</span><span class="nv">py36_0</span> ...
+<span class="nv">installing</span>: <span class="nv">pip</span><span class="o">-</span><span class="mi">10</span>.<span class="mi">0</span>.<span class="mi">1</span><span class="o">-</span><span class="nv">py36_0</span> ...
+<span class="nv">installing</span>: <span class="nv">pyopenssl</span><span class="o">-</span><span class="mi">18</span>.<span class="mi">0</span>.<span class="mi">0</span><span class="o">-</span><span class="nv">py36_0</span> ...
+<span class="nv">installing</span>: <span class="nv">urllib3</span><span class="o">-</span><span class="mi">1</span>.<span class="mi">22</span><span class="o">-</span><span class="nv">py36hbe7ace6_0</span> ...
+<span class="nv">installing</span>: <span class="nv">requests</span><span class="o">-</span><span class="mi">2</span>.<span class="mi">18</span>.<span class="mi">4</span><span class="o">-</span><span class="nv">py36he2e5f8d_1</span> ...
+<span class="nv">installing</span>: <span class="nv">conda</span><span class="o">-</span><span class="mi">4</span>.<span class="mi">5</span>.<span class="mi">4</span><span class="o">-</span><span class="nv">py36_0</span> ...
+<span class="nv">installation</span> <span class="nv">finished</span>.
+<span class="nv">WARNING</span>:
+    <span class="nv">You</span> <span class="nv">currently</span> <span class="nv">have</span> <span class="nv">a</span> <span class="nv">PYTHONPATH</span> <span class="nv">environment</span> <span class="nv">variable</span> <span class="nv">set</span>. <span class="nv">This</span> <span class="nv">may</span> <span class="nv">cause</span>
+    <span class="nv">unexpected</span> <span class="nv">behavior</span> <span class="nv">when</span> <span class="nv">running</span> <span class="nv">the</span> <span class="nv">Python</span> <span class="nv">interpreter</span> <span class="nv">in</span> <span class="nv">Miniconda3</span>.
+    <span class="k">For</span> <span class="nv">best</span> <span class="nv">results</span>, <span class="nv">please</span> <span class="nv">verify</span> <span class="nv">that</span> <span class="nv">your</span> <span class="nv">PYTHONPATH</span> <span class="nv">only</span> <span class="nv">points</span> <span class="nv">to</span>
+    <span class="nv">directories</span> <span class="nv">of</span> <span class="nv">packages</span> <span class="nv">that</span> <span class="nv">are</span> <span class="nv">compatible</span> <span class="nv">with</span> <span class="nv">the</span> <span class="nv">Python</span> <span class="nv">interpreter</span>
+    <span class="nv">in</span> <span class="nv">Miniconda3</span>: <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">local</span>
+<span class="nv">Solving</span> <span class="nv">environment</span>: ...<span class="nv">working</span>... <span class="nv">done</span>
+
+## <span class="nv">Package</span> <span class="nv">Plan</span> ##
+
+  <span class="nv">environment</span> <span class="nv">location</span>: <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">local</span>
+
+  <span class="nv">added</span> <span class="o">/</span> <span class="nv">updated</span> <span class="nv">specs</span>: 
+    <span class="o">-</span> <span class="nv">cudf</span>
+    <span class="o">-</span> <span class="nv">cuml</span>
+
+
+<span class="nv">The</span> <span class="nv">following</span> <span class="nv">packages</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">downloaded</span>:
+
+    <span class="nv">package</span>                    <span class="o">|</span>            <span class="nv">build</span>
+    <span class="o">---------------------------|-----------------</span>
+    <span class="nv">icu</span><span class="o">-</span><span class="mi">58</span>.<span class="mi">2</span>                   <span class="o">|</span>    <span class="nv">hf484d3e_1000</span>        <span class="mi">22</span>.<span class="mi">6</span> <span class="nv">MB</span>  <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>
+    <span class="nv">libgcc</span><span class="o">-</span><span class="nv">ng</span><span class="o">-</span><span class="mi">8</span>.<span class="mi">2</span>.<span class="mi">0</span>            <span class="o">|</span>       <span class="nv">hdf63c60_1</span>         <span class="mi">7</span>.<span class="mi">6</span> <span class="nv">MB</span>
+    <span class="nv">sqlite</span><span class="o">-</span><span class="mi">3</span>.<span class="mi">26</span>.<span class="mi">0</span>              <span class="o">|</span>    <span class="nv">h67949de_1001</span>         <span class="mi">1</span>.<span class="mi">9</span> <span class="nv">MB</span>  <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>
+    <span class="nv">python</span><span class="o">-</span><span class="mi">3</span>.<span class="mi">6</span>.<span class="mi">7</span>               <span class="o">|</span>    <span class="nv">h381d211_1004</span>        <span class="mi">34</span>.<span class="mi">5</span> <span class="nv">MB</span>  <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>
+    <span class="nv">numpy</span><span class="o">-</span><span class="mi">1</span>.<span class="mi">16</span>.<span class="mi">3</span>               <span class="o">|</span>   <span class="nv">py36he5ce36f_0</span>         <span class="mi">4</span>.<span class="mi">3</span> <span class="nv">MB</span>  <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>
+    <span class="nv">cudatoolkit</span><span class="o">-</span><span class="mi">10</span>.<span class="mi">0</span>.<span class="mi">130</span>       <span class="o">|</span>                <span class="mi">0</span>       <span class="mi">380</span>.<span class="mi">0</span> <span class="nv">MB</span>
+    <span class="nv">libcudf</span><span class="o">-</span><span class="mi">0</span>.<span class="mi">7</span>.<span class="mi">0</span>.<span class="nv">dev0</span>         <span class="o">|</span>    <span class="nv">cuda10</span>.<span class="mi">0</span><span class="nv">_1567</span>        <span class="mi">21</span>.<span class="mi">0</span> <span class="nv">MB</span>  <span class="nv">rapidsai</span><span class="o">-</span><span class="nv">nightly</span><span class="o">/</span><span class="nv">label</span><span class="o">/</span><span class="nv">cuda10</span>.<span class="mi">0</span>
+    <span class="nv">parquet</span><span class="o">-</span><span class="nv">cpp</span><span class="o">-</span><span class="mi">1</span>.<span class="mi">5</span>.<span class="mi">1</span>          <span class="o">|</span>                <span class="mi">4</span>           <span class="mi">3</span> <span class="nv">KB</span>  <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>
+    <span class="nv">arrow</span><span class="o">-</span><span class="nv">cpp</span><span class="o">-</span><span class="mi">0</span>.<span class="mi">12</span>.<span class="mi">1</span>           <span class="o">|</span>   <span class="nv">py36h0e61e49_0</span>         <span class="mi">6</span>.<span class="mi">9</span> <span class="nv">MB</span>  <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>
+    <span class="nv">liblapack</span><span class="o">-</span><span class="mi">3</span>.<span class="mi">8</span>.<span class="mi">0</span>            <span class="o">|</span>       <span class="mi">9</span><span class="nv">_openblas</span>           <span class="mi">6</span> <span class="nv">KB</span>  <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>
+    <span class="nv">libstdcxx</span><span class="o">-</span><span class="nv">ng</span><span class="o">-</span><span class="mi">8</span>.<span class="mi">2</span>.<span class="mi">0</span>         <span class="o">|</span>       <span class="nv">hdf63c60_1</span>         <span class="mi">2</span>.<span class="mi">9</span> <span class="nv">MB</span>
+    <span class="nv">libblas</span><span class="o">-</span><span class="mi">3</span>.<span class="mi">8</span>.<span class="mi">0</span>              <span class="o">|</span>       <span class="mi">9</span><span class="nv">_openblas</span>           <span class="mi">6</span> <span class="nv">KB</span>  <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>
+    <span class="nv">openssl</span><span class="o">-</span><span class="mi">1</span>.<span class="mi">1</span>.<span class="mi">1</span><span class="nv">b</span>             <span class="o">|</span>       <span class="nv">h14c3975_1</span>         <span class="mi">4</span>.<span class="mi">0</span> <span class="nv">MB</span>  <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>
+    <span class="nv">cython</span><span class="o">-</span><span class="mi">0</span>.<span class="mi">29</span>.<span class="mi">7</span>              <span class="o">|</span>   <span class="nv">py36he1b5a44_0</span>         <span class="mi">2</span>.<span class="mi">2</span> <span class="nv">MB</span>  <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>
+    <span class="nv">cryptography</span><span class="o">-</span><span class="mi">2</span>.<span class="mi">6</span>.<span class="mi">1</span>         <span class="o">|</span>   <span class="nv">py36h72c5cf5_0</span>         <span class="mi">606</span> <span class="nv">KB</span>  <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>
+    <span class="nv">certifi</span><span class="o">-</span><span class="mi">2019</span>.<span class="mi">3</span>.<span class="mi">9</span>           <span class="o">|</span>           <span class="nv">py36_0</span>         <span class="mi">149</span> <span class="nv">KB</span>  <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>
+    <span class="nv">ca</span><span class="o">-</span><span class="nv">certificates</span><span class="o">-</span><span class="mi">2019</span>.<span class="mi">3</span>.<span class="mi">9</span>   <span class="o">|</span>       <span class="nv">hecc5488_0</span>         <span class="mi">146</span> <span class="nv">KB</span>  <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>
+    <span class="nv">tk</span><span class="o">-</span><span class="mi">8</span>.<span class="mi">6</span>.<span class="mi">9</span>                   <span class="o">|</span>    <span class="nv">h84994c4_1001</span>         <span class="mi">3</span>.<span class="mi">2</span> <span class="nv">MB</span>  <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>
+    <span class="nv">libcuml</span><span class="o">-</span><span class="mi">0</span>.<span class="mi">8</span>.<span class="mi">0</span><span class="nv">a</span>             <span class="o">|</span>     <span class="nv">cuda10</span>.<span class="mi">0</span><span class="nv">_610</span>        <span class="mi">24</span>.<span class="mi">4</span> <span class="nv">MB</span>  <span class="nv">rapidsai</span><span class="o">-</span><span class="nv">nightly</span><span class="o">/</span><span class="nv">label</span><span class="o">/</span><span class="nv">cuda10</span>.<span class="mi">0</span>
+    <span class="nv">bzip2</span><span class="o">-</span><span class="mi">1</span>.<span class="mi">0</span>.<span class="mi">6</span>                <span class="o">|</span>    <span class="nv">h14c3975_1002</span>         <span class="mi">415</span> <span class="nv">KB</span>  <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>
+    <span class="nv">cuml</span><span class="o">-</span><span class="mi">0</span>.<span class="mi">8</span>.<span class="mi">0</span><span class="nv">a</span>                <span class="o">|</span><span class="nv">cuda10</span>.<span class="mi">0</span><span class="nv">_py36_610</span>         <span class="mi">3</span>.<span class="mi">0</span> <span class="nv">MB</span>  <span class="nv">rapidsai</span><span class="o">-</span><span class="nv">nightly</span><span class="o">/</span><span class="nv">label</span><span class="o">/</span><span class="nv">cuda10</span>.<span class="mi">0</span>
+    <span class="nv">python</span><span class="o">-</span><span class="nv">dateutil</span><span class="o">-</span><span class="mi">2</span>.<span class="mi">8</span>.<span class="mi">0</span>      <span class="o">|</span>             <span class="nv">py_0</span>         <span class="mi">219</span> <span class="nv">KB</span>  <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>
+    <span class="nv">conda</span><span class="o">-</span><span class="mi">4</span>.<span class="mi">6</span>.<span class="mi">14</span>               <span class="o">|</span>           <span class="nv">py36_0</span>         <span class="mi">2</span>.<span class="mi">1</span> <span class="nv">MB</span>  <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>
+    <span class="nv">openblas</span><span class="o">-</span><span class="mi">0</span>.<span class="mi">3</span>.<span class="mi">6</span>             <span class="o">|</span>       <span class="nv">h6e990d7_2</span>        <span class="mi">15</span>.<span class="mi">8</span> <span class="nv">MB</span>  <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>
+    <span class="nv">thrift</span><span class="o">-</span><span class="nv">cpp</span><span class="o">-</span><span class="mi">0</span>.<span class="mi">12</span>.<span class="mi">0</span>          <span class="o">|</span>    <span class="nv">h0a07b25_1002</span>         <span class="mi">2</span>.<span class="mi">4</span> <span class="nv">MB</span>  <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>
+    <span class="nv">rmm</span><span class="o">-</span><span class="mi">0</span>.<span class="mi">7</span>.<span class="mi">0</span>.<span class="nv">dev0</span>             <span class="o">|</span>          <span class="nv">py36_54</span>          <span class="mi">14</span> <span class="nv">KB</span>  <span class="nv">rapidsai</span><span class="o">-</span><span class="nv">nightly</span><span class="o">/</span><span class="nv">label</span><span class="o">/</span><span class="nv">cuda10</span>.<span class="mi">0</span>
+    <span class="nv">pyarrow</span><span class="o">-</span><span class="mi">0</span>.<span class="mi">12</span>.<span class="mi">1</span>             <span class="o">|</span>   <span class="nv">py36hbbcf98d_0</span>         <span class="mi">2</span>.<span class="mi">2</span> <span class="nv">MB</span>  <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>
+    <span class="nv">libprotobuf</span><span class="o">-</span><span class="mi">3</span>.<span class="mi">6</span>.<span class="mi">1</span>          <span class="o">|</span>    <span class="nv">hdbcaa40_1001</span>         <span class="mi">4</span>.<span class="mi">0</span> <span class="nv">MB</span>  <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>
+    <span class="nv">nvstrings</span><span class="o">-</span><span class="mi">0</span>.<span class="mi">7</span>.<span class="mi">0</span>.<span class="nv">dev0</span>       <span class="o">|</span>         <span class="nv">py36_143</span>          <span class="mi">88</span> <span class="nv">KB</span>  <span class="nv">rapidsai</span><span class="o">-</span><span class="nv">nightly</span><span class="o">/</span><span class="nv">label</span><span class="o">/</span><span class="nv">cuda10</span>.<span class="mi">0</span>
+    <span class="nv">librmm</span><span class="o">-</span><span class="mi">0</span>.<span class="mi">7</span>.<span class="mi">0</span>.<span class="nv">dev0</span>          <span class="o">|</span>      <span class="nv">cuda10</span>.<span class="mi">0</span><span class="nv">_54</span>          <span class="mi">39</span> <span class="nv">KB</span>  <span class="nv">rapidsai</span><span class="o">-</span><span class="nv">nightly</span><span class="o">/</span><span class="nv">label</span><span class="o">/</span><span class="nv">cuda10</span>.<span class="mi">0</span>
+    <span class="nv">libcblas</span><span class="o">-</span><span class="mi">3</span>.<span class="mi">8</span>.<span class="mi">0</span>             <span class="o">|</span>       <span class="mi">9</span><span class="nv">_openblas</span>           <span class="mi">6</span> <span class="nv">KB</span>  <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>
+    <span class="nv">libgfortran</span><span class="o">-</span><span class="nv">ng</span><span class="o">-</span><span class="mi">7</span>.<span class="mi">3</span>.<span class="mi">0</span>       <span class="o">|</span>       <span class="nv">hdf63c60_0</span>         <span class="mi">1</span>.<span class="mi">3</span> <span class="nv">MB</span>
+    <span class="nv">libnvstrings</span><span class="o">-</span><span class="mi">0</span>.<span class="mi">7</span>.<span class="mi">0</span>.<span class="nv">dev0</span>    <span class="o">|</span>     <span class="nv">cuda10</span>.<span class="mi">0</span><span class="nv">_132</span>         <span class="mi">9</span>.<span class="mi">3</span> <span class="nv">MB</span>  <span class="nv">rapidsai</span><span class="o">-</span><span class="nv">nightly</span><span class="o">/</span><span class="nv">label</span><span class="o">/</span><span class="nv">cuda10</span>.<span class="mi">0</span>
+    <span class="nv">llvmlite</span><span class="o">-</span><span class="mi">0</span>.<span class="mi">28</span>.<span class="mi">0</span>            <span class="o">|</span>   <span class="nv">py36hdbcaa40_0</span>        <span class="mi">20</span>.<span class="mi">2</span> <span class="nv">MB</span>  <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>
+    <span class="nv">cudf</span><span class="o">-</span><span class="mi">0</span>.<span class="mi">7</span>.<span class="mi">0</span>.<span class="nv">dev0</span>            <span class="o">|</span>        <span class="nv">py36_1568</span>         <span class="mi">2</span>.<span class="mi">7</span> <span class="nv">MB</span>  <span class="nv">rapidsai</span><span class="o">-</span><span class="nv">nightly</span><span class="o">/</span><span class="nv">label</span><span class="o">/</span><span class="nv">cuda10</span>.<span class="mi">0</span>
+    <span class="nv">pytz</span><span class="o">-</span><span class="mi">2019</span>.<span class="mi">1</span>                <span class="o">|</span>             <span class="nv">py_0</span>         <span class="mi">227</span> <span class="nv">KB</span>  <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>
+    <span class="nv">numba</span><span class="o">-</span><span class="mi">0</span>.<span class="mi">43</span>.<span class="mi">1</span>               <span class="o">|</span>   <span class="nv">py36hf2d7682_0</span>         <span class="mi">2</span>.<span class="mi">9</span> <span class="nv">MB</span>  <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>
+    <span class="nv">boost</span><span class="o">-</span><span class="nv">cpp</span><span class="o">-</span><span class="mi">1</span>.<span class="mi">68</span>.<span class="mi">0</span>           <span class="o">|</span>    <span class="nv">h11c811c_1000</span>        <span class="mi">20</span>.<span class="mi">5</span> <span class="nv">MB</span>  <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>
+    <span class="nv">pandas</span><span class="o">-</span><span class="mi">0</span>.<span class="mi">24</span>.<span class="mi">2</span>              <span class="o">|</span>   <span class="nv">py36hf484d3e_0</span>        <span class="mi">11</span>.<span class="mi">1</span> <span class="nv">MB</span>  <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>
+    <span class="nv">libcumlmg</span><span class="o">-</span><span class="mi">0</span>.<span class="mi">0</span>.<span class="mi">0</span>.<span class="nv">dev0</span>       <span class="o">|</span>     <span class="nv">cuda10</span>.<span class="mi">0</span><span class="nv">_373</span>         <span class="mi">955</span> <span class="nv">KB</span>  <span class="nv">nvidia</span><span class="o">/</span><span class="nv">label</span><span class="o">/</span><span class="nv">cuda10</span>.<span class="mi">0</span>
+    <span class="o">------------------------------------------------------------</span>
+                                           <span class="nv">Total</span>:       <span class="mi">615</span>.<span class="mi">7</span> <span class="nv">MB</span>
+
+<span class="nv">The</span> <span class="nv">following</span> <span class="nv">NEW</span> <span class="nv">packages</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">INSTALLED</span>:
+
+    <span class="nv">arrow</span><span class="o">-</span><span class="nv">cpp</span>:       <span class="mi">0</span>.<span class="mi">12</span>.<span class="mi">1</span><span class="o">-</span><span class="nv">py36h0e61e49_0</span>    <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>                    
+    <span class="nv">boost</span><span class="o">-</span><span class="nv">cpp</span>:       <span class="mi">1</span>.<span class="mi">68</span>.<span class="mi">0</span><span class="o">-</span><span class="nv">h11c811c_1000</span>     <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>                    
+    <span class="nv">bzip2</span>:           <span class="mi">1</span>.<span class="mi">0</span>.<span class="mi">6</span><span class="o">-</span><span class="nv">h14c3975_1002</span>      <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>                    
+    <span class="nv">cudatoolkit</span>:     <span class="mi">10</span>.<span class="mi">0</span>.<span class="mi">130</span><span class="o">-</span><span class="mi">0</span>                                              
+    <span class="nv">cudf</span>:            <span class="mi">0</span>.<span class="mi">7</span>.<span class="mi">0</span>.<span class="nv">dev0</span><span class="o">-</span><span class="nv">py36_1568</span>     <span class="nv">rapidsai</span><span class="o">-</span><span class="nv">nightly</span><span class="o">/</span><span class="nv">label</span><span class="o">/</span><span class="nv">cuda10</span>.<span class="mi">0</span>
+    <span class="nv">cuml</span>:            <span class="mi">0</span>.<span class="mi">8</span>.<span class="mi">0</span><span class="nv">a</span><span class="o">-</span><span class="nv">cuda10</span>.<span class="mi">0</span><span class="nv">_py36_610</span> <span class="nv">rapidsai</span><span class="o">-</span><span class="nv">nightly</span><span class="o">/</span><span class="nv">label</span><span class="o">/</span><span class="nv">cuda10</span>.<span class="mi">0</span>
+    <span class="nv">cython</span>:          <span class="mi">0</span>.<span class="mi">29</span>.<span class="mi">7</span><span class="o">-</span><span class="nv">py36he1b5a44_0</span>    <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>                    
+    <span class="nv">icu</span>:             <span class="mi">58</span>.<span class="mi">2</span><span class="o">-</span><span class="nv">hf484d3e_1000</span>       <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>                    
+    <span class="nv">libblas</span>:         <span class="mi">3</span>.<span class="mi">8</span>.<span class="mi">0</span><span class="o">-</span><span class="mi">9</span><span class="nv">_openblas</span>         <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>                    
+    <span class="nv">libcblas</span>:        <span class="mi">3</span>.<span class="mi">8</span>.<span class="mi">0</span><span class="o">-</span><span class="mi">9</span><span class="nv">_openblas</span>         <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>                    
+    <span class="nv">libcudf</span>:         <span class="mi">0</span>.<span class="mi">7</span>.<span class="mi">0</span>.<span class="nv">dev0</span><span class="o">-</span><span class="nv">cuda10</span>.<span class="mi">0</span><span class="nv">_1567</span> <span class="nv">rapidsai</span><span class="o">-</span><span class="nv">nightly</span><span class="o">/</span><span class="nv">label</span><span class="o">/</span><span class="nv">cuda10</span>.<span class="mi">0</span>
+    <span class="nv">libcuml</span>:         <span class="mi">0</span>.<span class="mi">8</span>.<span class="mi">0</span><span class="nv">a</span><span class="o">-</span><span class="nv">cuda10</span>.<span class="mi">0</span><span class="nv">_610</span>      <span class="nv">rapidsai</span><span class="o">-</span><span class="nv">nightly</span><span class="o">/</span><span class="nv">label</span><span class="o">/</span><span class="nv">cuda10</span>.<span class="mi">0</span>
+    <span class="nv">libcumlmg</span>:       <span class="mi">0</span>.<span class="mi">0</span>.<span class="mi">0</span>.<span class="nv">dev0</span><span class="o">-</span><span class="nv">cuda10</span>.<span class="mi">0</span><span class="nv">_373</span>  <span class="nv">nvidia</span><span class="o">/</span><span class="nv">label</span><span class="o">/</span><span class="nv">cuda10</span>.<span class="mi">0</span>          
+    <span class="nv">libgfortran</span><span class="o">-</span><span class="nv">ng</span>:  <span class="mi">7</span>.<span class="mi">3</span>.<span class="mi">0</span><span class="o">-</span><span class="nv">hdf63c60_0</span>                                        
+    <span class="nv">liblapack</span>:       <span class="mi">3</span>.<span class="mi">8</span>.<span class="mi">0</span><span class="o">-</span><span class="mi">9</span><span class="nv">_openblas</span>         <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>                    
+    <span class="nv">libnvstrings</span>:    <span class="mi">0</span>.<span class="mi">7</span>.<span class="mi">0</span>.<span class="nv">dev0</span><span class="o">-</span><span class="nv">cuda10</span>.<span class="mi">0</span><span class="nv">_132</span>  <span class="nv">rapidsai</span><span class="o">-</span><span class="nv">nightly</span><span class="o">/</span><span class="nv">label</span><span class="o">/</span><span class="nv">cuda10</span>.<span class="mi">0</span>
+    <span class="nv">libprotobuf</span>:     <span class="mi">3</span>.<span class="mi">6</span>.<span class="mi">1</span><span class="o">-</span><span class="nv">hdbcaa40_1001</span>      <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>                    
+    <span class="nv">librmm</span>:          <span class="mi">0</span>.<span class="mi">7</span>.<span class="mi">0</span>.<span class="nv">dev0</span><span class="o">-</span><span class="nv">cuda10</span>.<span class="mi">0</span><span class="nv">_54</span>   <span class="nv">rapidsai</span><span class="o">-</span><span class="nv">nightly</span><span class="o">/</span><span class="nv">label</span><span class="o">/</span><span class="nv">cuda10</span>.<span class="mi">0</span>
+    <span class="nv">llvmlite</span>:        <span class="mi">0</span>.<span class="mi">28</span>.<span class="mi">0</span><span class="o">-</span><span class="nv">py36hdbcaa40_0</span>    <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>                    
+    <span class="nv">numba</span>:           <span class="mi">0</span>.<span class="mi">43</span>.<span class="mi">1</span><span class="o">-</span><span class="nv">py36hf2d7682_0</span>    <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>                    
+    <span class="nv">numpy</span>:           <span class="mi">1</span>.<span class="mi">16</span>.<span class="mi">3</span><span class="o">-</span><span class="nv">py36he5ce36f_0</span>    <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>                    
+    <span class="nv">nvstrings</span>:       <span class="mi">0</span>.<span class="mi">7</span>.<span class="mi">0</span>.<span class="nv">dev0</span><span class="o">-</span><span class="nv">py36_143</span>      <span class="nv">rapidsai</span><span class="o">-</span><span class="nv">nightly</span><span class="o">/</span><span class="nv">label</span><span class="o">/</span><span class="nv">cuda10</span>.<span class="mi">0</span>
+    <span class="nv">openblas</span>:        <span class="mi">0</span>.<span class="mi">3</span>.<span class="mi">6</span><span class="o">-</span><span class="nv">h6e990d7_2</span>         <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>                    
+    <span class="nv">pandas</span>:          <span class="mi">0</span>.<span class="mi">24</span>.<span class="mi">2</span><span class="o">-</span><span class="nv">py36hf484d3e_0</span>    <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>                    
+    <span class="nv">parquet</span><span class="o">-</span><span class="nv">cpp</span>:     <span class="mi">1</span>.<span class="mi">5</span>.<span class="mi">1</span><span class="o">-</span><span class="mi">4</span>                  <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>                    
+    <span class="nv">pyarrow</span>:         <span class="mi">0</span>.<span class="mi">12</span>.<span class="mi">1</span><span class="o">-</span><span class="nv">py36hbbcf98d_0</span>    <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>                    
+    <span class="nv">python</span><span class="o">-</span><span class="nv">dateutil</span>: <span class="mi">2</span>.<span class="mi">8</span>.<span class="mi">0</span><span class="o">-</span><span class="nv">py_0</span>               <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>                    
+    <span class="nv">pytz</span>:            <span class="mi">2019</span>.<span class="mi">1</span><span class="o">-</span><span class="nv">py_0</span>              <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>                    
+    <span class="nv">rmm</span>:             <span class="mi">0</span>.<span class="mi">7</span>.<span class="mi">0</span>.<span class="nv">dev0</span><span class="o">-</span><span class="nv">py36_54</span>       <span class="nv">rapidsai</span><span class="o">-</span><span class="nv">nightly</span><span class="o">/</span><span class="nv">label</span><span class="o">/</span><span class="nv">cuda10</span>.<span class="mi">0</span>
+    <span class="nv">thrift</span><span class="o">-</span><span class="nv">cpp</span>:      <span class="mi">0</span>.<span class="mi">12</span>.<span class="mi">0</span><span class="o">-</span><span class="nv">h0a07b25_1002</span>     <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>
+
+<span class="nv">The</span> <span class="nv">following</span> <span class="nv">packages</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">UPDATED</span>:
+
+    <span class="nv">ca</span><span class="o">-</span><span class="nv">certificates</span>: <span class="mi">2018</span>.<span class="mi">03</span>.<span class="mi">07</span><span class="o">-</span><span class="mi">0</span>                                             <span class="o">--&gt;</span> <span class="mi">2019</span>.<span class="mi">3</span>.<span class="mi">9</span><span class="o">-</span><span class="nv">hecc5488_0</span>  <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>
+    <span class="nv">certifi</span>:         <span class="mi">2018</span>.<span class="mi">4</span>.<span class="mi">16</span><span class="o">-</span><span class="nv">py36_0</span>                                         <span class="o">--&gt;</span> <span class="mi">2019</span>.<span class="mi">3</span>.<span class="mi">9</span><span class="o">-</span><span class="nv">py36_0</span>      <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>
+    <span class="nv">conda</span>:           <span class="mi">4</span>.<span class="mi">5</span>.<span class="mi">4</span><span class="o">-</span><span class="nv">py36_0</span>                                             <span class="o">--&gt;</span> <span class="mi">4</span>.<span class="mi">6</span>.<span class="mi">14</span><span class="o">-</span><span class="nv">py36_0</span>        <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>
+    <span class="nv">cryptography</span>:    <span class="mi">2</span>.<span class="mi">2</span>.<span class="mi">2</span><span class="o">-</span><span class="nv">py36h14c3975_0</span>                                     <span class="o">--&gt;</span> <span class="mi">2</span>.<span class="mi">6</span>.<span class="mi">1</span><span class="o">-</span><span class="nv">py36h72c5cf5_0</span> <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>
+    <span class="nv">libgcc</span><span class="o">-</span><span class="nv">ng</span>:       <span class="mi">7</span>.<span class="mi">2</span>.<span class="mi">0</span><span class="o">-</span><span class="nv">hdf63c60_3</span>                                         <span class="o">--&gt;</span> <span class="mi">8</span>.<span class="mi">2</span>.<span class="mi">0</span><span class="o">-</span><span class="nv">hdf63c60_1</span>                
+    <span class="nv">libstdcxx</span><span class="o">-</span><span class="nv">ng</span>:    <span class="mi">7</span>.<span class="mi">2</span>.<span class="mi">0</span><span class="o">-</span><span class="nv">hdf63c60_3</span>                                         <span class="o">--&gt;</span> <span class="mi">8</span>.<span class="mi">2</span>.<span class="mi">0</span><span class="o">-</span><span class="nv">hdf63c60_1</span>                
+    <span class="nv">openssl</span>:         <span class="mi">1</span>.<span class="mi">0</span>.<span class="mi">2</span><span class="nv">o</span><span class="o">-</span><span class="nv">h20670df_0</span>                                        <span class="o">--&gt;</span> <span class="mi">1</span>.<span class="mi">1</span>.<span class="mi">1</span><span class="nv">b</span><span class="o">-</span><span class="nv">h14c3975_1</span>    <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>
+    <span class="nv">python</span>:          <span class="mi">3</span>.<span class="mi">6</span>.<span class="mi">5</span><span class="o">-</span><span class="nv">hc3d631a_2</span>                                         <span class="o">--&gt;</span> <span class="mi">3</span>.<span class="mi">6</span>.<span class="mi">7</span><span class="o">-</span><span class="nv">h381d211_1004</span>  <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>
+    <span class="nv">sqlite</span>:          <span class="mi">3</span>.<span class="mi">23</span>.<span class="mi">1</span><span class="o">-</span><span class="nv">he433501_0</span>                                        <span class="o">--&gt;</span> <span class="mi">3</span>.<span class="mi">26</span>.<span class="mi">0</span><span class="o">-</span><span class="nv">h67949de_1001</span> <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>
+    <span class="nv">tk</span>:              <span class="mi">8</span>.<span class="mi">6</span>.<span class="mi">7</span><span class="o">-</span><span class="nv">hc745277_3</span>                                         <span class="o">--&gt;</span> <span class="mi">8</span>.<span class="mi">6</span>.<span class="mi">9</span><span class="o">-</span><span class="nv">h84994c4_1001</span>  <span class="nv">conda</span><span class="o">-</span><span class="nv">forge</span>
+
+<span class="nv">Preparing</span> <span class="nv">transaction</span>: ...<span class="nv">working</span>... <span class="nv">done</span>
+<span class="nv">Verifying</span> <span class="nv">transaction</span>: ...<span class="nv">working</span>... <span class="nv">done</span>
+<span class="nv">Executing</span> <span class="nv">transaction</span>: ...<span class="nv">working</span>... <span class="nv">done</span>
+</pre></div>
+
+
+<h2 id="critical-imports">Critical Imports<a class="headerlink" href="#critical-imports" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="c1"># Critical imports</span>
+<span class="kn">import</span> <span class="nn">nvstrings</span><span class="o">,</span> <span class="nn">nvcategory</span><span class="o">,</span> <span class="nn">cudf</span>
+<span class="kn">import</span> <span class="nn">cuml</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+</pre></div>
+
+<h2 id="creating">Creating<a class="headerlink" href="#creating" title="Permanent link">&para;</a></h2>
+<h3 id="create-a-series-of-integers">Create a Series of integers<a class="headerlink" href="#create-a-series-of-integers" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="n">gdf</span> <span class="o">=</span> <span class="n">cudf</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">gdf</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">gdf</span><span class="p">))</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="mi">0</span>    <span class="mi">1</span>
+<span class="mi">1</span>    <span class="mi">2</span>
+<span class="mi">2</span>    <span class="mi">3</span>
+<span class="mi">3</span>    <span class="mi">4</span>
+<span class="mi">4</span>    <span class="mi">5</span>
+<span class="mi">5</span>    <span class="mi">6</span>
+<span class="n">dtype</span><span class="p">:</span> <span class="n">int64</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="s1">&#39;cudf.dataframe.series.Series&#39;</span><span class="o">&gt;</span>
+</pre></div>
+
+
+<h3 id="create-a-series-of-floats">Create a Series of floats<a class="headerlink" href="#create-a-series-of-floats" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="n">gdf</span> <span class="o">=</span> <span class="n">cudf</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">2.</span><span class="p">,</span> <span class="mf">3.</span><span class="p">,</span> <span class="mf">4.</span><span class="p">,</span> <span class="mf">5.</span><span class="p">,</span> <span class="mf">6.</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">gdf</span><span class="p">)</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="mi">0</span>    <span class="mi">1</span><span class="p">.</span><span class="mi">0</span>
+<span class="mi">1</span>    <span class="mi">2</span><span class="p">.</span><span class="mi">0</span>
+<span class="mi">2</span>    <span class="mi">3</span><span class="p">.</span><span class="mi">0</span>
+<span class="mi">3</span>    <span class="mi">4</span><span class="p">.</span><span class="mi">0</span>
+<span class="mi">4</span>    <span class="mi">5</span><span class="p">.</span><span class="mi">0</span>
+<span class="mi">5</span>    <span class="mi">6</span><span class="p">.</span><span class="mi">0</span>
+<span class="n">dtype</span><span class="p">:</span> <span class="n">float64</span>
+</pre></div>
+
+
+<h3 id="create-a-series-of-strings">Create a  Series of strings<a class="headerlink" href="#create-a-series-of-strings" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="n">gdf</span> <span class="o">=</span> <span class="n">cudf</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">gdf</span><span class="p">)</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="mi">0</span>    <span class="n">a</span>
+<span class="mi">1</span>    <span class="n">b</span>
+<span class="mi">2</span>    <span class="k">c</span>
+<span class="n">dtype</span><span class="p">:</span> <span class="k">object</span>
+</pre></div>
+
+
+<h3 id="create-3-column-dataframe">Create 3 column DataFrame<a class="headerlink" href="#create-3-column-dataframe" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Consisting of dates, integers and floats</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="c1"># Import</span>
+<span class="kn">import</span> <span class="nn">datetime</span> <span class="kn">as</span> <span class="nn">dt</span>
+
+<span class="c1"># Using a list of tuples</span>
+<span class="c1"># Each element in the list represents a category</span>
+<span class="c1"># The first element of the tuple is the category&#39;s name</span>
+<span class="c1"># The second element of the tuple is a list of the values in that category</span>
+<span class="n">gdf</span> <span class="o">=</span> <span class="n">cudf</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span>
+    <span class="c1"># Create 10 busindates ess from 1st January 2019 via pandas</span>
+    <span class="p">(</span><span class="s1">&#39;dates&#39;</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="s1">&#39;1/1/2019&#39;</span><span class="p">,</span> <span class="n">periods</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;B&#39;</span><span class="p">)),</span>
+    <span class="c1"># Integers</span>
+    <span class="p">(</span><span class="s1">&#39;integers&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]),</span>
+    <span class="c1"># Floats</span>
+    <span class="p">(</span><span class="s1">&#39;floats&#39;</span><span class="p">,</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)])</span>
+<span class="p">])</span>
+
+<span class="c1"># Print dataframe</span>
+<span class="k">print</span><span class="p">(</span><span class="n">gdf</span><span class="p">)</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span>                     <span class="n">dates</span>  <span class="n">integers</span>  <span class="n">floats</span>
+<span class="mi">0</span> <span class="mi">2019</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span><span class="n">T00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">.</span><span class="mi">000</span>         <span class="mi">0</span>     <span class="mi">0</span><span class="p">.</span><span class="mi">0</span>
+<span class="mi">1</span> <span class="mi">2019</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">02</span><span class="n">T00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">.</span><span class="mi">000</span>         <span class="mi">1</span>     <span class="mi">1</span><span class="p">.</span><span class="mi">0</span>
+<span class="mi">2</span> <span class="mi">2019</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">03</span><span class="n">T00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">.</span><span class="mi">000</span>         <span class="mi">2</span>     <span class="mi">2</span><span class="p">.</span><span class="mi">0</span>
+<span class="mi">3</span> <span class="mi">2019</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">04</span><span class="n">T00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">.</span><span class="mi">000</span>         <span class="mi">3</span>     <span class="mi">3</span><span class="p">.</span><span class="mi">0</span>
+<span class="mi">4</span> <span class="mi">2019</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">07</span><span class="n">T00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">.</span><span class="mi">000</span>         <span class="mi">4</span>     <span class="mi">4</span><span class="p">.</span><span class="mi">0</span>
+<span class="mi">5</span> <span class="mi">2019</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">08</span><span class="n">T00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">.</span><span class="mi">000</span>         <span class="mi">5</span>     <span class="mi">5</span><span class="p">.</span><span class="mi">0</span>
+<span class="mi">6</span> <span class="mi">2019</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">09</span><span class="n">T00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">.</span><span class="mi">000</span>         <span class="mi">6</span>     <span class="mi">6</span><span class="p">.</span><span class="mi">0</span>
+<span class="mi">7</span> <span class="mi">2019</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">10</span><span class="n">T00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">.</span><span class="mi">000</span>         <span class="mi">7</span>     <span class="mi">7</span><span class="p">.</span><span class="mi">0</span>
+<span class="mi">8</span> <span class="mi">2019</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">11</span><span class="n">T00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">.</span><span class="mi">000</span>         <span class="mi">8</span>     <span class="mi">8</span><span class="p">.</span><span class="mi">0</span>
+<span class="mi">9</span> <span class="mi">2019</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">14</span><span class="n">T00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">.</span><span class="mi">000</span>         <span class="mi">9</span>     <span class="mi">9</span><span class="p">.</span><span class="mi">0</span>
+</pre></div>
+
+
+<h3 id="create-2-column-dataframe">Create 2 column Dataframe<a class="headerlink" href="#create-2-column-dataframe" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Consisting of integers and string category</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="c1"># Using a list of tuples</span>
+<span class="c1"># Each element in the list represents a category</span>
+<span class="c1"># The first element of the tuple is the category&#39;s name</span>
+<span class="c1"># The second element of the tuple is a list of the values in that category</span>
+<span class="n">gdf</span> <span class="o">=</span> <span class="n">cudf</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span>
+    <span class="p">(</span><span class="s1">&#39;integers&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span> <span class="p">,</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]),</span>
+    <span class="p">(</span><span class="s1">&#39;string&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">])</span>
+<span class="p">])</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">gdf</span><span class="p">)</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span>   <span class="n">integers</span>  <span class="n">string</span>
+<span class="mi">0</span>         <span class="mi">1</span>       <span class="n">a</span>
+<span class="mi">1</span>         <span class="mi">2</span>       <span class="n">b</span>
+<span class="mi">2</span>         <span class="mi">3</span>       <span class="k">c</span>
+<span class="mi">3</span>         <span class="mi">4</span>       <span class="n">d</span>
+</pre></div>
+
+
+<h3 id="create-a-2-column-dataframe-with-pandas-bridge">Create a 2 Column  Dataframe with Pandas Bridge<a class="headerlink" href="#create-a-2-column-dataframe-with-pandas-bridge" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Consisting of integers and string category</li>
+<li>For all string columns, you must convert them to type <code class="codehilite"><span class="n">category</span></code> for filtering functions to work intuitively (for now)</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="c1"># Create pandas dataframe</span>
+<span class="n">pandas_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;integers&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> 
+    <span class="s1">&#39;strings&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="c1"># Convert string column to category format</span>
+<span class="n">pandas_df</span><span class="p">[</span><span class="s1">&#39;strings&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pandas_df</span><span class="p">[</span><span class="s1">&#39;strings&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;category&#39;</span><span class="p">)</span>
+
+<span class="c1"># Bridge from pandas to cudf</span>
+<span class="n">gdf</span> <span class="o">=</span> <span class="n">cudf</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_pandas</span><span class="p">(</span><span class="n">pandas_df</span><span class="p">)</span>
+
+<span class="c1"># Print dataframe</span>
+<span class="k">print</span><span class="p">(</span><span class="n">gdf</span><span class="p">)</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span>   <span class="n">integers</span>  <span class="n">strings</span>
+<span class="mi">0</span>         <span class="mi">1</span>        <span class="n">a</span>
+<span class="mi">1</span>         <span class="mi">2</span>        <span class="n">b</span>
+<span class="mi">2</span>         <span class="mi">3</span>        <span class="k">c</span>
+<span class="mi">3</span>         <span class="mi">4</span>        <span class="n">d</span>
+</pre></div>
+
+
+<h2 id="viewing">Viewing<a class="headerlink" href="#viewing" title="Permanent link">&para;</a></h2>
+<h3 id="printing-column-names">Printing Column Names<a class="headerlink" href="#printing-column-names" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="n">gdf</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="k">Index</span><span class="p">([</span><span class="s1">&#39;integers&#39;</span><span class="p">,</span> <span class="s1">&#39;strings&#39;</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;object&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<h3 id="viewing-top-of-dataframe">Viewing Top of DataFrame<a class="headerlink" href="#viewing-top-of-dataframe" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="n">num_of_rows_to_view</span> <span class="o">=</span> <span class="mi">2</span> 
+<span class="k">print</span><span class="p">(</span><span class="n">gdf</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">num_of_rows_to_view</span><span class="p">))</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span>   <span class="n">integers</span>  <span class="n">strings</span>
+<span class="mi">0</span>         <span class="mi">1</span>        <span class="n">a</span>
+<span class="mi">1</span>         <span class="mi">2</span>        <span class="n">b</span>
+</pre></div>
+
+
+<h3 id="viewing-bottom-of-dataframe">Viewing Bottom of DataFrame<a class="headerlink" href="#viewing-bottom-of-dataframe" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="n">num_of_rows_to_view</span> <span class="o">=</span> <span class="mi">3</span> 
+<span class="k">print</span><span class="p">(</span><span class="n">gdf</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="n">num_of_rows_to_view</span><span class="p">))</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span>   <span class="n">integers</span>  <span class="n">strings</span>
+<span class="mi">1</span>         <span class="mi">2</span>        <span class="n">b</span>
+<span class="mi">2</span>         <span class="mi">3</span>        <span class="k">c</span>
+<span class="mi">3</span>         <span class="mi">4</span>        <span class="n">d</span>
+</pre></div>
+
+
+<h2 id="filtering">Filtering<a class="headerlink" href="#filtering" title="Permanent link">&para;</a></h2>
+<h3 id="method-1-query">Method 1: Query<a class="headerlink" href="#method-1-query" title="Permanent link">&para;</a></h3>
+<h4 id="filtering-integersfloats-by-column-values">Filtering Integers/Floats by Column Values<a class="headerlink" href="#filtering-integersfloats-by-column-values" title="Permanent link">&para;</a></h4>
+<ul>
+<li>This only works for floats and integers, not for strings</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">gdf</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;integers == 1&#39;</span><span class="p">))</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span>   <span class="n">integers</span>  <span class="n">strings</span>
+<span class="mi">0</span>         <span class="mi">1</span>        <span class="n">a</span>
+</pre></div>
+
+
+<h4 id="filtering-strings-by-column-values">Filtering Strings by Column Values<a class="headerlink" href="#filtering-strings-by-column-values" title="Permanent link">&para;</a></h4>
+<ul>
+<li>This only works for floats and integers, not for strings so this will return an error!</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">gdf</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;strings == a&#39;</span><span class="p">))</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="o">---------------------------------------------------------------------------</span>
+
+<span class="nv">KeyError</span>                                  <span class="nv">Traceback</span> <span class="ss">(</span><span class="nv">most</span> <span class="nv">recent</span> <span class="k">call</span> <span class="nl">last</span><span class="ss">)</span>
+
+<span class="o">&lt;</span><span class="nv">ipython</span><span class="o">-</span><span class="nv">input</span><span class="o">-</span><span class="mi">33</span><span class="o">-</span><span class="mi">5</span><span class="nv">cfd0345d51c</span><span class="o">&gt;</span> <span class="nv">in</span> <span class="o">&lt;</span><span class="nv">module</span><span class="o">&gt;</span><span class="ss">()</span>
+<span class="o">----&gt;</span> <span class="mi">1</span> <span class="nv">print</span><span class="ss">(</span><span class="nv">gdf</span>.<span class="nv">query</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">strings == a</span><span class="s1">&#39;</span><span class="ss">))</span>
+
+
+<span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">local</span><span class="o">/</span><span class="nv">lib</span><span class="o">/</span><span class="nv">python3</span>.<span class="mi">6</span><span class="o">/</span><span class="nv">site</span><span class="o">-</span><span class="nv">packages</span><span class="o">/</span><span class="nv">cudf</span><span class="o">/</span><span class="nv">dataframe</span><span class="o">/</span><span class="nv">dataframe</span>.<span class="nv">py</span> <span class="nv">in</span> <span class="nv">query</span><span class="ss">(</span><span class="nv">self</span>, <span class="nv">expr</span>, <span class="nv">local_dict</span><span class="ss">)</span>
+   <span class="mi">1905</span>         }
+   <span class="mi">1906</span>         # <span class="nv">Run</span> <span class="nv">query</span>
+<span class="o">-&gt;</span> <span class="mi">1907</span>         <span class="nv">boolmask</span> <span class="o">=</span> <span class="nv">queryutils</span>.<span class="nv">query_execute</span><span class="ss">(</span><span class="nv">self</span>, <span class="nv">expr</span>, <span class="nv">callenv</span><span class="ss">)</span>
+   <span class="mi">1908</span> 
+   <span class="mi">1909</span>         <span class="nv">selected</span> <span class="o">=</span> <span class="nv">Series</span><span class="ss">(</span><span class="nv">boolmask</span><span class="ss">)</span>
+
+
+<span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">local</span><span class="o">/</span><span class="nv">lib</span><span class="o">/</span><span class="nv">python3</span>.<span class="mi">6</span><span class="o">/</span><span class="nv">site</span><span class="o">-</span><span class="nv">packages</span><span class="o">/</span><span class="nv">cudf</span><span class="o">/</span><span class="nv">utils</span><span class="o">/</span><span class="nv">queryutils</span>.<span class="nv">py</span> <span class="nv">in</span> <span class="nv">query_execute</span><span class="ss">(</span><span class="nv">df</span>, <span class="nv">expr</span>, <span class="nv">callenv</span><span class="ss">)</span>
+    <span class="mi">215</span>             <span class="nv">envargs</span>.<span class="nv">append</span><span class="ss">(</span><span class="nv">val</span><span class="ss">)</span>
+    <span class="mi">216</span>     # <span class="nv">prepare</span> <span class="nv">col</span> <span class="nv">args</span>
+<span class="o">--&gt;</span> <span class="mi">217</span>     <span class="nv">colarrays</span> <span class="o">=</span> [<span class="nv">df</span>[<span class="nv">col</span>].<span class="nv">to_gpu_array</span><span class="ss">()</span> <span class="k">for</span> <span class="nv">col</span> <span class="nv">in</span> <span class="nv">compiled</span>[<span class="s1">&#39;</span><span class="s">colnames</span><span class="s1">&#39;</span>]]
+    <span class="mi">218</span>     # <span class="nv">allocate</span> <span class="nv">output</span> <span class="nv">buffer</span>
+    <span class="mi">219</span>     <span class="nv">nrows</span> <span class="o">=</span> <span class="nv">len</span><span class="ss">(</span><span class="nv">df</span><span class="ss">)</span>
+
+
+<span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">local</span><span class="o">/</span><span class="nv">lib</span><span class="o">/</span><span class="nv">python3</span>.<span class="mi">6</span><span class="o">/</span><span class="nv">site</span><span class="o">-</span><span class="nv">packages</span><span class="o">/</span><span class="nv">cudf</span><span class="o">/</span><span class="nv">utils</span><span class="o">/</span><span class="nv">queryutils</span>.<span class="nv">py</span> <span class="nv">in</span> <span class="o">&lt;</span><span class="nv">listcomp</span><span class="o">&gt;</span><span class="ss">(</span>.<span class="mi">0</span><span class="ss">)</span>
+    <span class="mi">215</span>             <span class="nv">envargs</span>.<span class="nv">append</span><span class="ss">(</span><span class="nv">val</span><span class="ss">)</span>
+    <span class="mi">216</span>     # <span class="nv">prepare</span> <span class="nv">col</span> <span class="nv">args</span>
+<span class="o">--&gt;</span> <span class="mi">217</span>     <span class="nv">colarrays</span> <span class="o">=</span> [<span class="nv">df</span>[<span class="nv">col</span>].<span class="nv">to_gpu_array</span><span class="ss">()</span> <span class="k">for</span> <span class="nv">col</span> <span class="nv">in</span> <span class="nv">compiled</span>[<span class="s1">&#39;</span><span class="s">colnames</span><span class="s1">&#39;</span>]]
+    <span class="mi">218</span>     # <span class="nv">allocate</span> <span class="nv">output</span> <span class="nv">buffer</span>
+    <span class="mi">219</span>     <span class="nv">nrows</span> <span class="o">=</span> <span class="nv">len</span><span class="ss">(</span><span class="nv">df</span><span class="ss">)</span>
+
+
+<span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">local</span><span class="o">/</span><span class="nv">lib</span><span class="o">/</span><span class="nv">python3</span>.<span class="mi">6</span><span class="o">/</span><span class="nv">site</span><span class="o">-</span><span class="nv">packages</span><span class="o">/</span><span class="nv">cudf</span><span class="o">/</span><span class="nv">dataframe</span><span class="o">/</span><span class="nv">dataframe</span>.<span class="nv">py</span> <span class="nv">in</span> <span class="nv">__getitem__</span><span class="ss">(</span><span class="nv">self</span>, <span class="nv">arg</span><span class="ss">)</span>
+    <span class="mi">230</span>             <span class="k">return</span> <span class="nv">self</span>.<span class="nv">columns</span>.<span class="nv">_get_column_major</span><span class="ss">(</span><span class="nv">self</span>, <span class="nv">arg</span><span class="ss">)</span>
+    <span class="mi">231</span>         <span class="k">if</span> <span class="nv">isinstance</span><span class="ss">(</span><span class="nv">arg</span>, <span class="ss">(</span><span class="nv">str</span>, <span class="nv">numbers</span>.<span class="nv">Number</span><span class="ss">))</span> <span class="nv">or</span> <span class="nv">isinstance</span><span class="ss">(</span><span class="nv">arg</span>, <span class="nv">tuple</span><span class="ss">)</span>:
+<span class="o">--&gt;</span> <span class="mi">232</span>             <span class="nv">s</span> <span class="o">=</span> <span class="nv">self</span>.<span class="nv">_cols</span>[<span class="nv">arg</span>]
+    <span class="mi">233</span>             <span class="nv">s</span>.<span class="nv">name</span> <span class="o">=</span> <span class="nv">arg</span>
+    <span class="mi">234</span>             <span class="nv">s</span>.<span class="nv">index</span> <span class="o">=</span> <span class="nv">self</span>.<span class="nv">index</span>
+
+
+<span class="nv">KeyError</span>: <span class="s1">&#39;</span><span class="s">a</span><span class="s1">&#39;</span>
+</pre></div>
+
+
+<h3 id="method-2-simple-columns">Method 2:  Simple Columns<a class="headerlink" href="#method-2-simple-columns" title="Permanent link">&para;</a></h3>
+<h4 id="filtering-strings-by-column-values_1">Filtering Strings by Column Values<a class="headerlink" href="#filtering-strings-by-column-values_1" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="c1"># Filtering based on the string column</span>
+<span class="k">print</span><span class="p">(</span><span class="n">gdf</span><span class="p">[</span><span class="n">gdf</span><span class="o">.</span><span class="n">strings</span> <span class="o">==</span> <span class="s1">&#39;b&#39;</span><span class="p">])</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span>   <span class="n">integers</span>  <span class="n">strings</span>
+<span class="mi">1</span>         <span class="mi">2</span>        <span class="n">b</span>
+</pre></div>
+
+
+<h4 id="filtering-integersfloats-by-column-values_1">Filtering Integers/Floats by Column Values<a class="headerlink" href="#filtering-integersfloats-by-column-values_1" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="c1"># Filtering based on the string column</span>
+<span class="k">print</span><span class="p">(</span><span class="n">gdf</span><span class="p">[</span><span class="n">gdf</span><span class="o">.</span><span class="n">integers</span> <span class="o">==</span> <span class="mi">2</span><span class="p">])</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span>   <span class="n">integers</span>  <span class="n">strings</span>
+<span class="mi">1</span>         <span class="mi">2</span>        <span class="n">b</span>
+</pre></div>
+
+
+<h3 id="method-2-simple-rows">Method 2:  Simple Rows<a class="headerlink" href="#method-2-simple-rows" title="Permanent link">&para;</a></h3>
+<h4 id="filtering-by-row-numbers">Filtering by Row Numbers<a class="headerlink" href="#filtering-by-row-numbers" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="c1"># Filter rows 0 to 2 (not inclusive of the third row with the index 2)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">gdf</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span>   <span class="n">integers</span>  <span class="n">strings</span>
+<span class="mi">0</span>         <span class="mi">1</span>        <span class="n">a</span>
+<span class="mi">1</span>         <span class="mi">2</span>        <span class="n">b</span>
+</pre></div>
+
+
+<h3 id="method-3-locrows-columns">Method 3:  loc[rows, columns]<a class="headerlink" href="#method-3-locrows-columns" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="c1"># The syntax is as follows loc[rows, columns] allowing you to choose rows and columns accordingly</span>
+<span class="c1"># The example allows us to filter the first 3 rows (inclusive) of the column integers</span>
+<span class="k">print</span><span class="p">(</span><span class="n">gdf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;integers&#39;</span><span class="p">]])</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span>   <span class="n">integers</span>
+<span class="mi">0</span>         <span class="mi">1</span>
+<span class="mi">1</span>         <span class="mi">2</span>
+<span class="mi">2</span>         <span class="mi">3</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+  <h2 id="__comments">Comments</h2>
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = "https://www.deeplearningwizard.com/machine_learning/gpu/rapids_cudf/";
+      this.page.identifier =
+        "machine_learning/gpu/rapids_cudf/";
+    };
+    (function() {
+      var d = document, s = d.createElement("script");
+      s.src = "//deep-learning-wizard.disqus.com/embed.js";
+      s.setAttribute("data-timestamp", +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="machine_learning/intro/" title="Introduction" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Introduction
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="machine_learning/gpu/gpu_fractional_differencing/" title="GPU/CPU Fractional Differencing" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                GPU/CPU Fractional Differencing
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2019 Deep Learning Wizard
+          </div>
+        
+        proudly an
+        <a href="http://www.nvidia.com/page/home.html">NVIDIA Inception Partner</a> and supported by the
+        <a href="https://aws.amazon.com/activate/">Amazon AWS Activate Programme</a> by
+        <a href="https://www.ritchieng.com/">
+          Ritchie Ng</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/ritchieng" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://www.facebook.com/DeepLearningWizard/" class="md-footer-social__link fa fa-facebook"></a>
+    
+      <a href="https://www.linkedin.com/company/deeplearningwizard/" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.ac79c3b0.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
