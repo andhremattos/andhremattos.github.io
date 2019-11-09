@@ -7,10 +7,10 @@ site_url: 'https://www.2dados.com/'
 # Navigation
 pages:
     - Home: index.md
-    - About Us: about.md
-    - Reviews: review.md
-    - AI Pipeline: pipeline.md
-    - Consultancy: consultancy.md
+    - Sobre: sobre.md
+#    - Reviews: review.md
+    - Projetos: pipeline.md
+    - Consultoria: consultoria.md
     - Deep Learning Tutorials (CPU/GPU):
       - Introduction: deep_learning/intro.md
       - Course Progression: deep_learning/course_progression.md
@@ -38,10 +38,10 @@ pages:
       - Dynamic Programming: deep_learning/deep_reinforcement_learning_pytorch/dynamic_programming_frozenlake.md
       - Additional Readings: deep_learning/readings.md
 
-    - Machine Learning Tutorials (CPU/GPU):
-      - Introduction: machine_learning/intro.md
-      - GPU DataFrames: machine_learning/gpu/rapids_cudf.md
-      - GPU/CPU Fractional Differencing: machine_learning/gpu/gpu_fractional_differencing.md
+#    - Machine Learning Tutorials (CPU/GPU):
+#      - Introduction: machine_learning/intro.md
+#      - GPU DataFrames: machine_learning/gpu/rapids_cudf.md
+#      - GPU/CPU Fractional Differencing: machine_learning/gpu/gpu_fractional_differencing.md
 #      - Linear Regression: machine_learning/gpu/rapids_cudf.md
 #      - Ridge Regression: machine_learning/gpu/rapids_cudf.md
 #      - Kalman Filter: machine_learning/gpu/rapids_cudf.md
@@ -131,11 +131,11 @@ extra_javascript:
 extra:
   social:
     - type: 'github'
-      link: 'https://github.com/ritchieng'
+      link: 'https://github.com/andhremattos'
     - type: 'facebook'
-      link: 'https://www.facebook.com/DeepLearningWizard/'
+      link: 'https://www.facebook.com/acmatos/'
     - type: 'linkedin'
-      link: 'https://www.linkedin.com/company/deeplearningwizard/'
+      link: 'https://www.linkedin.com/company/andhremattos/'
   disqus: 'deep-learning-wizard'
 
 
@@ -145,4 +145,4 @@ google_analytics:
   - 'auto'
 
 # Copyright
-copyright: 'Copyright &copy; 2019 2dados. "Deus não joga dados" (Albert Einstein).'
+copyright: '&copy; 2019 2dados. "Deus não joga dados" (Albert Einstein).'
