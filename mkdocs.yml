@@ -1,8 +1,8 @@
 # Project information
-site_name: 'Deep Learning Wizard'
+site_name: '2dados'
 site_description: 'Learn deep learning and deep reinforcement learning theories and code easily and quickly. Used by thousands of students and professionals from top tech companies and research institutions.'
 site_author: 'Ritchie Ng'
-site_url: 'https://www.deeplearningwizard.com/'
+site_url: 'https://www.2dados.com/'
 
 # Navigation
 pages:
@@ -84,7 +84,7 @@ pages:
 theme:
   name: 'material'
   custom_dir: 'theme'
-  language: 'en'
+  language: 'pt'
   feature:
     tabs: true
   logo:
@@ -145,4 +145,4 @@ google_analytics:
   - 'auto'
 
 # Copyright
-copyright: 'Copyright &copy; 2019 Deep Learning Wizard'
+copyright: 'Copyright &copy; 2019 2dados. "Deus não joga dados" (Albert Einstein).'
