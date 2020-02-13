@@ -9,62 +9,23 @@ pages:
     - Home: index.md
     - Sobre: sobre.md
 #    - Reviews: review.md
-    - Projetos: pipeline.md
+    - Projetos: projetos.md
     - Consultoria: consultoria.md
-    - Deep Learning Tutorials (CPU/GPU):
-      - Introduction: deep_learning/intro.md
-      - Course Progression: deep_learning/course_progression.md
-      - Matrices: deep_learning/practical_pytorch/pytorch_matrices.md
-      - Gradients: deep_learning/practical_pytorch/pytorch_gradients.md
-      - Linear Regression: deep_learning/practical_pytorch/pytorch_linear_regression.md
-      - Logistic Regression: deep_learning/practical_pytorch/pytorch_logistic_regression.md
-      - Feedforward Neural Networks (FNN): deep_learning/practical_pytorch/pytorch_feedforward_neuralnetwork.md
-      - Convolutional Neural Networks (CNN): deep_learning/practical_pytorch/pytorch_convolutional_neuralnetwork.md
-      - Recurrent Neural Networks (RNN): deep_learning/practical_pytorch/pytorch_recurrent_neuralnetwork.md
-      - Long Short Term Memory Neural Networks (LSTM): deep_learning/practical_pytorch/pytorch_lstm_neuralnetwork.md
-      - Autoencoders (AE): deep_learning/practical_pytorch/pytorch_autoencoder.md
-#      - Fully-connected Overcomplete Autoencoder (AE): deep_learning/practical_pytorch/pytorch_fc_overcomplete_ae.md
-#      - Fully-connected Undercomplete Autoencoder (AE): deep_learning/practical_pytorch/pytorch_fc_undercomplete_ae.md
-#      - Convolutional Overcomplete Variational Autoencoder (VAE): deep_learning/practical_pytorch/pytorch_autoencoder.md
-#      - Convolutional Overcomplete Adversarial Autoencoder (AAE): deep_learning/practical_pytorch/pytorch_autoencoder.md
-#      - Generative Adversarial Networks (GAN): deep_learning/practical_pytorch/pytorch_autoencoder.md
-      - Derivative, Gradient and Jacobian: deep_learning/boosting_models_pytorch/derivative_gradient_jacobian.md
-      - Forward- and Backward-propagation and Gradient Descent: deep_learning/boosting_models_pytorch/forwardpropagation_backpropagation_gradientdescent.md
-      - Learning Rate Scheduling: deep_learning/boosting_models_pytorch/lr_scheduling.md
-      - Optimization Algorithms: deep_learning/boosting_models_pytorch/optimizers.md
-      - Weight Initialization and Activation Functions: deep_learning/boosting_models_pytorch/weight_initialization_activation_functions.md
-      - Supervised Learning to Reinforcement Learning (RL): deep_learning/deep_reinforcement_learning_pytorch/supervised_to_rl.md
-      - Markov Decision Processes (MDP) and Bellman Equations: deep_learning/deep_reinforcement_learning_pytorch/bellman_mdp.md
-      - Dynamic Programming: deep_learning/deep_reinforcement_learning_pytorch/dynamic_programming_frozenlake.md
-      - Additional Readings: deep_learning/readings.md
+    - Pré-Cálculo:
+      - Introdução: pre_calculo/introducao.md
+      - Conjuntos: pre_calculo/conjuntos_numericos/introducao_a_conjuntos.md
+      - Funções: pre_calculo/funcoes/introducao_a_funcao.md
+  
 
-#    - Machine Learning Tutorials (CPU/GPU):
-#      - Introduction: machine_learning/intro.md
-#      - GPU DataFrames: machine_learning/gpu/rapids_cudf.md
-#      - GPU/CPU Fractional Differencing: machine_learning/gpu/gpu_fractional_differencing.md
-#      - Linear Regression: machine_learning/gpu/rapids_cudf.md
-#      - Ridge Regression: machine_learning/gpu/rapids_cudf.md
-#      - Kalman Filter: machine_learning/gpu/rapids_cudf.md
-#      - Stochastic Gradient Descent: machine_learning/gpu/rapids_cudf.md
-#      - K-nearest Neighbours Classification: machine_learning/gpu/rapids_cudf.md
-#      - K-Means Clustering: machine_learning/gpu/rapids_cudf.md
-#      - Density-Based Spatial Clustering of Applications with Noise (DBSCAN): machine_learning/gpu/rapids_cudf.md
-#      - Singular Value Decomposition (SVD), Dimensionality Reduction: machine_learning/gpu/rapids_cudf.md
-#      - Principal Component Analysis (PCA), Dimensionality Reduction: machine_learning/gpu/rapids_cudf.md
-#      - Uniform Manifold Approximation and Projection (UMAP), Dimensionality Reduction: machine_learning/gpu/rapids_cudf.md
+    - Cálculo I:
+      - Introdução: calculo_i/introducao.md
+      - Limite: calculo_i/limite/parte_1.md
+      - Derivada: calculo_i/derivada/parte_1.md
+      
 
-    - Programming Tutorials:
-      - Introduction: programming/intro.md
-      - C++: programming/cpp/cpp.md
-      - Bash: programming/bash/bash.md
-      - Python: programming/python/python.md
-      - Javascript: programming/javascript/javascript.md
-      - Electron: programming/electron/electron.md
-#      - Matplotlib: programming/plotting/matplotlib.md
-
-    - Scalable Database Tutorials:
-      - Introduction: database/intro.md
-      - Cassandra Cluster Setup: database/setting_up_cluster.md
+    - Cálculo II:
+      - Introdução: calculo_ii/introducao.md
+      - Integral: calculo_ii/integral/parte_1.md
 
     - Blog:
       - Home: blog/index.md
