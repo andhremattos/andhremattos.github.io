@@ -1,10 +1,10 @@
 disqus:
 
-# Welcome to our Blog
+# Sejam Bem-vindos/as
 
-Here, we post news related to Deep Learning Wizard's releases, features and achievements :ghost:
+Neste espaço vamos publicar artigos sobre Data Science, Machine Learning e Deep Learning. :ghost:
 
-
+<!--
 ## Notable News
 
 * [x] Oral Presentation for AI for Social Good Workshop ICML, Long Beach, Los Angeles, USA, June 2019
@@ -15,3 +15,4 @@ Here, we post news related to Deep Learning Wizard's releases, features and achi
 * [x] Featured on PyTorch Website, January 2018
 * [x] Led NVIDIA Self-Driving Cars and Healthcare Talk, Singapore, June 2017
 * [x] Clinched NVIDIA Inception Partner Status, Singapore, May 2017
+-->
