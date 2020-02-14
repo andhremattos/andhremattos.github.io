@@ -1,0 +1,1896 @@
+
+
+
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Projetos de Data Science e Machine Learning. Estudo de Cálculo.">
+      
+      
+        <link rel="canonical" href="https://www.2dados.com/calculo_i/python/python/">
+      
+      
+        <meta name="author" content="Carlos Andre">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copiar para área de transferência">
+      
+        <meta name="lang:clipboard.copied" content="Copiado para área de transferência">
+      
+        <meta name="lang:search.language" content="pt">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="Nenhum resultado encontrado">
+      
+        <meta name="lang:search.result.one" content="1 resultado encontrado">
+      
+        <meta name="lang:search.result.other" content="# resultados encontrados">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../docs/assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>Python - 2dados</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.30686662.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#009688">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-122083328-1", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#python" tabindex="1" class="md-skip">
+        Ir para o conteúdo
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://www.2dados.com/" title="2dados" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">whatshot</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              2dados
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Python
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Digite para iniciar a busca
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+<nav class="md-tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../.." class="md-tabs__link md-tabs__link--active">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../pre_calculo/introducao/" class="md-tabs__link">
+          Pré-Cálculo
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../introducao/" class="md-tabs__link">
+          Cálculo I
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../calculo_ii/introducao/" class="md-tabs__link">
+          Cálculo II
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../blog/" class="md-tabs__link">
+          Blog
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://www.2dados.com/" title="2dados" class="md-nav__button md-logo">
+      
+        <i class="md-icon">whatshot</i>
+      
+    </a>
+    2dados
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../sobre/" title="Sobre" class="md-nav__link">
+      Sobre
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../projetos/" title="Projetos" class="md-nav__link">
+      Projetos
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../consultoria/" title="Consultoria" class="md-nav__link">
+      Consultoria
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Pré-Cálculo
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Pré-Cálculo
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../pre_calculo/introducao/" title="Introdução" class="md-nav__link">
+      Introdução
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../pre_calculo/conjuntos_numericos/introducao_a_conjuntos/" title="Conjuntos" class="md-nav__link">
+      Conjuntos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../pre_calculo/funcoes/introducao_a_funcao/" title="Funções" class="md-nav__link">
+      Funções
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Cálculo I
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Cálculo I
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../introducao/" title="Introdução" class="md-nav__link">
+      Introdução
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../limite/parte_1/" title="Limite" class="md-nav__link">
+      Limite
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../derivada/parte_1/" title="Derivada" class="md-nav__link">
+      Derivada
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Cálculo II
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Cálculo II
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../calculo_ii/introducao/" title="Introdução" class="md-nav__link">
+      Introdução
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../calculo_ii/integral/parte_1/" title="Integral" class="md-nav__link">
+      Integral
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Blog
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Blog
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../blog/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../blog/artigo_01_12_02_2020/" title="Artigo_1" class="md-nav__link">
+      Artigo_1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../blog/artigo_02_14_02_2020/" title="Artigo_2" class="md-nav__link">
+      Artigo_2
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Índice</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lists" class="md-nav__link">
+    Lists
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-list-manual-fill" class="md-nav__link">
+    Creating List: Manual Fill
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-list-list-comprehension" class="md-nav__link">
+    Creating List: List Comprehension
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#joining-list-with-blanks" class="md-nav__link">
+    Joining List with Blanks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#joining-list-with-comma" class="md-nav__link">
+    Joining List with Comma
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-lists-equal-method-1" class="md-nav__link">
+    Checking Lists Equal: Method 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-lists-equal-method-2" class="md-nav__link">
+    Checking Lists Equal: Method 2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sets" class="md-nav__link">
+    Sets
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#removing-duplicate-from-list" class="md-nav__link">
+    Removing Duplicate from List
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lambda-map-filter-reduce" class="md-nav__link">
+    Lambda, map, filter, reduce
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lambda" class="md-nav__link">
+    Lambda
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-function" class="md-nav__link">
+    Add Function
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiply-function" class="md-nav__link">
+    Multiply Function
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map" class="md-nav__link">
+    Map
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-list" class="md-nav__link">
+    Create List
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map-square-function-to-list" class="md-nav__link">
+    Map Square Function to List
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-multiple-list" class="md-nav__link">
+    Create Multiple List
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map-add-function-to-multiple-lists" class="md-nav__link">
+    Map Add Function to Multiple Lists
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filter" class="md-nav__link">
+    Filter
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-list_1" class="md-nav__link">
+    Create List
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filter-multiples-of-3" class="md-nav__link">
+    Filter multiples of 3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reduce" class="md-nav__link">
+    Reduce
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generators" class="md-nav__link">
+    Generators
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple-custom-generator-function-example-sum-1-to-1000000" class="md-nav__link">
+    Simple custom generator function example: sum 1 to 1,000,000
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#without-generator-function-sum-with-list" class="md-nav__link">
+    Without generator function: sum with list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#without-generator-function-sum-with-for-loop" class="md-nav__link">
+    Without generator function: sum with for loop
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generator-expression" class="md-nav__link">
+    Generator expression
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decorators" class="md-nav__link">
+    Decorators
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#first-class-objects" class="md-nav__link">
+    First Class Objects
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#args" class="md-nav__link">
+    *args
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kwargs" class="md-nav__link">
+    **kwargs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decorators-as-logger-and-debugging" class="md-nav__link">
+    Decorators as Logger and Debugging
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dates" class="md-nav__link">
+    Dates
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-current-date" class="md-nav__link">
+    Get Current Date
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-clean-string-current-date" class="md-nav__link">
+    Get Clean String Current Date
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#count-business-days" class="md-nav__link">
+    Count Business Days
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#progress-bars" class="md-nav__link">
+    Progress Bars
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tqdm" class="md-nav__link">
+    TQDM
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-paths" class="md-nav__link">
+    Check Paths
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-path-exists" class="md-nav__link">
+    Check Path Exists
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-path-exists-otherwise-create-folder" class="md-nav__link">
+    Check Path Exists Otherwise Create Folder
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exception-handling" class="md-nav__link">
+    Exception Handling
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#try-except-finally-error" class="md-nav__link">
+    Try, Except, Finally: Error
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#try-except-finally-no-error" class="md-nav__link">
+    Try, Except, Finally: No Error
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assertion" class="md-nav__link">
+    Assertion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asynchronous" class="md-nav__link">
+    Asynchronous
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#concurrency-parallelism-asynchronous" class="md-nav__link">
+    Concurrency, Parallelism, Asynchronous
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#asynchronous-key-components" class="md-nav__link">
+    Asynchronous Key Components
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#synchronous-2-function-calls" class="md-nav__link">
+    Synchronous 2 Function Calls
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parallel-2-function-calls" class="md-nav__link">
+    Parallel 2 Function Calls
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#asynchronous-2-function-calls" class="md-nav__link">
+    Asynchronous 2 Function Calls
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" class="md-nav__link md-nav__link--active">
+            Comentários
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="python">Python<a class="headerlink" href="#python" title="Permanent link">&para;</a></h1>
+<p><a href="https://colab.research.google.com/github/ritchieng/deep-learning-wizard/blob/master/docs/programming/python/python.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
+<h2 id="lists">Lists<a class="headerlink" href="#lists" title="Permanent link">&para;</a></h2>
+<h3 id="creating-list-manual-fill">Creating List: Manual Fill<a class="headerlink" href="#creating-list-manual-fill" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span> <span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="err">[0, 1, 2, 3]</span>
+</pre></div>
+
+
+<h3 id="creating-list-list-comprehension">Creating List: List Comprehension<a class="headerlink" href="#creating-list-list-comprehension" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="err">[0, 1, 2, 3]</span>
+</pre></div>
+
+
+<h3 id="joining-list-with-blanks">Joining List with Blanks<a class="headerlink" href="#joining-list-with-blanks" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="c1"># To use .join(), your list needs to be of type string</span>
+<span class="n">lst_to_string</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">lst</span><span class="p">))</span>
+
+<span class="c1"># Join the list of strings</span>
+<span class="n">lst_join</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lst_to_string</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lst_join</span><span class="p">)</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="err">0 1 2 3</span>
+</pre></div>
+
+
+<h3 id="joining-list-with-comma">Joining List with Comma<a class="headerlink" href="#joining-list-with-comma" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="c1"># Join the list of strings</span>
+<span class="n">lst_join</span> <span class="o">=</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lst_to_string</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lst_join</span><span class="p">)</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="err">0, 1, 2, 3</span>
+</pre></div>
+
+
+<h3 id="checking-lists-equal-method-1">Checking Lists Equal: Method 1<a class="headerlink" href="#checking-lists-equal-method-1" title="Permanent link">&para;</a></h3>
+<p>Returns <code class="codehilite"><span class="err">True</span></code> if equal, and <code class="codehilite"><span class="err">False</span></code> if unequal</p>
+<div class="codehilite"><pre><span></span><span class="n">lst_unequal</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">lst_equal</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">50</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Unequal List&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">50</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">lst_unequal</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lst_unequal</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">bool_equal</span> <span class="o">=</span> <span class="n">lst_unequal</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">==</span> <span class="n">lst_unequal</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">bool_equal</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">50</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Equal List&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">50</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">lst_equal</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lst_equal</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">bool_equal</span> <span class="o">=</span> <span class="n">lst_equal</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">==</span> <span class="n">lst_equal</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">bool_equal</span><span class="p">)</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="err">--------------------------------------------------</span>
+<span class="err">Unequal List</span>
+<span class="err">--------------------------------------------------</span>
+<span class="err">[1, 2, 3, 4, 4]</span>
+<span class="err">[1, 1, 2, 3, 4]</span>
+<span class="err">False</span>
+<span class="err">--------------------------------------------------</span>
+<span class="err">Equal List</span>
+<span class="err">--------------------------------------------------</span>
+<span class="err">[0, 0, 0, 0, 0]</span>
+<span class="err">[0, 0, 0, 0, 0]</span>
+<span class="err">True</span>
+</pre></div>
+
+
+<h3 id="checking-lists-equal-method-2">Checking Lists Equal: Method 2<a class="headerlink" href="#checking-lists-equal-method-2" title="Permanent link">&para;</a></h3>
+<p>Returns <code class="codehilite"><span class="err">True</span></code> if equal, and <code class="codehilite"><span class="err">False</span></code> if unequal. Here, <code class="codehilite"><span class="err">all</span></code> essentially checks that there is no <code class="codehilite"><span class="err">False</span></code> in the list. </p>
+<div class="codehilite"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">50</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Unequal List&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">50</span><span class="p">)</span>
+
+<span class="n">lst_check</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="o">==</span> <span class="n">lst_unequal</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">lst_unequal</span><span class="p">]</span>
+<span class="n">bool_equal</span> <span class="o">=</span> <span class="nb">all</span><span class="p">(</span><span class="n">lst_check</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">bool_equal</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">50</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Equal List&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">50</span><span class="p">)</span>
+
+<span class="n">lst_check</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="o">==</span> <span class="n">lst_equal</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">lst_equal</span><span class="p">]</span>
+<span class="n">bool_equal</span> <span class="o">=</span> <span class="nb">all</span><span class="p">(</span><span class="n">lst_check</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">bool_equal</span><span class="p">)</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="err">--------------------------------------------------</span>
+<span class="err">Unequal List</span>
+<span class="err">--------------------------------------------------</span>
+<span class="err">False</span>
+<span class="err">--------------------------------------------------</span>
+<span class="err">Equal List</span>
+<span class="err">--------------------------------------------------</span>
+<span class="err">True</span>
+</pre></div>
+
+
+<h2 id="sets">Sets<a class="headerlink" href="#sets" title="Permanent link">&para;</a></h2>
+<h3 id="removing-duplicate-from-list">Removing Duplicate from List<a class="headerlink" href="#removing-duplicate-from-list" title="Permanent link">&para;</a></h3>
+<p>Sets can be very useful for quickly removing duplicates from a list, essentially finding unique values</p>
+<div class="codehilite"><pre><span></span><span class="n">lst_one</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">lst_two</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">lst_both</span> <span class="o">=</span> <span class="n">lst_one</span> <span class="o">+</span> <span class="n">lst_two</span>
+<span class="n">lst_no_duplicate</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">lst_both</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Original Combined List </span><span class="si">{lst_both}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;No Duplicated Combined List </span><span class="si">{lst_no_duplicate}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="err">Original Combined List [1, 2, 3, 5, 1, 1, 2, 4]</span>
+<span class="err">No Duplicated Combined List [1, 2, 3, 4, 5]</span>
+</pre></div>
+
+
+<h2 id="lambda-map-filter-reduce">Lambda, map, filter, reduce<a class="headerlink" href="#lambda-map-filter-reduce" title="Permanent link">&para;</a></h2>
+<h3 id="lambda">Lambda<a class="headerlink" href="#lambda" title="Permanent link">&para;</a></h3>
+<p>The syntax is simple <code class="codehilite"><span class="err">lambda your_variables: your_operation</span></code></p>
+<h4 id="add-function">Add Function<a class="headerlink" href="#add-function" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="n">add</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+<span class="n">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="err">5</span>
+</pre></div>
+
+
+<h4 id="multiply-function">Multiply Function<a class="headerlink" href="#multiply-function" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="n">multiply</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span> 
+<span class="n">multiply</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="err">6</span>
+</pre></div>
+
+
+<h3 id="map">Map<a class="headerlink" href="#map" title="Permanent link">&para;</a></h3>
+<h4 id="create-list">Create List<a class="headerlink" href="#create-list" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">11</span><span class="p">)]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="err">[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</span>
+</pre></div>
+
+
+<h4 id="map-square-function-to-list">Map Square Function to List<a class="headerlink" href="#map-square-function-to-list" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="n">square_element</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">lst</span><span class="p">)</span>
+
+<span class="c1"># This gives you a map object</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">square_element</span><span class="p">)</span>
+
+<span class="c1"># You need to explicitly return a list</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">square_element</span><span class="p">))</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="err">&lt;map object at 0x7f08c8620438&gt;</span>
+<span class="err">[0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100]</span>
+</pre></div>
+
+
+<h4 id="create-multiple-list">Create Multiple List<a class="headerlink" href="#create-multiple-list" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="n">lst_1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">lst_2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="n">lst_3</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
+</pre></div>
+
+<h4 id="map-add-function-to-multiple-lists">Map Add Function to Multiple Lists<a class="headerlink" href="#map-add-function-to-multiple-lists" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="n">add_elements</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="n">z</span><span class="p">,</span> <span class="n">lst_1</span><span class="p">,</span> <span class="n">lst_2</span><span class="p">,</span> <span class="n">lst_3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">add_elements</span><span class="p">))</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="err">[6, 12, 18, 24]</span>
+</pre></div>
+
+
+<h3 id="filter">Filter<a class="headerlink" href="#filter" title="Permanent link">&para;</a></h3>
+<h4 id="create-list_1">Create List<a class="headerlink" href="#create-list_1" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="err">[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
+</pre></div>
+
+
+<h4 id="filter-multiples-of-3">Filter multiples of 3<a class="headerlink" href="#filter-multiples-of-3" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="n">multiples_of_three</span> <span class="o">=</span> <span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="n">lst</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">multiples_of_three</span><span class="p">))</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="err">[0, 3, 6, 9]</span>
+</pre></div>
+
+
+<h3 id="reduce">Reduce<a class="headerlink" href="#reduce" title="Permanent link">&para;</a></h3>
+<p>The syntax is <code class="codehilite"><span class="err">reduce(function, sequence)</span></code>. The function is applied to the elements in the list in a sequential manner. Meaning if <code class="codehilite"><span class="err">lst = [1, 2, 3, 4]</span></code> and you have a sum function, you would arrive with <code class="codehilite"><span class="err">((1+2) + 3) + 4</span></code>.</p>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">reduce</span>
+<span class="n">sum_all</span> <span class="o">=</span> <span class="n">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">,</span> <span class="n">lst</span><span class="p">)</span>
+<span class="c1"># Here we&#39;ve 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sum_all</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">+</span> <span class="mi">6</span> <span class="o">+</span> <span class="mi">7</span> <span class="o">+</span> <span class="mi">8</span> <span class="o">+</span> <span class="mi">9</span><span class="p">)</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="err">45</span>
+<span class="err">45</span>
+</pre></div>
+
+
+<h2 id="generators">Generators<a class="headerlink" href="#generators" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Why: <code class="codehilite"><span class="err">generators</span></code> are typically more memory-efficient than using simple <code class="codehilite"><span class="err">for loops</span></code></p>
+<ul>
+<li>Imagine wanting to sum digits 0 to 1 trillion, using a list containing those numbers and summing them would be very RAM memory-inefficient.</li>
+<li>Using a generator would allow you to sum one digit sequentially, staggering the RAM memory usage in steps.</li>
+</ul>
+</li>
+<li>
+<p>What: <code class="codehilite"><span class="err">generator</span></code> basically a function that returns an iterable object where we can iterate one bye one</p>
+</li>
+<li>Types: generator functions and generator expressions</li>
+<li>Dependencies: we need to install a memory profiler, so install via <code class="codehilite"><span class="err">pip install memory_profiler</span></code></li>
+</ul>
+<h3 id="simple-custom-generator-function-example-sum-1-to-1000000">Simple custom generator function example: sum 1 to 1,000,000<a class="headerlink" href="#simple-custom-generator-function-example-sum-1-to-1000000" title="Permanent link">&para;</a></h3>
+<ul>
+<li>What: let's create a simple generator, allowing us to iterate through the digits 1 to 1,000,000 (inclusive) one by one with an increment of 1 at each step and summing them</li>
+<li>How: 2 step process with a <code class="codehilite"><span class="err">while</span></code> and a <code class="codehilite"><span class="err">yield</span></code></li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="c1"># Load memory profiler</span>
+<span class="o">%</span><span class="n">load_ext</span> <span class="n">memory_profiler</span>
+
+<span class="c1"># Here we take a step from 1</span>
+<span class="k">def</span> <span class="nf">create_numbers</span><span class="p">(</span><span class="n">end_number</span><span class="p">):</span>
+    <span class="n">current_number</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="c1"># Step 1: while</span>
+    <span class="k">while</span> <span class="n">current_number</span> <span class="o">&lt;=</span> <span class="n">end_number</span><span class="p">:</span>
+        <span class="c1"># Step 2: yield</span>
+        <span class="k">yield</span> <span class="n">current_number</span>
+
+        <span class="c1"># Add to current number</span>
+        <span class="n">current_number</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="c1"># Here we sum the digits 1 to 100 (inclusive) and time it</span>
+<span class="o">%</span><span class="n">memit</span> <span class="n">total</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">create_numbers</span><span class="p">(</span><span class="mf">1e6</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="err">peak memory: 46.50 MiB, increment: 0.28 MiB</span>
+<span class="err">500000500000</span>
+</pre></div>
+
+
+<h4 id="without-generator-function-sum-with-list">Without generator function: sum with list<a class="headerlink" href="#without-generator-function-sum-with-list" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Say we don't use a generator, and have a list of digits 0 to 1,000,000 (inclusive) in memory then sum them. </li>
+<li>Notice how this is double the memory than using a generator!</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="o">%</span><span class="n">memit</span> <span class="n">total</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="mf">1e6</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="err">peak memory: 85.14 MiB, increment: 38.38 MiB</span>
+<span class="err">500000500000</span>
+</pre></div>
+
+
+<h4 id="without-generator-function-sum-with-for-loop">Without generator function: sum with for loop<a class="headerlink" href="#without-generator-function-sum-with-for-loop" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Say we don't use a generator and don't put all our numbers into a list </li>
+<li>Notiice how this is much better than summing a list but still worst than a generator in terms of memory?</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">sum_with_loop</span><span class="p">(</span><span class="n">end_number</span><span class="p">):</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">end_number</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">total</span> <span class="o">+=</span> <span class="n">i</span>
+
+    <span class="k">return</span> <span class="n">total</span>
+
+<span class="o">%</span><span class="n">memit</span> <span class="n">total</span> <span class="o">=</span> <span class="n">sum_with_loop</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="mf">1e6</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="err">peak memory: 54.49 MiB, increment: 0.00 MiB</span>
+<span class="err">500001500001</span>
+</pre></div>
+
+
+<h3 id="generator-expression">Generator expression<a class="headerlink" href="#generator-expression" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Like list/dictionary expressions, we can have generator expressions too</li>
+<li>We can quickly create generators this way, allowing us to make computations on the fly rather than pre-compute on a whole list/array of numbers<ul>
+<li>This is more memory efficient</li>
+</ul>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="c1"># Define the list</span>
+<span class="n">list_of_numbers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+
+<span class="c1"># Find square root using the list comprehension</span>
+<span class="n">list_of_results</span> <span class="o">=</span> <span class="p">[</span><span class="n">number</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">list_of_numbers</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list_of_results</span><span class="p">)</span>
+
+<span class="c1"># Use generator expression to calculate the square root</span>
+<span class="n">generator_of_results</span> <span class="o">=</span> <span class="p">(</span><span class="n">number</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">list_of_numbers</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">generator_of_results</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">generator_of_results</span><span class="p">))</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="k">[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]</span>
+<span class="na">&lt;generator object &lt;genexpr&gt; at 0x7f08c85aa4f8&gt;</span>
+<span class="na">0</span>
+<span class="na">1</span>
+<span class="na">4</span>
+<span class="na">9</span>
+<span class="na">16</span>
+<span class="na">25</span>
+<span class="na">36</span>
+<span class="na">49</span>
+<span class="na">64</span>
+<span class="na">81</span>
+</pre></div>
+
+
+<h2 id="decorators">Decorators<a class="headerlink" href="#decorators" title="Permanent link">&para;</a></h2>
+<ul>
+<li>This allows us to to modify our original function or even entirely replace it without changing the function's code. </li>
+<li>It sounds mind-boggling, but a simple case I would like to illustrate here is using decorators for consistent logging (formatted print statements).</li>
+<li>For us to understand decorators, we'll first need to understand:<ul>
+<li><code class="codehilite"><span class="err">first class objects</span></code></li>
+<li><code class="codehilite"><span class="err">*args</span></code></li>
+<li><code class="codehilite"><span class="err">*kwargs</span></code></li>
+</ul>
+</li>
+</ul>
+<h3 id="first-class-objects">First Class Objects<a class="headerlink" href="#first-class-objects" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">outer</span><span class="p">():</span>
+    <span class="k">def</span> <span class="nf">inner</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Inside inner() function.&#39;</span><span class="p">)</span>
+
+    <span class="c1"># This returns a function.</span>
+    <span class="k">return</span> <span class="n">inner</span>
+
+<span class="c1"># Here, we are assigning `outer()` function to the object `call_outer`.</span>
+<span class="n">call_outer</span> <span class="o">=</span> <span class="n">outer</span><span class="p">()</span>
+
+<span class="c1"># Then we call `call_outer()` </span>
+<span class="n">call_outer</span><span class="p">()</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="err">Inside inner() function.</span>
+</pre></div>
+
+
+<h3 id="args">*args<a class="headerlink" href="#args" title="Permanent link">&para;</a></h3>
+<ul>
+<li>This is used to indicate that positional arguments should be stored in the variable args</li>
+<li><code class="codehilite"><span class="err">*</span></code> is for iterables and positional parameters</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="c1"># Define dummy function</span>
+<span class="k">def</span> <span class="nf">dummy_func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+
+<span class="c1"># * allows us to extract positional variables from an iterable when we are calling a function</span>
+<span class="n">dummy_func</span><span class="p">(</span><span class="o">*</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+
+<span class="c1"># If we do not use *, this would happen</span>
+<span class="n">dummy_func</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+
+<span class="c1"># See how we can have varying arguments?</span>
+<span class="n">dummy_func</span><span class="p">(</span><span class="o">*</span><span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="err">(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)</span>
+<span class="err">(range(0, 10),)</span>
+<span class="err">(0, 1)</span>
+</pre></div>
+
+
+<h3 id="kwargs">**kwargs<a class="headerlink" href="#kwargs" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code class="codehilite"><span class="err">**</span></code> is for dictionaries &amp; key/value pairs</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="c1"># New dummy function</span>
+<span class="k">def</span> <span class="nf">dummy_func_new</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="c1"># Call function with no arguments</span>
+<span class="n">dummy_func_new</span><span class="p">()</span>
+
+<span class="c1"># Call function with 2 arguments</span>
+<span class="n">dummy_func_new</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Again, there&#39;s no limit to the number of arguments.</span>
+<span class="n">dummy_func_new</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># Or we can just pass the whole dictionary object if we want</span>
+<span class="n">new_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
+<span class="n">dummy_func_new</span><span class="p">(</span><span class="o">**</span><span class="n">new_dict</span><span class="p">)</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="err">{}</span>
+<span class="err">{&#39;a&#39;: 0, &#39;b&#39;: 1}</span>
+<span class="err">{&#39;a&#39;: 0, &#39;b&#39;: 1, &#39;c&#39;: 2}</span>
+<span class="err">{&#39;a&#39;: 0, &#39;b&#39;: 1, &#39;c&#39;: 2, &#39;d&#39;: 3}</span>
+</pre></div>
+
+
+<h3 id="decorators-as-logger-and-debugging">Decorators as Logger and Debugging<a class="headerlink" href="#decorators-as-logger-and-debugging" title="Permanent link">&para;</a></h3>
+<ul>
+<li>A simple way to remember the power of decorators is that the decorator (the nested function illustrated below) can<ul>
+<li>(1) access the passed arguments of the decorated function and</li>
+<li>(2) access the decorated function</li>
+</ul>
+</li>
+<li>Therefore this allows us to modify the decorated function without changing the decorated function</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="c1"># Create a nested function that will be our decorator</span>
+<span class="k">def</span> <span class="nf">function_inspector</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">inner</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Function args: </span><span class="si">{args}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Function kwargs: </span><span class="si">{kwargs}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Function return result: </span><span class="si">{result}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span>
+    <span class="k">return</span> <span class="n">inner</span>
+
+<span class="c1"># Decorate our multiply function with our logger for easy logging</span>
+<span class="c1"># Of arguments pass to the function and results returned</span>
+<span class="nd">@function_inspector</span>
+<span class="k">def</span> <span class="nf">multiply_func</span><span class="p">(</span><span class="n">num_one</span><span class="p">,</span> <span class="n">num_two</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">num_one</span> <span class="o">*</span> <span class="n">num_two</span>
+
+<span class="n">multiply_result</span> <span class="o">=</span> <span class="n">multiply_func</span><span class="p">(</span><span class="n">num_one</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">num_two</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="err">Function args: ()</span>
+<span class="err">Function kwargs: {&#39;num_one&#39;: 1, &#39;num_two&#39;: 2}</span>
+<span class="err">Function return result: 2</span>
+</pre></div>
+
+
+<h2 id="dates">Dates<a class="headerlink" href="#dates" title="Permanent link">&para;</a></h2>
+<h3 id="get-current-date">Get Current Date<a class="headerlink" href="#get-current-date" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
+<span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">now</span><span class="p">)</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="err">2019-08-12 14:20:45.604849</span>
+</pre></div>
+
+
+<h3 id="get-clean-string-current-date">Get Clean String Current Date<a class="headerlink" href="#get-clean-string-current-date" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="c1"># YYYY-MM-DD</span>
+<span class="n">now</span><span class="o">.</span><span class="n">date</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;20%y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="err">&#39;2019-08-12&#39;</span>
+</pre></div>
+
+
+<h3 id="count-business-days">Count Business Days<a class="headerlink" href="#count-business-days" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="c1"># Number of business days in a month from Jan 2019 to Feb 2019</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">days</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">busday_count</span><span class="p">(</span><span class="s1">&#39;2019-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2019-02&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">days</span><span class="p">)</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="err">23</span>
+</pre></div>
+
+
+<h2 id="progress-bars">Progress Bars<a class="headerlink" href="#progress-bars" title="Permanent link">&para;</a></h2>
+<h3 id="tqdm">TQDM<a class="headerlink" href="#tqdm" title="Permanent link">&para;</a></h3>
+<p>Simple progress bar via <code class="codehilite"><span class="err">pip install tqdm</span></code></p>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)):</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+    <span class="k">pass</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="err">100%|██████████| 100/100 [00:10&lt;00:00,  9.91it/s]</span>
+</pre></div>
+
+
+<h2 id="check-paths">Check Paths<a class="headerlink" href="#check-paths" title="Permanent link">&para;</a></h2>
+<h3 id="check-path-exists">Check Path Exists<a class="headerlink" href="#check-path-exists" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Check if directory exists</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="n">directory</span><span class="o">=</span><span class="s1">&#39;new_dir&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">directory</span><span class="p">))</span>
+
+<span class="c1"># Magic function to list all folders</span>
+<span class="err">!</span><span class="n">ls</span> <span class="o">-</span><span class="n">d</span> <span class="o">*/</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="err">False</span>
+<span class="c">ls: cannot access &#39;*/&#39;: No such file or directory</span>
+</pre></div>
+
+
+<h3 id="check-path-exists-otherwise-create-folder">Check Path Exists Otherwise Create Folder<a class="headerlink" href="#check-path-exists-otherwise-create-folder" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Check if directory exists, otherwise make folder</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">directory</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">directory</span><span class="p">)</span>
+
+<span class="c1"># Magic function to list all folders</span>
+<span class="err">!</span><span class="n">ls</span> <span class="o">-</span><span class="n">d</span> <span class="o">*/</span>
+
+<span class="c1"># Remove directory</span>
+<span class="err">!</span><span class="n">rmdir</span> <span class="n">new_dir</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="err">new_dir/</span>
+</pre></div>
+
+
+<h2 id="exception-handling">Exception Handling<a class="headerlink" href="#exception-handling" title="Permanent link">&para;</a></h2>
+<h3 id="try-except-finally-error">Try, Except, Finally: Error<a class="headerlink" href="#try-except-finally-error" title="Permanent link">&para;</a></h3>
+<ul>
+<li>This is very handy and often exploited to patch up (save) poorly written code</li>
+<li>You can use general exceptions or specific ones like <code class="codehilite"><span class="err">ValueError</span></code>, <code class="codehilite"><span class="err">KeyboardInterrupt</span></code> and <code class="codehilite"><span class="err">MemoryError</span></code> to name a few</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="n">value_one</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span>
+<span class="n">value_two</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="c1"># Try the following line of code</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">final_sum</span> <span class="o">=</span> <span class="n">value_one</span> <span class="o">/</span> <span class="n">value_two</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Code passed!&#39;</span><span class="p">)</span>
+<span class="c1"># If the code above fails, code nested under except will be executed</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Code failed!&#39;</span><span class="p">)</span>
+<span class="c1"># This will run no matter whether the nested code in try or except is executed</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ran code block regardless of error or not.&#39;</span><span class="p">)</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="err">Code failed!</span>
+<span class="err">Ran code block regardless of error or not.</span>
+</pre></div>
+
+
+<h3 id="try-except-finally-no-error">Try, Except, Finally: No Error<a class="headerlink" href="#try-except-finally-no-error" title="Permanent link">&para;</a></h3>
+<ul>
+<li>There won't be errors because you can divide 4 with 2</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="n">value_one</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">value_two</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="c1"># Try the following line of code</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">final_sum</span> <span class="o">=</span> <span class="n">value_one</span> <span class="o">/</span> <span class="n">value_two</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Code passed!&#39;</span><span class="p">)</span>
+<span class="c1"># If the code above fails, code nested under except will be executed</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Code failed!&#39;</span><span class="p">)</span>
+<span class="c1"># This will run no matter whether the nested code in try or except is executed</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ran code block regardless of error or not.&#39;</span><span class="p">)</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="err">Code passed!</span>
+<span class="err">Ran code block regardless of error or not.</span>
+</pre></div>
+
+
+<h3 id="assertion">Assertion<a class="headerlink" href="#assertion" title="Permanent link">&para;</a></h3>
+<ul>
+<li>This comes in handy when you want to enforce strict requirmenets of a certain value, shape, value type, or others</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;Value is more than 5, rejected&#39;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Passed assertion for value </span><span class="si">{i}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="n">Passed</span> <span class="k">assertion</span> <span class="k">for</span> <span class="n">value</span> <span class="mi">0</span>
+<span class="n">Passed</span> <span class="k">assertion</span> <span class="k">for</span> <span class="n">value</span> <span class="mi">1</span>
+<span class="n">Passed</span> <span class="k">assertion</span> <span class="k">for</span> <span class="n">value</span> <span class="mi">2</span>
+<span class="n">Passed</span> <span class="k">assertion</span> <span class="k">for</span> <span class="n">value</span> <span class="mi">3</span>
+<span class="n">Passed</span> <span class="k">assertion</span> <span class="k">for</span> <span class="n">value</span> <span class="mi">4</span>
+<span class="n">Passed</span> <span class="k">assertion</span> <span class="k">for</span> <span class="n">value</span> <span class="mi">5</span>
+
+
+
+<span class="c1">---------------------------------------------------------------------------</span>
+
+<span class="n">AssertionError</span>                            <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="k">call</span> <span class="k">last</span><span class="p">)</span>
+
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="k">input</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="n">d9d077e139a9</span><span class="o">&gt;</span> <span class="k">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+      <span class="mi">1</span> <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+<span class="c1">----&gt; 2     assert i &lt;= 5, &#39;Value is more than 5, rejected&#39;</span>
+      <span class="mi">3</span>     <span class="n">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Passed assertion for value {i}&#39;</span><span class="p">)</span>
+
+
+<span class="n">AssertionError</span><span class="p">:</span> <span class="n">Value</span> <span class="k">is</span> <span class="k">more</span> <span class="k">than</span> <span class="mi">5</span><span class="p">,</span> <span class="n">rejected</span>
+</pre></div>
+
+
+<h2 id="asynchronous">Asynchronous<a class="headerlink" href="#asynchronous" title="Permanent link">&para;</a></h2>
+<h3 id="concurrency-parallelism-asynchronous">Concurrency, Parallelism, Asynchronous<a class="headerlink" href="#concurrency-parallelism-asynchronous" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Concurrency (single CPU core): multiple threads on a single core running in <strong>sequence</strong>, only 1 thread is making progress at any point<ul>
+<li>Think of 1 human, packing a box then wrapping the box</li>
+</ul>
+</li>
+<li>Parallelism (mutliple GPU cores): multiple threads on multiple cores running in <strong>parallel</strong>, multiple threads can be making progress<ul>
+<li>Think of 2 humans, one packing a box, another wrapping the box</li>
+</ul>
+</li>
+<li>Asynchronous: concurrency but with a more dynamic system that moves amongst threads more efficiently rather than waiting for a task to finish then moving to the next task<ul>
+<li>Python's <code class="codehilite"><span class="err">asyncio</span></code> allows us to code asynchronously</li>
+<li>Benefits:<ul>
+<li>Scales better if you need to wait on a lot of processes<ul>
+<li>Less memory (easier in this sense) to wait on thousands of co-routines than running on thousands of threads</li>
+</ul>
+</li>
+<li>Good for IO bound uses like reading/saving from databases while subsequently running other computation</li>
+<li>Easier management than multi-thread processing like in parallel programming<ul>
+<li>In the sense that everything operates sequentially in the same memory space</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="asynchronous-key-components">Asynchronous Key Components<a class="headerlink" href="#asynchronous-key-components" title="Permanent link">&para;</a></h3>
+<ul>
+<li>The three main parts are (1) coroutines and subroutines, (2) event loops, and (3) future.<ul>
+<li>Co-routine and subroutines<ul>
+<li>Subroutine: the usual function</li>
+<li>Coroutine: this allows us to maintain states with memory of where things stopped so we can swap amongst subroutines<ul>
+<li><code class="codehilite"><span class="err">async</span></code> declares a function as a coroutine</li>
+<li><code class="codehilite"><span class="err">await</span></code> to call a coroutine</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Event loops</li>
+<li>Future</li>
+</ul>
+</li>
+</ul>
+<h3 id="synchronous-2-function-calls">Synchronous 2 Function Calls<a class="headerlink" href="#synchronous-2-function-calls" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">timeit</span>
+<span class="k">def</span> <span class="nf">add_numbers</span><span class="p">(</span><span class="n">num_1</span><span class="p">,</span> <span class="n">num_2</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Adding&#39;</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">num_1</span> <span class="o">+</span> <span class="n">num_2</span>
+
+<span class="k">def</span> <span class="nf">display_sum</span><span class="p">(</span><span class="n">num_1</span><span class="p">,</span> <span class="n">num_2</span><span class="p">):</span>
+    <span class="n">total_sum</span> <span class="o">=</span> <span class="n">add_numbers</span><span class="p">(</span><span class="n">num_1</span><span class="p">,</span> <span class="n">num_2</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Total sum </span><span class="si">{total_sum}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">display_sum</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">display_sum</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="n">start</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">default_timer</span><span class="p">()</span>
+
+<span class="n">main</span><span class="p">()</span>
+
+<span class="n">end</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">default_timer</span><span class="p">()</span>
+<span class="n">total_time</span> <span class="o">=</span> <span class="n">end</span> <span class="o">-</span> <span class="n">start</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Total time </span><span class="si">{total_time:.2f}</span><span class="s1">s&#39;</span><span class="p">)</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="err">Adding</span>
+<span class="err">Total sum 4</span>
+<span class="err">Adding</span>
+<span class="err">Total sum 4</span>
+<span class="err">Total time 2.00s</span>
+</pre></div>
+
+
+<h3 id="parallel-2-function-calls">Parallel 2 Function Calls<a class="headerlink" href="#parallel-2-function-calls" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">multiprocessing</span> <span class="kn">import</span> <span class="n">Pool</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">partial</span>
+
+<span class="n">start</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">default_timer</span><span class="p">()</span>
+
+<span class="n">pool</span> <span class="o">=</span> <span class="n">Pool</span><span class="p">()</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">pool</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">partial</span><span class="p">(</span><span class="n">display_sum</span><span class="p">,</span> <span class="n">num_2</span><span class="o">=</span><span class="mi">2</span><span class="p">),</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span> 
+
+<span class="n">end</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">default_timer</span><span class="p">()</span>
+<span class="n">total_time</span> <span class="o">=</span> <span class="n">end</span> <span class="o">-</span> <span class="n">start</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Total time </span><span class="si">{total_time:.2f}</span><span class="s1">s&#39;</span><span class="p">)</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="err">Adding</span>
+<span class="err">Adding</span>
+<span class="err">Total sum 4</span>
+<span class="err">Total sum 4</span>
+<span class="err">Total time 1.08s</span>
+</pre></div>
+
+
+<h3 id="asynchronous-2-function-calls">Asynchronous 2 Function Calls<a class="headerlink" href="#asynchronous-2-function-calls" title="Permanent link">&para;</a></h3>
+<p>For this use case, it'll take half the time compared to a synchronous application and slightly faster than parallel application (although not always true for parallel except in this case)</p>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="kn">import</span> <span class="nn">timeit</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">add_numbers</span><span class="p">(</span><span class="n">num_1</span><span class="p">,</span> <span class="n">num_2</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Adding&#39;</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">num_1</span> <span class="o">+</span> <span class="n">num_2</span> 
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">display_sum</span><span class="p">(</span><span class="n">num_1</span><span class="p">,</span> <span class="n">num_2</span><span class="p">):</span>
+    <span class="n">total_sum</span> <span class="o">=</span> <span class="k">await</span> <span class="n">add_numbers</span><span class="p">(</span><span class="n">num_1</span><span class="p">,</span> <span class="n">num_2</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Total sum </span><span class="si">{total_sum}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># .gather allows us to group subroutines</span>
+    <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">gather</span><span class="p">(</span><span class="n">display_sum</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> 
+                         <span class="n">display_sum</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+
+<span class="n">start</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">default_timer</span><span class="p">()</span>
+
+<span class="c1"># For .ipynb, event loop already done</span>
+<span class="k">await</span> <span class="n">main</span><span class="p">()</span>
+
+<span class="c1"># For .py</span>
+<span class="c1"># asyncio.run(main())</span>
+
+<span class="n">end</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">default_timer</span><span class="p">()</span>
+<span class="n">total_time</span> <span class="o">=</span> <span class="n">end</span> <span class="o">-</span> <span class="n">start</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Total time </span><span class="si">{total_time:.4f}</span><span class="s1">s&#39;</span><span class="p">)</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="err">Adding</span>
+<span class="err">Adding</span>
+<span class="err">Total sum 4</span>
+<span class="err">Total sum 4</span>
+<span class="err">Total time 1.0021s</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+  <h2 id="__comments">Comentários</h2>
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = "https://www.2dados.com/calculo_i/python/python/";
+      this.page.identifier =
+        "calculo_i/python/python/";
+    };
+    (function() {
+      var d = document, s = d.createElement("script");
+      s.src = "//deep-learning-wizard.disqus.com/embed.js";
+      s.setAttribute("data-timestamp", +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            &copy; 2019 2dados. "Deus não joga dados" (Albert Einstein).
+          </div>
+        
+         Todo o conteúdo deste site está publicado sob a licença 
+        <a href="http://www.nvidia.com/page/home.html">Creative Commons CC BY-SA 4.0 Brasil</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/andhremattos" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://www.facebook.com/acmatos/" class="md-footer-social__link fa fa-facebook"></a>
+    
+      <a href="https://www.linkedin.com/company/andhremattos/" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.ac79c3b0.js"></script>
+      
+        
+        
+          
+          <script src="../../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+                <script src="../../../assets/javascripts/lunr/lunr.pt.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
