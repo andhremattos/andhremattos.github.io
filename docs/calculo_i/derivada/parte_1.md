@@ -1,4 +1,25 @@
-# Electron
+# Exercícios 
+
+## Exercício A 
+
+1. Determine a função derivada de $f(x) = x^4 - \sin(x) + \frac{x^{-2}}{-\pi}$ 
+
+**Solução:** 
+
+Temos que $f(x)$ é uma junção de dois tipos de funções, função polinomial com função trigonométrica. Para derivar $f(x)$ basta utilizar a propriedade básica: 
+
+$$f(x) = x^4 - \sin(x) + \frac{x^{-2}}{-\pi}$$ 
+
+$$ f'(x) = 4x^3 - \cos(x) + \left( \frac{-2x^{-1}}{-\pi} \right)$$ 
+
+$$ f'(x) = 4x^3 - \cos(x) + \displaystyle\frac{2x^{-1}}{\pi} $$ 
+
+Que podemos ainda reescrever, ficando 
+
+$$ f'(x) = 4x^3 - \cos(x) + \frac{2}{\pi x} $$ 
+
+
+<!-- 
 
 ## Why Electron
 
@@ -247,3 +268,4 @@ Hello from JS
 
 finished
 ```
+-->
