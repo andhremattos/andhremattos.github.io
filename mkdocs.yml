@@ -27,11 +27,6 @@ pages:
       - Introdução: calculo_ii/introducao.md
       - Integral: calculo_ii/integral/parte_1.md
 
-    - Blog:
-      - Home: blog/index.md
-      - Artigo_1: blog/artigo_01_12_02_2020.md
-      - Artigo_2: blog/artigo_02_14_02_2020.md
-
 # Configuration
 theme:
   name: 'material'
@@ -39,8 +34,7 @@ theme:
   language: 'pt'
   feature:
     tabs: true
-  logo:
-    icon: 'whatshot'
+  logo: 'images/logo_a.svg'
   palette:
     primary: 'teal'
     accent: 'teal'
@@ -97,4 +91,4 @@ google_analytics:
   - 'auto'
 
 # Copyright
-copyright: '&copy; 2019 2dados. "Deus não joga dados" (Albert Einstein).'
+copyright: '&copy; 2020 2dados.'
