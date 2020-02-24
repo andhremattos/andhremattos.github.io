@@ -1,4 +1,4 @@
-# **Videoaulas**
+# Home
 
 <style>
 p.combinado:first-letter { 
@@ -54,11 +54,10 @@ p.combinado:first-letter {
 }	
 </style>
 
+![](/assets/marca.png)
 
 
-
-<h3> Faça o curso no AVA Acadêmico: </h3>
-
+<!-- 
 <center><button class="button"><a href="https://avaacademico.ufrb.edu.br/" target="_blank"><span style="color:#FFF"> Curso MOOC </a></span></button></center>
 
 ## Curso: O Papel do Fiscal na Administração Pública - Apresentação 
@@ -115,3 +114,4 @@ To this date, we have taught thousands of students across more than 120+ countri
 ![](/assets/mario_flappy_pacman_optimized.gif)
 
 [^1]: Simulation of deep reinforcement learning agent mastering games like [Super Mario Bros](https://github.com/ppaquette/gym-super-mario), [Flappy Bird](https://github.com/sourabhv/FlapPyBird) and [PacMan](http://ai.berkeley.edu/project_overview.html). These games have APIs for algorithms to interact with the environment, and they are created by talented people so feel free to check out their respective repositories with the links given.
+-->

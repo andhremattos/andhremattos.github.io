@@ -27,6 +27,11 @@ pages:
       - Introdução: calculo_ii/introducao.md
       - Integral: calculo_ii/integral/parte_1.md
 
+    - Blog:
+      - Home: blog/index.md
+      - Artigo_1: blog/artigo_01_12_02_2020.md
+      - Artigo_2: blog/artigo_02_14_02_2020.md
+
 # Configuration
 theme:
   name: 'material'
@@ -36,8 +41,8 @@ theme:
     tabs: true
   logo: 'images/logo_a.svg'
   palette:
-    primary: 'teal'
-    accent: 'teal'
+    primary: 'Indigo'
+    accent: 'Indigo'
   font:
     text: 'Roboto'
     code: 'Roboto Mono'
@@ -91,4 +96,4 @@ google_analytics:
   - 'auto'
 
 # Copyright
-copyright: '&copy; 2020 2dados.'
+copyright: '&copy; 2020 2dados'
