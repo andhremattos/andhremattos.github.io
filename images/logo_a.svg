@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X7 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="0.796661in" height="0.796661in" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 797 797"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <font id="FontID0" horiz-adv-x="716" font-variant="normal" style="fill-rule:nonzero" font-style="normal" font-weight="400">
+	<font-face 
+		font-family="Kirvy">
+	</font-face>
+   <missing-glyph><path d="M0 0z"/></missing-glyph>
+   <glyph unicode="2" horiz-adv-x="551"><path d="M476.997 0l0 69.9982 -361.997 0c18.0021,224.004 203,253 310.001,379.999 37.0023,44.0035 54.9976,95.0014 54.9976,153 0,1.00502 -3.00147,201.004 -212.996,201.004 -154.005,0 -213.003,-105.004 -220.004,-118.001l60.0023 -35.9973c42.9985,57.9991 99.9993,84.0005 158.997,84.0005 79.0026,0 143.005,-56.0026 143.005,-133.002 -1.00502,-90.0035 -60.0023,-134 -143.005,-193.004 -51.9961,-36.9955 -107,-75.9943 -150.997,-133.993 -49.9997,-67.0035 -73.9979,-146.006 -73.9979,-241.001l0 -33.0026 435.995 0z"/></glyph>
+  </font>
+  <style type="text/css">
+   <![CDATA[
+    @font-face { font-family:"Kirvy";src:url("#FontID0") format(svg)}
+    .str0 {stroke:#FEFEFE;stroke-width:7.87402}
+    .fil0 {fill:#FEFEFE}
+    .fil1 {fill:#624DE8}
+    .fil2 {fill:#B054DB}
+    .fnt0 {font-weight:normal;font-size:579.768px;font-family:'Kirvy'}
+   ]]>
+  </style>
+ </defs>
+ <g id="Camada_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_2734603134592">
+   <circle class="fil0 str0" cx="398" cy="398" r="397"/>
+   <g>
+    <path class="fil1" d="M269 567l37 0 0 -209 -18 0 0 50c0,1 0,6 -8,6l-11 0c-42,0 -77,35 -77,77 0,44 37,76 77,76zm18 -135l0 117 -18 0c-33,0 -59,-26 -59,-58 0,-33 26,-59 59,-59l10 0c3,0 6,0 8,-1l0 1z"/>
+    <path class="fil1" d="M358 565c31,0 57,-20 57,-46l0 -63c0,-25 -25,-47 -54,-47 -19,0 -36,8 -46,22l-5 7 14 11 6 -7c6,-9 17,-14 30,-14 21,0 36,13 36,28l0 9c0,6 -5,7 -6,7 -4,0 -32,0 -32,0 -30,0 -56,20 -56,46 0,27 26,47 56,47zm32 -75c1,0 3,0 6,-1l0 29c0,16 -17,29 -38,29 -21,0 -38,-13 -38,-29 0,-15 17,-27 38,-28l32 0z"/>
+    <path class="fil1" d="M485 566l37 0 0 -209 -18 0 0 50c0,1 0,6 -8,6l-11 0c-42,0 -77,35 -77,77 0,44 38,76 77,76zm19 -135l0 117 -19 0c-32,0 -59,-26 -59,-58 0,-33 27,-59 59,-59l11 0c2,0 5,0 8,-1l0 1z"/>
+    <path class="fil1" d="M572 566c38,0 68,-35 68,-78 0,-40 -27,-78 -68,-78 -37,0 -67,35 -67,78 0,40 27,78 67,78zm0 -138c27,0 50,27 50,60 0,33 -23,60 -50,60 -27,0 -49,-27 -49,-60 0,-33 22,-60 49,-60z"/>
+    <path class="fil1" d="M672 566c33,0 55,-20 55,-46 0,-27 -24,-36 -51,-43 -21,-5 -38,-9 -38,-26 0,-13 11,-23 29,-23 13,0 25,3 39,22l15 -11c-17,-23 -35,-29 -53,-29 -29,0 -48,16 -48,41 0,27 23,37 51,44 20,5 37,9 37,25 0,17 -13,27 -36,27 -25,0 -32,-6 -43,-21l-14 11c13,18 26,29 57,29z"/>
+   </g>
+   <g transform="matrix(-0.508835 -0.860864 0.860864 -0.508835 410.718 880.974)">
+    <text x="398" y="398"  class="fil2 fnt0">2</text>
+   </g>
+  </g>
+ </g>
+</svg>
