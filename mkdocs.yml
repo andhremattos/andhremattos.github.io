@@ -11,6 +11,22 @@ pages:
 #    - Reviews: review.md
     - Projetos: projetos.md
     - Consultoria: consultoria.md
+
+
+    - App Web ebook:
+      - Serviço: app_web_ebook/servico.md
+      - App Web ebook - amostra: app_web_ebook/amostra.md
+
+    - Diagramação:
+      - Serviço: diagramacao/servico.md
+      - Amostra: diagramacao/amostra-diagramacao.md
+
+    - Ciência de dados:
+      - Serviço: ciencia_de_dados/servico.md
+      - Amostra 1: ciencia_de_dados/amostra-1.md
+      - Amostra 2: ciencia_de_dados/amostra-2.md
+      
+
     - Pré-Cálculo:
       - Introdução: pre_calculo/introducao.md
       - Conjuntos: pre_calculo/conjuntos_numericos/introducao_a_conjuntos.md
@@ -27,6 +43,18 @@ pages:
       - Introdução: calculo_ii/introducao.md
       - Integral: calculo_ii/integral/parte_1.md
 
+    - Cálculo III:
+      - Introdução: calculo_iii/introducao.md
+      - Series: calculo_iii/sequencias/parte_1.md
+
+    - Cálculo IV:
+      - Introdução: calculo_iv/introducao.md
+      - Integral dupla: calculo_iv/integral_dupla/parte_1.md
+
+    - Cálculo Numérico:
+      - Introdução: calculo_numerico/introducao.md
+      - Zeros: calculo_numerico/zeros_da_funcao/parte_1.md
+
     - Blog:
       - Home: blog/index.md
       - Artigo_1: blog/artigo_01_12_02_2020.md
@@ -41,8 +69,8 @@ theme:
     tabs: true
   logo: 'images/logo_a.svg'
   palette:
-    primary: 'Indigo'
-    accent: 'Indigo'
+    primary: 'Teal'
+    accent: 'Teal'
   font:
     text: 'Roboto'
     code: 'Roboto Mono'
@@ -87,7 +115,7 @@ extra:
       link: 'https://www.facebook.com/acmatos/'
     - type: 'linkedin'
       link: 'https://www.linkedin.com/company/andhremattos/'
-  disqus: 'deep-learning-wizard'
+ # disqus: 'deep-learning-wizard'
 
 
 # Google Analytics

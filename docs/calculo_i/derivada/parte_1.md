@@ -1,3 +1,5 @@
+disqus:
+
 # Exercícios 
 
 ## Exercício A 

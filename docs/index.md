@@ -54,7 +54,20 @@ p.combinado:first-letter {
 }	
 </style>
 
-![](/assets/marca.png)
+![](/assets/marca_2.png)
+
+
+!!! abstract "App Web ebook"
+    
+    Aqui teremos uma pequena descrição com um botão para ir para página de App web ebook
+
+!!! abstract "Diagramação"
+    
+    Aqui teremos uma pequena descrição com um botão para ir para página de App web ebook
+
+!!! abstract "Ciência de dados"
+    
+    Aqui teremos uma pequena descrição com um botão para ir para página de App web ebook
 
 
 <!-- 

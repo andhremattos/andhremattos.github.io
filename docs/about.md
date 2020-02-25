@@ -1,4 +1,4 @@
-disqus:
+<!--disqus:-->
 
 # About Us
 

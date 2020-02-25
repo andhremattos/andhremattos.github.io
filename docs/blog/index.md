@@ -1,6 +1,6 @@
 disqus:
 
-# Sejam Bem-vindos/as
+# Sejam Bem-vindos(a)s
 
 Neste espaço vamos publicar artigos sobre Data Science, Machine Learning e Deep Learning. :ghost:
 
