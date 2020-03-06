@@ -1,0 +1,3 @@
+disqus:
+
+# Amostra 2 
