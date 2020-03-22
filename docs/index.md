@@ -67,7 +67,7 @@ p.combinado:first-letter {
 
 !!! abstract "Ciência de dados"
     
-    Aqui teremos uma pequena descrição com um botão para ir para página de App web ebook
+    Aqui teremos $\frac{x}{y}$ uma pequena descrição com um botão para ir para página de App web ebook
 
 
 <!-- 

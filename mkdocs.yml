@@ -25,40 +25,53 @@ pages:
       - Serviço: ciencia_de_dados/servico.md
       - Amostra 1: ciencia_de_dados/amostra-1.md
       - Amostra 2: ciencia_de_dados/amostra-2.md
-      
 
-    - Pré-Cálculo:
-      - Introdução: pre_calculo/introducao.md
-      - Conjuntos: pre_calculo/conjuntos_numericos/introducao_a_conjuntos.md
-      - Funções: pre_calculo/funcoes/introducao_a_funcao.md
+    - Aprenda Cálculo:
+      - Bem-Vindos: aprendacalculo/bem_vindos.md
+      - Pré-Cálculo: aprendacalculo/pre_calculo.md
+      - Cálculo I: aprendacalculo/calculo_i.md
+      - Cálculo II: aprendacalculo/calculo_ii.md
+      - Cálculo III: aprendacalculo/calculo_iii.md
+      - Cálculo IV: aprendacalculo/calculo_iv.md
+      - C. Numérico: aprendacalculo/calculo_numerico.md
+
+    - Curso de LaTeX:
+      - Programas: cursolatex/programas.md
+      - LaTeX online: cursolatex/latex_online.md
+      - Introdução: cursolatex/introducao.md
+
+    #- Pré-Cálculo:
+      #- Introdução: pre_calculo/introducao.md
+      #- Conjuntos: pre_calculo/conjuntos_numericos/introducao_a_conjuntos.md
+      #- Funções: pre_calculo/funcoes/introducao_a_funcao.md
   
 
-    - Cálculo I:
-      - Introdução: calculo_i/introducao.md
-      - Limite: calculo_i/limite/parte_1.md
-      - Derivada: calculo_i/derivada/parte_1.md
+    #- Cálculo I:
+      #- Introdução: calculo_i/introducao.md
+      #- Limite: calculo_i/limite/parte_1.md
+      #- Derivada: calculo_i/derivada/parte_1.md
       
 
-    - Cálculo II:
-      - Introdução: calculo_ii/introducao.md
-      - Integral: calculo_ii/integral/parte_1.md
+    #- Cálculo II:
+      #- Introdução: calculo_ii/introducao.md
+      #- Integral: calculo_ii/integral/parte_1.md
 
-    - Cálculo III:
-      - Introdução: calculo_iii/introducao.md
-      - Series: calculo_iii/sequencias/parte_1.md
+    #- Cálculo III:
+      #- Introdução: calculo_iii/introducao.md
+      #- Series: calculo_iii/sequencias/parte_1.md
 
-    - Cálculo IV:
-      - Introdução: calculo_iv/introducao.md
-      - Integral dupla: calculo_iv/integral_dupla/parte_1.md
+    #- Cálculo IV:
+      #- Introdução: calculo_iv/introducao.md
+      #- Integral dupla: calculo_iv/integral_dupla/parte_1.md
 
-    - Cálculo Numérico:
-      - Introdução: calculo_numerico/introducao.md
-      - Zeros: calculo_numerico/zeros_da_funcao/parte_1.md
+    #- Cálculo Numérico:
+      #- Introdução: calculo_numerico/introducao.md
+      #- Zeros: calculo_numerico/zeros_da_funcao/parte_1.md
 
-    - Blog:
-      - Home: blog/index.md
-      - Artigo_1: blog/artigo_01_12_02_2020.md
-      - Artigo_2: blog/artigo_02_14_02_2020.md
+    #- Blog:
+      #- Home: blog/index.md
+      #- Artigo_1: blog/artigo_01_12_02_2020.md
+      #- Artigo_2: blog/artigo_02_14_02_2020.md
 
 # Configuration
 theme:
