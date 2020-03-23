@@ -1,8 +1,8 @@
 disqus:
 
-# Bem-Vindo(a)s
+# **Bem-Vindo(a)s**
 
-É com uma enorme satisfação que te recebemos nesta aplicação web, especificamente nesta página do [Curso de LaTeX](https://www.2dados.com/cursolatex). Sou Carlos André, serei o responsável por ministrar o curso livre. Vamos lá, veja abaixo o cronograma e sucesso! Ah, depois de aprender LaTeX, seus trabalhos acadêmicos não serão os mesmos, :). 
+É com enorme satisfação que te recebemos nesta aplicação web, especificamente nesta página do [Curso de LaTeX](https://www.2dados.com/cursolatex). Sou Carlos André, serei o responsável por ministrar o curso livre. Vamos lá, veja abaixo o cronograma e sucesso! Ah, depois de aprender LaTeX, seus trabalhos acadêmicos não serão os mesmos, :). 
 
 **Este curso é totalmente gratuito**. 
 

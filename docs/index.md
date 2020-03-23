@@ -63,24 +63,36 @@ p {
 
 !!! abstract "**Aprenda Cálculo**"
     
-    <p><button class="button"><a href="/aprendacalculo" target="_blank"><span style="color:#FFF"> Acesse </a></span></button></p>
+    <p><button class="button"><a href="/aprendacalculo"><span style="color:#FFF"> Acesse </a></span></button></p>
 
 !!! abstract "**Curso de LaTeX**"
     
-    <p><button class="button"><a href="/cursolatex" target="_blank"><span style="color:#FFF"> Acesse </a></span></button></p>
+    <p><button class="button"><a href="/cursolatex"><span style="color:#FFF"> Acesse </a></span></button></p>
+
+!!! abstract "**Sobre**"
+    
+    <p><button class="button"><a href="/sobre"><span style="color:#FFF"> Acesse </a></span></button></p>
+
+!!! abstract "**Apoie**"
+    
+    <p><button class="button"><a href="/apoie"><span style="color:#FFF"> Acesse </a></span></button></p>
+
+!!! abstract "**Consultoria**"
+    
+    <p><button class="button"><a href="/consultoria"><span style="color:#FFF"> Acesse </a></span></button></p>
 
 
 !!! abstract "App Web ebook"
     
-    <p><button class="button"><a href="app_web_ebook/servico/" target="_blank"><span style="color:#FFF"> Acesse </a></span></button></p>
+    <p><button class="button"><a href="app_web_ebook/servico/"><span style="color:#FFF"> Acesse </a></span></button></p>
 
 !!! abstract "Diagramação"
     
-    <p><button class="button"><a href="/diagramacao/servico/" target="_blank"><span style="color:#FFF"> Acesse </a></span></button></p>
+    <p><button class="button"><a href="/diagramacao/servico/"><span style="color:#FFF"> Acesse </a></span></button></p>
 
 !!! abstract "Ciência de dados"
     
-    <p><button class="button"><a href="/ciencia_de_dados/servico/" target="_blank"><span style="color:#FFF"> Acesse </a></span></button></p>
+    <p><button class="button"><a href="/ciencia_de_dados/servico/"><span style="color:#FFF"> Acesse </a></span></button></p>
 
 
 <!-- 
