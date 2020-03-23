@@ -14,7 +14,7 @@ disqus:
 </iframe>
 </p>
 
-!!! abstract "soma de frações"
+!!! abstract "Soma de frações"
     
     Para descobrir como somar frações com mesmo denominador, observamos que: 
 
@@ -34,7 +34,9 @@ disqus:
 
     $$ = \displaystyle\frac{1}{4} \cdot (19 + 6) = \displaystyle\frac{25}{4}.$$ 
 
+### Potenciação 
 
+### Radiação 
 
 ## Funções 
 
@@ -47,7 +49,6 @@ disqus:
 ### Função Ímpar
 
 ## Trigonometria 
-
 
 ## Referências 
 

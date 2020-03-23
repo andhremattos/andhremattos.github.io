@@ -9,7 +9,7 @@ pages:
     - Home: index.md
     - Sobre: sobre.md
 #    - Reviews: review.md
-    - Projetos: projetos.md
+    - Apoie: apoie.md
     - Consultoria: consultoria.md
 
 
@@ -40,6 +40,12 @@ pages:
       - Programas: cursolatex/programas.md
       - LaTeX online: cursolatex/latex_online.md
       - Parte 1: cursolatex/parte_1.md
+      - Parte 2: cursolatex/parte_2.md
+      - Parte 3: cursolatex/parte_3.md
+      - Parte 4: cursolatex/parte_4.md
+      - Parte 5: cursolatex/parte_5.md
+      - Parte 6: cursolatex/parte_6.md
+      - Parte 7: cursolatex/parte_7.md
 
     #- Pré-Cálculo:
       #- Introdução: pre_calculo/introducao.md

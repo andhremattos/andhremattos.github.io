@@ -2,6 +2,72 @@ disqus:
 
 # Sobre
 
+## App Web 
+
+Este site, [2dados](https://www.2dados.com) é uma App Web, totalmente responsivo para os diversos dispositivos. Se adapta a qualquer tela. 
+
+Esta aplicação serve como base para o oferecimento de serviços de consultoria e projetos gratuitos e abertos. 
+
+## Consultoria 
+
+1. **Desenvolvemos App Web ebook**: Uma aplicação para web e com responsividade para dispositivo mobile de livros e/ou tabalhos acadêmicos que se encontram em formato PDF, Word, LibreOffice e outros. Desenvolvemos desde a aplicação em si, assim como o design gráfico e o processo de adquirir domínio personalizado; 
+
+2. **Diagramação**: Diagramamos artigos, relatórios, Trabalhos de Conclusão de Curso, dissertações, teses, livretos, cartilhas, revista e livros. Seguindo as Normas da ABNT (quando se aplicar) e personalizações dos usuários; 
+
+3. **Ciência de dados**: Todo tipo de problema que envolva dados públicos e que estão na internet, para extração dos dados, limpeza dos dados, análise exploratória dos dados, investigações e aplicação de estatística descritiva. Dados do DATASUS e Portal de dados abertos do governo são umas das fontes de dados que consultamos. Aquira dados e análise para embasar: trabalhos acadêmicos, release de reportagens joranlísticas, dentre outros. 
+
+## Projetos gratuitos e livres 
+
+### Aprenda Cálculo 
+
+Este projeto surgiu como um inquietamento frente a esse momento de incertezas e recolhimento domiciliar para evitarmos a propagação do Coronavírus (COVID-19). Irá reunir um material já produzido de videoaulas de exercícios resolvidos de pré-cálculo e cálculo. A proposta é oferecer um conteúdo gratuito e livre dos principais tópicos de pré-cálculo e cálculo para todo(a)s o(a)s universitário(a)s. 
+
+O projeto está hospedado neste App Web, em [Aprenda Cálculo](https://www.2dados.com/aprendacalculo). Foi incialmente pensado para oferecer duas vezes na semana, videoaulas ao vivo (Live no Canal Disponha Cálculo no Youtube). No entanto, inicialmente terá videaulas gravadas antecipadamente e liberadas nas datas específicas segundo o cronograma. 
+
+**É gratuito e livre.**
+
+**Público-alvo**: Todos que queiram aprender.
+
+### Curso de LaTeX 
+
+O [Cuso de LaTeX](https://www.2dados.com/cursolatex) é uma contribuição para a comunidade, que pretende mostrar como trabalhar com escrita cienttífica utilizando LaTeX para preparação de documentos, seja estes relatórios, artigos, tcc, dissertações, teses, dentre outros. 
+
+**É gratuito e livre**.
+
+**Público-alvo**: Todos que queiram apnder.
+
+### Canal no Youtube Disponha Cálculo 
+
+O [Disponha Cálculo](https://www.youtube.com/user/DisponhaCalculo/) é um canal no Youtube, que reúne mais de **100 videoaulas** de exercícios resolvidos passo a passo de pré-cálculo e cálculo(limite, derivada, integral, aplicações da integral, sequências, séries, EDO, Integral dupla e outros). 
+
+Conta atualmente com mais de **500.000 mil** visualizações.
+
+## Equipe 
+
+!!! abstract "Desenvolvedor e editor de conteúdo"
+    
+    **Carlos André Lima de Matos**
+    
+    Bacharel em Ciências Exatas e Tecnológicas pela Universidade Federal do Recôncavo da Bahia; cientista de dados com certificação pela [Udacty - Fundamentos de Data Science I](https://confirm.udacity.com/J56CJQRF). 
+
+    **Contato**: 
+
+    [Linkedin](https://www.linkedin.com/in/dhematos/)
+
+    [WhatsApp](https://api.whatsapp.com/send?1=pt_BR&phone=5575991940520)
+
+    [Telegram](https://t.me/dhematos)
+
+    [Instagram](https://www.instagram/dhematos)
+
+    [Twitter](https://www.twitter.com/dhematos)
+
+    [Facebook](https://www.facebook.com/2dhematos)
+    
+    E-mail: andhremattos@gmail.com.
+
+
+<!-- 
 We deploy a top-down approach that enables you to grasp deep learning and deep reinforcement learning theories and code easily and quickly. We have open-sourced all our materials through our [Deep Learning Wizard Tutorials](https://www.deeplearningwizard.com/deep_learning/course_progression/). For visual learners, feel free to sign up for our [video course](https://www.udemy.com/practical-deep-learning-with-pytorch/?couponCode=DEEPWIZARD) and join over 6000 deep learning wizards.
 
 To this date, we have taught thousands of students across more than 120+ countries from students in high school to postgraduates and professionals in leading MNCs and research institutions around the world.
@@ -66,3 +132,4 @@ To this date, we have taught thousands of students across more than 120+ countri
 If you have found these useful in your research, presentations, school work, projects or workshops, feel free to cite using this DOI.
 
 [![DOI](https://zenodo.org/badge/139945544.svg)](https://zenodo.org/badge/latestdoi/139945544)
+-->

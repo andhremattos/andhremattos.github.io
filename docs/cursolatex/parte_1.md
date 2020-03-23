@@ -1,6 +1,6 @@
 disqus:
 
-# Parte 1 -  
+# Parte 1 - Instalação dos programas básicos para uso do LaTeX 
 
 ## Instalação do MiKTeX no Windows
 

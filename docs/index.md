@@ -15,17 +15,21 @@ p.combinado:first-letter {
 }
 
 .button {
-  border-radius: 4px;
-  background-color: #1E90FF;
+  border-radius: 20px;
+  background-color: #009688;
   border: none;
   color: #FFFFFF;
   text-align: center;
-  font-size: 22px;
+  font-size: 15px;
   padding: 10px;
-  width: 200px;
+  width: 150px;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
+}
+
+p {
+ text-align: center; 
 }
 
 .button span {
@@ -57,17 +61,26 @@ p.combinado:first-letter {
 ![](/assets/banner_v2.png)
 
 
+!!! abstract "**Aprenda Cálculo**"
+    
+    <p><button class="button"><a href="https://www.2dados.com/aprendacalculo" target="_blank"><span style="color:#FFF"> Acesse </a></span></button></p>
+
+!!! abstract "**Curso de LaTeX**"
+    
+    <p><button class="button"><a href="https://www.2dados.com/cursolatex" target="_blank"><span style="color:#FFF"> Acesse </a></span></button></p>
+
+
 !!! abstract "App Web ebook"
     
-    Aqui teremos uma pequena descrição com um botão para ir para página de App web ebook
+    <p><button class="button"><a href="https://www.2dados.com/app_web_ebook/servico/" target="_blank"><span style="color:#FFF"> Acesse </a></span></button></p>
 
 !!! abstract "Diagramação"
     
-    Aqui teremos uma pequena descrição com um botão para ir para página de App web ebook
+    <p><button class="button"><a href="https://www.2dados.com/diagramacao/servico/" target="_blank"><span style="color:#FFF"> Acesse </a></span></button></p>
 
 !!! abstract "Ciência de dados"
     
-    Aqui teremos $\frac{x}{y}$ uma pequena descrição com um botão para ir para página de App web ebook
+    <p><button class="button"><a href="https://www.2dados.com/ciencia_de_dados/servico/" target="_blank"><span style="color:#FFF"> Acesse </a></span></button></p>
 
 
 <!-- 

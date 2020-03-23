@@ -1,20 +1,27 @@
 disqus:
 
-# Treinamento, Consultoria & Serviços
+## Consultoria 
 
-Prestamos treinamto em pré-cálculo, cálculo I, cálculo II, LaTeX e análise de dados com Python. 
-Consultoria para formatação de trabalhos acadêmicos, livros impressos e ebook. Criação de marcas e banners para eventos. 
 
-Estamos aqui pensando em dividir essa parte de consultoria em:
+!!! abstract "**Desenvolvemos App Web ebook**"
+    
+     Uma aplicação para web e com responsividade para dispositivo mobile de livros e/ou tabalhos acadêmicos que se encontram em formato PDF, Word, LibreOffice e outros. Desenvolvemos desde a aplicação em si, assim como o design gráfico e o processo de adquirir domínio personalizado;
 
-1. Diagramação de trabalhos acadêmicos
-2. Diagramação de ebooks
-3. Diagramação de livros impressos
-4. Aulas particulares
-5. Análise de dados para trabalhos científicos
+!!! abstract "**Diagramação**"
+    
+     Diagramamos artigos, relatórios, Trabalhos de Conclusão de Curso, dissertações, teses, livretos, cartilhas, revista e livros. Seguindo as Normas da ABNT (quando se aplicar) e personalizações dos usuários; 
+ 
+!!! abstract "**Ciência de dados**"
+    
+     Todo tipo de problema que envolva dados públicos e que estão na internet, para extração dos dados, limpeza dos dados, análise exploratória dos dados, investigações e aplicação de estatística descritiva. Dados do DATASUS e Portal de dados abertos do governo são umas das fontes de dados que consultamos. Aquira dados e análise para embasar: trabalhos acadêmicos, release de reportagens joranlísticas, dentre outros.  
 
-Criar um Instagram e pagar patrocinado. 
 
-Divulgação nos grupos das universidades 
+## Solicitar consultoria 
 
-Para entrar em contato, me envie um e-mail para  **contato@2dados.com**.
+Para solicitar serviço de consultoria, por favor entre em contato pelos seguintes meios: 
+
+[WhatsApp](https://api.whatsapp.com/send?1=pt_BR&phone=5575991940520)
+
+[Telegram](https://t.me/dhematos)
+
+ E-mail: andhremattos@gmail.com.
