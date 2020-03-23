@@ -63,24 +63,24 @@ p {
 
 !!! abstract "**Aprenda Cálculo**"
     
-    <p><button class="button"><a href="https://www.2dados.com/aprendacalculo" target="_blank"><span style="color:#FFF"> Acesse </a></span></button></p>
+    <p><button class="button"><a href="/aprendacalculo" target="_blank"><span style="color:#FFF"> Acesse </a></span></button></p>
 
 !!! abstract "**Curso de LaTeX**"
     
-    <p><button class="button"><a href="https://www.2dados.com/cursolatex" target="_blank"><span style="color:#FFF"> Acesse </a></span></button></p>
+    <p><button class="button"><a href="/cursolatex" target="_blank"><span style="color:#FFF"> Acesse </a></span></button></p>
 
 
 !!! abstract "App Web ebook"
     
-    <p><button class="button"><a href="https://www.2dados.com/app_web_ebook/servico/" target="_blank"><span style="color:#FFF"> Acesse </a></span></button></p>
+    <p><button class="button"><a href="app_web_ebook/servico/" target="_blank"><span style="color:#FFF"> Acesse </a></span></button></p>
 
 !!! abstract "Diagramação"
     
-    <p><button class="button"><a href="https://www.2dados.com/diagramacao/servico/" target="_blank"><span style="color:#FFF"> Acesse </a></span></button></p>
+    <p><button class="button"><a href="/diagramacao/servico/" target="_blank"><span style="color:#FFF"> Acesse </a></span></button></p>
 
 !!! abstract "Ciência de dados"
     
-    <p><button class="button"><a href="https://www.2dados.com/ciencia_de_dados/servico/" target="_blank"><span style="color:#FFF"> Acesse </a></span></button></p>
+    <p><button class="button"><a href="/ciencia_de_dados/servico/" target="_blank"><span style="color:#FFF"> Acesse </a></span></button></p>
 
 
 <!-- 

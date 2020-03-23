@@ -1,15 +1,13 @@
+{#-
+  This file was automatically generated - do not edit
+-#}
 {% import "partials/language.html" as lang with context %}
 <footer class="md-footer">
   {% if page.previous_page or page.next_page %}
-  <style>
-  div.abn{
-    text-align: center;
-
-  }</style>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         {% if page.previous_page %}
-          <a href="{{ page.previous_page.url }}" title="{{ page.previous_page.title }}" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="{{ page.previous_page.url | url }}" title="{{ page.previous_page.title | striptags }}" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -24,7 +22,7 @@
           </a>
         {% endif %}
         {% if page.next_page %}
-          <a href="{{ page.next_page.url }}" title="{{ page.next_page.title }}" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="{{ page.next_page.url | url }}" title="{{ page.next_page.title | striptags }}" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
@@ -49,12 +47,10 @@
             {{ config.copyright }}
           </div>
         {% endif %}
-         Todo o conteúdo deste site está publicado sob a licença 
-        <a href="http://www.nvidia.com/page/home.html">Creative Commons CC BY-SA 4.0 Brasil</a>
+        Todo o conteúdo deste site está publicado sob a licença 
+        <a href="https://creativecommons.org/licenses/by-sa/4.0/legalcode">Creative Commons CC BY-SA 4.0 Brasil</a>
       </div>
-      {% block social %}
-        {% include "partials/social.html" %}
-      {% endblock %}
+      {% include "partials/social.html" %}
     </div>
   </div>
 </footer>
