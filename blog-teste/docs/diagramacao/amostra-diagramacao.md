@@ -1,3 +1,0 @@
-disqus:
-
-# Serviço 

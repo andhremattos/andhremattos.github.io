@@ -1,38 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Creator: CorelDRAW X7 -->
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="0.999992in" height="0.999992in" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-viewBox="0 0 1000 1000"
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="8.26772in" height="11.6929in" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 8268 11693"
  xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
-  <font id="FontID0" horiz-adv-x="666" font-variant="normal" class="str2" style="fill-rule:nonzero" font-weight="400">
+  <font id="FontID0" horiz-adv-x="716" font-variant="normal" style="fill-rule:nonzero" font-weight="400">
 	<font-face 
-		font-family="Arial">
+		font-family="Kirvy">
 	</font-face>
    <missing-glyph><path d="M0 0z"/></missing-glyph>
-   <glyph unicode="2" horiz-adv-x="556"><path d="M503 83.9997l0 -83.9997 -474 0c-0.66674,21.1678 2.83485,41.501 10.3321,61.1674 12.1692,32.1666 31.6678,63.9975 58.5005,95.1664 26.8327,31.1641 65.1679,67.1681 115.001,107.998 77.5002,63.8344 130.168,114.334 157.667,151.667 27.6673,37.3375 41.501,72.6699 41.501,106.002 0,34.8336 -12.5002,64.1654 -37.5005,88.168 -25.0004,23.83 -57.6706,35.8313 -97.8333,35.8313 -42.5035,0 -76.5024,-12.6681 -102.002,-37.9994 -25.4992,-25.1682 -38.3352,-60.1649 -38.6661,-105l-90.0003 8.99859c6.16855,67.336 29.4997,118.665 69.835,154.003 40.4985,35.3324 94.6627,52.9987 162.833,52.9987 68.6646,0 123.165,-18.9997 163.164,-57.167 40.1675,-38.1673 60.1649,-85.501 60.1649,-141.833 0,-28.665 -5.83278,-56.8312 -17.6662,-84.4985 -11.6656,-27.8352 -31.1641,-56.9991 -58.3326,-87.6691 -27.3316,-30.4974 -72.4972,-72.6651 -135.497,-126 -52.8356,-44.331 -86.8345,-74.3343 -101.834,-90.1682 -14.9993,-15.8291 -27.3363,-31.663 -37.1696,-47.6647l351.502 0z"/></glyph>
+   <glyph unicode="2" horiz-adv-x="551"><path d="M476.998 0l0 69.9993 -361.994 0c17.9919,224.004 202.995,253.004 309.997,379.996 37.0026,44.0055 54.9945,95.004 54.9945,153.005 0,0.999001 -2.997,200.997 -212.995,200.997 -154.004,0 -213.005,-104.994 -219.998,-118.001l59.9994 -35.9937c42.9966,58.0014 99.999,83.9952 158.999,83.9952 79.0002,0 142.996,-56.0034 142.996,-132.996 -0.999001,-89.9991 -59.9994,-134.005 -142.996,-193.005 -51.9975,-37.0026 -107.002,-75.9933 -150.998,-133.995 -49.9995,-67.0023 -74.0052,-146.003 -74.0052,-241.007l0 -32.9967 436 0z"/></glyph>
   </font>
   <style type="text/css">
    <![CDATA[
-    @font-face { font-family:"Arial";src:url("#FontID0") format(svg)}
-    .str2 {stroke-width:3.65354}
-    .str1 {stroke:#00AEB4;stroke-width:7.87402}
-    .str0 {stroke:#2F2C3D;stroke-width:7.87402}
-    .str3 {stroke:#00AEB4;stroke-width:3}
-    .fil1 {fill:none}
-    .fil2 {fill:#00AEB4}
-    .fil0 {fill:#2F2C3D}
-    .fnt0 {font-weight:normal;font-size:820.776px;font-family:'Arial'}
+    @font-face { font-family:"Kirvy";src:url("#FontID0") format(svg)}
+    .str0 {stroke:#20434F;stroke-width:3.93701}
+    .fil0 {fill:#FEFEFE}
+    .fil2 {fill:#009688}
+    .fil1 {fill:#20434F}
+    .fnt0 {font-weight:normal;font-size:398.035px;font-family:'Kirvy'}
    ]]>
   </style>
  </defs>
  <g id="Camada_x0020_1">
   <metadata id="CorelCorpID_0Corel-Layer"/>
-  <g id="_2022350632784">
-   <rect class="fil0 str0" x="243" y="76" width="487" height="786" rx="20" ry="46"/>
-   <rect class="fil1 str1" x="320" y="142" width="410" height="796" rx="17" ry="47"/>
-   <text x="322" y="786"  class="fil2 str3 fnt0">2</text>
-   <circle class="fil1" cx="500" cy="500" r="500"/>
+  <circle class="fil0 str0" cx="3222" cy="3876" r="212"/>
+  <g id="_2206231241904">
+   <path class="fil1" d="M3271 4019l56 0 0 -320 -28 0 0 77c0,1 0,9 -13,9l-16 0c-64,0 -118,53 -118,117 0,68 58,117 119,117zm27 -207l0 180 -28 0c-50,0 -90,-40 -90,-90 0,-49 40,-89 90,-89l16 0c4,0 8,-1 12,-1l0 0z"/>
+   <text x="3069" y="4020"  class="fil2 fnt0">2</text>
   </g>
  </g>
 </svg>

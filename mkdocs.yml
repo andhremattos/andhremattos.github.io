@@ -27,7 +27,7 @@ pages:
       - Amostra 2: ciencia_de_dados/amostra-2.md
 
     - Aprenda Cálculo:
-      - Bem-Vindos: aprendacalculo/bem_vindos.md
+      - Bem-Vindo(a)s: aprendacalculo/bem_vindos.md
       - Pré-Cálculo: aprendacalculo/pre_calculo.md
       - Cálculo I: aprendacalculo/calculo_i.md
       - Cálculo II: aprendacalculo/calculo_ii.md
@@ -36,9 +36,10 @@ pages:
       - C. Numérico: aprendacalculo/calculo_numerico.md
 
     - Curso de LaTeX:
+      - Bem-Vindo(a)s: cursolatex/bem_vindos.md
       - Programas: cursolatex/programas.md
       - LaTeX online: cursolatex/latex_online.md
-      - Introdução: cursolatex/introducao.md
+      - Parte 1: cursolatex/parte_1.md
 
     #- Pré-Cálculo:
       #- Introdução: pre_calculo/introducao.md
@@ -80,10 +81,10 @@ theme:
   language: 'pt'
   feature:
     tabs: true
-  logo: 'images/logo_d.svg'
+  logo: 'images/logo.svg'
   palette:
-    primary: 'Blue'
-    accent: 'Cyan'
+    primary: 'Teal'
+    accent: 'Teal'
   font:
     text: 'Roboto'
     code: 'Roboto Mono'

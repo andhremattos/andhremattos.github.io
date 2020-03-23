@@ -1,4 +1,3 @@
-disqus:
 
-# Introdução 
+
 

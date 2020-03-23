@@ -54,7 +54,7 @@ p.combinado:first-letter {
 }	
 </style>
 
-![](/assets/marca_3.png)
+![](/assets/banner_v2.png)
 
 
 !!! abstract "App Web ebook"
