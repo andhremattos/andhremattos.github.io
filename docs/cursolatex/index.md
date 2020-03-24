@@ -132,6 +132,8 @@ p.combinado:first-letter {
 }
 </style>
 
+![](/assets/curso_latex.png)
+
 <div class="card">
 <div class="alert">
   <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 

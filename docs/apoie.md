@@ -15,7 +15,7 @@ Alguns dos textos neste App web precisam de uma revisão textual, se você é da
 
 Atualmente estou desenvolvendo o [Aprenda Cálculo](https://www.2dados.com/aprendacalculo) e o [Curso de LaTeX](https://www.2dados.com/cursolatex) utilizando um **notebook emprestado** que em breve terei que devolver. Assim, caso você tenha condições e possa doar/contribuir com qualquer quantia em recurso financeiro para que eu possa adquirir um notebook para me auxiliar no desenvolvimentos destes projetos, ficarei imensamente grato.  
 
-Infelizmente/Felizmente só possuo uma conta bancária no Banco do Brasil. 
+Infelizmente/felizmente só possuo uma conta bancária no Banco do Brasil. 
 
 !!! warning "**Dados da conta bancária:**"
 
@@ -27,9 +27,7 @@ Infelizmente/Felizmente só possuo uma conta bancária no Banco do Brasil.
 
     **Beneficiário**: Carlos Andre Lima de Matos - CPF: 047.779.005-41
 
-
 # Apoiadoras/Apoiadores
-
 1. Eduarda Santos apoiou [Aprenda Cálculo](https://www.2dados.com/aprendacalculo) doando listas de exercícios.
 
 2. Marcelo Bitencourt apoiou com **recuros financeiros em qualquer quantia**.
