@@ -90,15 +90,23 @@ extra:
     - type: 'github'
       link: 'https://github.com/andhremattos'
     - type: 'facebook'
-      link: 'https://www.facebook.com/acmatos/'
+      link: 'https://www.facebook.com/2dhematos'
     - type: 'linkedin'
-      link: 'https://www.linkedin.com/company/andhremattos/'
+      link: 'https://www.linkedin.com/dhematos'
+    - type: 'instagram'
+      link: 'https://www.instagram.com/dhematos'
+    - type: 'twitter'
+      link: 'https://www.twitter.com/dhematos'
+    - type: 'whatsapp'
+      link: 'https://api.whatsapp.com/send?1=pt_BR&phone=5575991940520'
+    - type: 'telegram'
+      link: 'https://t.me/dhematos'
  # disqus: 'deep-learning-wizard'
 
 
 # Google Analytics
 google_analytics:
-  - 'UA-152071943-1'
+  - 'UA-215083676-1'
   - 'auto'
 
 # Copyright

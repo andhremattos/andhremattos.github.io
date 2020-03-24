@@ -6,5 +6,5 @@ disqus:
 
 ## Integral tripla   
 
-## Stokes  
+## Teorema de Stokes  
 

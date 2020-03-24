@@ -4,8 +4,10 @@ disqus:
 
 ## Introdução ao limite 
 
-## Definiçãod e limites 
+## Definição de limite
 
-## Propriedades de limites 
+## Propriedades de limite
 
 ## Continuidade 
+
+## Referências 
