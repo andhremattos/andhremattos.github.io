@@ -1,5 +1,3 @@
-disqus:
-
 # Sobre
 
 ## App Web 

@@ -132,7 +132,25 @@ p.combinado:first-letter {
 }
 </style>
 
+
+
+<!-- AddToAny BEGIN -->
+<div class="a2a_kit a2a_kit_size_24 a2a_default_style" style="line-height: 24px;">
+<a class="a2a_button_instagram"></a>
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_linkedin"></a>
+<a class="a2a_button_whatsapp"></a>
+<a class="a2a_button_telegram"></a>
+<a class="a2a_button_reddit"></a>
+</div>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
 ![](/assets/curso_latex.png)
+
+
+
+
 
 <div class="card">
 <div class="alert">
