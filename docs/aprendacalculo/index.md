@@ -164,14 +164,14 @@ Iniciaremos na próxima quinta-feira, 26 de março de 2020, o **Curso** [Aprenda
 
 | Cronograma Pré-Cálculo |
 |------|
-| 1. **Pré-Cálculo** -> **Data: 26/03/2020 - Quinta-feira** (em vídeo e escrito) - **Parte 1**: Conjuntos numéricos e os números reais; |
-| 2. **Pré-Cálculo** -> **Data: 26/03/2020 - Quinta-feira** (em vídeo e escrito) - **Parte 2**: Conjuntos numéricos e os números reais; |
-| 3. **Pré-Cálculo** -> **Data: 02/04/2020 - Quinta-feira** (em vídeo e escrito) - **Parte 3**: Conjuntos numéricos e os números reais; |
-| 4. **Pré-Cálculo** -> **Data: 02/04/2020 - Quinta-feira** (em vídeo e escrito) - **Parte 1**: Radiciação e potenciação; |
-| 5. **Pré-Cálculo** -> **Data: 09/04/2020 - Quinta-feira** (em vídeo e escrito) - **Parte 2**: Radiciação e potenciação; |
-| 6. **Pré-Cálculo** -> **Data: 09/04/2020 - Quinta-feira** (em vídeo e escrito) - **Parte 1**: Polinômios e fatoração; |
-| 7. **Pré-Cálculo** -> **Data: 16/04/2020 - Quinta-feira** (em vídeo e escrito) - **Parte 2**: Polinômios e fatoração; |
-| 8. **Pré-Cálculo** -> **Data: 16/04/2020 - Quinta-feira** (em vídeo e escrito) - **Parte 1**: Expressões fracionárias; |
+| 1. **Pré-Cálculo** -> **Data: 26/03/2020 - Quinta-feira** (**em vídeo e escrito liberados a partir das 21h**) - **Parte 1**: Conjuntos numéricos e os números reais; |
+| 2. **Pré-Cálculo** -> **Data: 26/03/2020 - Quinta-feira** (**em vídeo e escrito liberados a partir das 21h**) - **Parte 2**: Conjuntos numéricos e os números reais; |
+| 3. **Pré-Cálculo** -> **Data: 02/04/2020 - Quinta-feira** (**em vídeo e escrito liberados a partir das 21h**) - **Parte 3**: Conjuntos numéricos e os números reais; |
+| 4. **Pré-Cálculo** -> **Data: 02/04/2020 - Quinta-feira** (**em vídeo e escrito liberados a partir das 21h**) - **Parte 1**: Radiciação e potenciação; |
+| 5. **Pré-Cálculo** -> **Data: 09/04/2020 - Quinta-feira** (**em vídeo e escrito liberados a partir das 21h**) - **Parte 2**: Radiciação e potenciação; |
+| 6. **Pré-Cálculo** -> **Data: 09/04/2020 - Quinta-feira** (**em vídeo e escrito liberados a partir das 21h**) - **Parte 1**: Polinômios e fatoração; |
+| 7. **Pré-Cálculo** -> **Data: 16/04/2020 - Quinta-feira** (**em vídeo e escrito liberados a partir das 21h**) - **Parte 2**: Polinômios e fatoração; |
+| 8. **Pré-Cálculo** -> **Data: 16/04/2020 - Quinta-feira** (**em vídeo e escrito liberados a partir das 21h**) - **Parte 1**: Expressões fracionárias; |
 
 <div class="atento">
   <p><strong>Daremos uma pausa em pré-cálculo para iniciar Cálculo I. Os tópicos de pré-cálculo retornam. </strong></p>

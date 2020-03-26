@@ -133,13 +133,42 @@ p.combinado:first-letter {
 </style>
 
 <div class="card">
-<div class="alert">
+<div class="sucesso">
   <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-  <strong>Atenção!</strong> Começa quinta-feira, 26 de março, com as primerias videoaulas liberadas!</a>
+  <strong>Informe: Galera, tivemos um problema no upload das videaulas para Youtube e a liberação vai demorar, prevemos para 23h ainda de hoje os vídeos estarem aqui! Pedimos desculpas por isso.</strong></a>
 </div>
 </div>
 
 ## Conjuntos numéricos e os números reais 
+
+### Representação dos números reais 
+
+<!--
+!!! tip "Videoaula"
+    <p style="text-align: center;">
+    <iframe width="720" height="345" src="https://www.youtube.com/embed/mgHg9-pW220"></iframe>
+    </p>
+-->
+
+!!! abstract "Tópico escrito"
+    
+    Um **número real** é qualquer número que pode ser escrito na forma decimal. 
+
+    O conjunto dos números reais contém vários subconjuntos: 
+
+    1. Conjunto dos números naturais: $N=\{ 0,, 1, 2, 3, ... \}$. 
+
+    2. Conjunto dos números inteiros: $Z=\{..., -3, -2, -1 0,, 1, 2, 3, ... \}$. 
+
+    3. Conjunto dos números racionais 
+
+    Primeiro, temos que observar que um número **racional** é qualquer número que pode ser escito como a razão $a/b$ de dois números inteiros, onde $a\neq 0$. 
+
+    Tem a seguinte notação: 
+
+    $$ Q = \displaystyle\{ \displaystyle\frac{a}{b} | a, b \quad \text{são inteiros, e } b \neq 0 \}$$
+
+
 
 ## Radiciação e potenciação
 

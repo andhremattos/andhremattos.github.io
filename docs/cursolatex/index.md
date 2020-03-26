@@ -148,9 +148,6 @@ p.combinado:first-letter {
 ![](/assets/curso_latex.png)
 
 
-
-
-
 <div class="card">
 <div class="alert">
   <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
@@ -180,13 +177,13 @@ Iniciaremos na próxima sexta-feira, 27 de março de 2020, o Curso de LateX que 
 
 | Cronograma curso LaTeX |
 |------|
-| 1. Parte 1 -> **Data: 27/03/2020 - Sexta-feira** (em vídeo e escrito) - Instalação dos programas básicos para uso do LaTeX; |
-| 2. Parte 2 -> **Data: 27/03/2020 - Sexta-feira** (em vídeo e escrito) - LaTeX online, utilizando a plataforma Overleaf; |
-| 3. Parte 3 -> **Data: 27/03/2020 - Sexta-feira** (em vídeo e escrito) - Primeiro documento LaTeX no Texstudio e no Overleaf; |
-| 4. Parte 4 -> **Data: 03/04/2020 - Sexta-feira** (em vídeo e escrito) - Inserindo imagens e tabelas; |
-| 5. Parte 5 -> **Data: 10/04/2020 - Sexta-feira** (em vídeo e escrito) - abnTeX, o pacote ABNT do LaTeX; |
-| 6. Parte 6 -> **Data: 17/04/2020 - Sexta-feira** (em vídeo e escrito) - Escrita científica com LaTeX, explorando modelos no Overleaf; |
-| 7. Parte 6 -> **Data: 24/04/2020 - Sexta-feira** (em vídeo e escrito) - Criando comandos para LaTeX; |
+| 1. Parte 1 -> **Data: 27/03/2020 - Sexta-feira** (**em vídeo e escrito liberados a partir das 21h**) - Instalação dos programas básicos para uso do LaTeX (); |
+| 2. Parte 2 -> **Data: 27/03/2020 - Sexta-feira** (**em vídeo e escrito liberados a partir das 21h**) - LaTeX online, utilizando a plataforma Overleaf; |
+| 3. Parte 3 -> **Data: 27/03/2020 - Sexta-feira** (**em vídeo e escrito liberados a partir das 21h**) - Primeiro documento LaTeX no Texstudio e no Overleaf; |
+| 4. Parte 4 -> **Data: 03/04/2020 - Sexta-feira** (**em vídeo e escrito liberados a partir das 21h**) - Inserindo imagens e tabelas; |
+| 5. Parte 5 -> **Data: 10/04/2020 - Sexta-feira** (**em vídeo e escrito liberados a partir das 21h**) - abnTeX, o pacote ABNT do LaTeX; |
+| 6. Parte 6 -> **Data: 17/04/2020 - Sexta-feira** (**em vídeo e escrito liberados a partir das 21h**) - Escrita científica com LaTeX, explorando modelos no Overleaf; |
+| 7. Parte 6 -> **Data: 24/04/2020 - Sexta-feira** (**em vídeo e escrito liberados a partir das 21h**) - Criando comandos para LaTeX; |
 
 
 ## **Orientações**
