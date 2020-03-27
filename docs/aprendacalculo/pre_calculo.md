@@ -135,7 +135,7 @@ p.combinado:first-letter {
 <div class="card">
 <div class="sucesso">
   <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-  <strong>Informe: Galera, primeira videaula!</strong></a>
+  <strong>Informe: Galera, videoaulas no App web!</strong></a>
 </div>
 </div>
 
@@ -144,11 +144,15 @@ p.combinado:first-letter {
 ### Representação dos números reais 
 
 
-!!! tip "Videoaula"
+!!! tip "Videoaula 1"
     <p style="text-align: center;">
     <iframe width="720" height="345" src="https://www.youtube.com/embed/r8rz0rqYOjU"></iframe>
     </p>
 
+!!! tip "Videoaula 2"
+    <p style="text-align: center;">
+    <iframe width="720" height="345" src="https://www.youtube.com/embed/bPwsUvsVmT4"></iframe>
+    </p>
 
 !!! abstract "Tópico escrito"
     

@@ -132,6 +132,14 @@ p.combinado:first-letter {
 }
 </style>
 
+<div class="card">
+<div class="info">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  <strong>Informe: Galera, videoaulas de conjuntos numéricos no App web!</strong></a>
+</div>
+</div>
+
+<br>
 <!-- AddToAny BEGIN -->
 <div class="a2a_kit a2a_kit_size_24 a2a_default_style" style="line-height: 24px;">
 <a class="a2a_button_facebook"></a>
@@ -152,6 +160,8 @@ p.combinado:first-letter {
   <strong>Atenção!</strong> Encontrou algum erro? nos avise clicando aqui: <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5575991940520"><span style="color:#20434F"> Reportar erro.</a>
 </div>
 </div>
+
+
 
 É com enorme satisfação que te recebo nesta [aplicação web](https://www.2dados.com), especificamente nesta página do **Curso** [Aprenda Cálculo](https://www.2dados.com/aprendacalculo). Sou Carlos André, serei o responsável por ministrar este curso gratuito e livre. Vamos lá, veja abaixo o cronograma e sucesso! Ah, cálculo não é absolutamente trivial, mas faremos de tudo para aprender. 
 
