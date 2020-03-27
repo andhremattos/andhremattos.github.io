@@ -132,8 +132,13 @@ p.combinado:first-letter {
 }
 </style>
 
-
-
+<div class="card">
+<div class="info">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  <strong>Informe: Galera, videoaulas liberadas no App web!</strong></a>
+</div>
+</div>
+<br>
 <!-- AddToAny BEGIN -->
 <div class="a2a_kit a2a_kit_size_24 a2a_default_style" style="line-height: 24px;">
 <a class="a2a_button_facebook"></a>

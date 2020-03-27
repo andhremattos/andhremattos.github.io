@@ -135,18 +135,44 @@ p.combinado:first-letter {
 </style>
 
 <div class="card">
-<div class="warning">
+<div class="info">
   <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-  <strong>Informe:</strong> começa sexta-feira, 27 de março, às 21h, com as primerias videoaulas liberadas!</a>
+  <strong>Informe:</strong> Videoaula liberada!</a>
 </div>
 </div>
 
-## Instalação do MiKTeX no Windows
 
-Após baixar o programa, basta seguir as orientações que aparecem na tela. Teremos uma videoaula mostrando o processo de instalação. 
+!!! tip "Videoaula 1"
+    <p style="text-align: center;">
+    <iframe width="720" height="345" src="https://www.youtube.com/embed/kJYLWFwfL80"></iframe>
+    </p>
 
-## Instalação do TeXstudio no Windows 
-Após baixar o programa, basta também seguir as orientações que aparecem na tela. 
+!!! abstract "Instalação dos programas MiKTeX e TeXstudio"
+    
+    **Instalação do TeXstudio**: 
+
+    Acesse texstudio.org ou digite no seu navegador de preferência, ou seja, dá um google em "texstudio", normalmente é o primeiro resultado que aparece na pesquisa. 
+
+    Ao clicar, você será levado a página de baixar em função do seu sistema operacional. Basta clicar e aguardar o download. 
+
+
+    **Instalação do MiKTeX**: 
+
+    Acesse miktex.org ou digite no seu navegador de preferência, ou seja, dá um google em "miktex", normalmente é o primeiro resultado que aparece na pesquisa.
+
+    Ao entrar na página, você terá logo a opção de baixar um tipo de instalador. Não instale usando o instalador sugerido, vá até  "all downloads" e escolha a opção em função do seu sistema operacional. 
+
+    Agora é a hora de escolher a instalação _basic_ ou _net_ e se é 32bit ou 64bit. Neste tutorial, minha recomendação é utilizar a opção _net_. Clique em baixar e aguarde. 
+
+    Após baixar, dê um clique e autorize a instalação no computador, a segunda tela que aparecerá é para concordar com os termos de instalação, clique na caixa indicada, depois em _net_ (próximo). 
+
+    **Atenção**: O MiKTeX tem duas etapas para sua completa instalação. Primeiro você irá baixar os pacotes em seu computador. Depois fará a instalação usando os pacotes baixados inicialmente. 
+
+    Vamos lá, escolha _download_ e depois o local onde será o _download_, em seguida você vai escolher o distribuidor em função do país, as primeiras opções são do Brasil, da USP, clique na opção que tem **HTTP** e depois em _net_. Aguarde o _download_. Demora de 40min a 1h 30min. 
+
+    Agora é hora de fazer a instalação. Clique novamente no arquivo **setup.exe** do MiKTeX e siga com _net_ escolhendo a versão completa e se será somente para seu usuário do computador ou para os demais. Busce a pasta onde você baixou os pacotes e siga com _net_. Aguarde, vai demorar bastante! 
+
+    Após as etapas você já tem o "sitema" LaTeX instalado no seu computador. Tendo dúvidas, fique a vontade para me indagar pelo WhatsApp ou Telegram. 
 
 
 <!--
