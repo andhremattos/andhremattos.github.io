@@ -201,7 +201,24 @@ Um curso em videoaulas e com material escrito neste [App Web](https://www.2dados
   <p><strong>Será de duas a três videoaulas liberadas por semana. Prezarei por vídeos curtos entre 13 a 15 minutos. </strong></p>
 </div>
 
-
 **Algumas das videoaulas poderão ocorrer ao vivo em uma live no Youtube**, avisaremos se ocorrer dessa forma.
 
 Dúvidas podem ser encaminhadas para meu [WhatsApp](https://api.whatsapp.com/send?1=pt_BR&phone=5575991940520) ou [Telegram](https://t.me/dhematos). Se preferir, pode me enviar um e-mail: andhremattos@gmail.com.
+
+## Funcionalidades do App web
+
+### Acesso desktop 
+
+!!! tip "Detalhes da aplicação no navegador de desktop"
+    <p style="text-align: center;">
+    <iframe width="720" height="345" src="https://www.youtube.com/embed/60iS9CHospY"></iframe>
+    </p>
+
+
+### Acesso mobile 
+
+!!! tip "Detalhes da aplicação em smartphone"
+    <p style="text-align: center;">
+    <iframe width="720" height="345" src="https://www.youtube.com/embed/ZXwik6p58rE"></iframe>
+    </p>
+
