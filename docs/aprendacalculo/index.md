@@ -133,9 +133,9 @@ p.combinado:first-letter {
 </style>
 
 <div class="card">
-<div class="info">
+<div class="alert">
   <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-  <strong>Informe: Galera, videoaulas de conjuntos numéricos no App web!</strong></a>
+  <strong>Em função de problemas no upload das videoaulas no Youtube, adiamos para amanhã, dia 03 sua disponibilização!</strong></a>
 </div>
 </div>
 
