@@ -4,6 +4,8 @@ disqus:
 
 ## Exercício A 
 
+Estamos fazendo uma modificação aqui.
+
 1. Determine a função derivada de $f(x) = x^4 - \sin(x) + \frac{x^{-2}}{-\pi}$ 
 
 **Solução:** 
