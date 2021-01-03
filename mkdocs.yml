@@ -167,6 +167,54 @@ nav:
     - Parte 5: cursolatex/parte_5.md
     - Parte 6: cursolatex/parte_6.md
     - Parte 7: cursolatex/parte_7.md
+  - Pré-cálculo:
+    - Conjuntos: pre-calculo/conjuntos.md
+    - Conjuntos Numéricos: pre-calculo/conjuntos-numericos.md
+    - Divisibilidade: pre-calculo/divisibilidade.md
+    - Operações Numéricas: pre-calculo/operacoes-numericas.md
+    - Potenciação: pre-calculo/potenciacao.md
+    - Expressões Algébricas: pre-calculo/expressoes-algebricas.md
+    - Equações: pre-calculo/equacoes.md
+    - Inequações: pre-calculo/inequacoes.md
+    - Funções: pre-calculo/funcoes.md
+    - Trigonometria: pre-calculo/trigonometria.md
+    - Funções Exponenciais: pre-calculo/funcoes-exponenciais.md
+    - Funções Logarítmicas: pre-calculo/funcoes-logaritmicas.md
+  - Limite:
+    - Definição: limite/definicao.md
+    - Propriedades: limite/propriedades.md
+    - Indeterminados: limite/indeterminados.md
+    - Laterais: limite/laterais.md
+    - Infinitos: limite/infinitos.md
+    - No infinito: limite/no-infinito.md
+    - Assíntotas: limite/assintotas.md
+    - Continuidade: limite/continuidade.md
+    - Teo. do Confronto: limite/teo-confronto.md
+    - Fundamentais: limite/fundamentais.md
+    - Exercícios: limite/exercicios.md
+    - Licença: limite/creative-commons.md 
+  - Derivada:
+    - Inclinação: derivada/inclinacao-reta.md
+    - Definição: derivada/definicao.md
+    - Função derivada: derivada/funcao-derivada.md
+    - Propriedades: derivada/propriedades.md
+    - Licença: derivada/creative-commons.md
+  - Aplicações:
+    - Definição: aplicacao/definicao.md
+    - Propriedades: aplicacao/propriedades.md
+    - Licença: aplicacao/creative-commons.md
+  - Integral:
+    - Definição: integral/definicao.md
+    - Propriedades: integral/propriedades.md
+    - Licença: integral/creative-commons.md
+  - Listas:
+    - Limite: listas/limite.md
+    - Limite extra: listas/limite-extra.md
+    - Limite extra 2: listas/limite-extra-2.md
+    - Derivada: listas/derivada.md
+    - Aplicações: listas/aplicacao.md
+    - Integral: listas/integral.md
+    - Licença: listas/creative-commons.md
 # Google Analytics
 google_analytics:
   - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
