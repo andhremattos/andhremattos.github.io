@@ -19,13 +19,7 @@ Infelizmente/felizmente só possuo uma conta bancária no Banco do Brasil.
 
 !!! warning "**Dados da conta bancária:**"
 
-    **Banco do Brasil** 
-
-    **Agência**: 0414-6 
-
-    **Conta corrente ou poupança**: 34819-8
-
-    **Beneficiário**: Carlos Andre Lima de Matos - CPF: 047.779.005-41
+    **PIX**: +5575991940520
 
 # Apoiadoras/Apoiadores
 1. Eduarda Santos apoiou [Aprenda Cálculo](https://www.2dados.com/aprendacalculo) doando listas de exercícios.
